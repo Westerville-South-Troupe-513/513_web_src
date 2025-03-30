@@ -1,0 +1,46 @@
+.button {
+    border: none;
+    color: white;
+    padding: 30px 64px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #008CBA;
+    position: absolute;
+    margin-left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25%;
+}
+
+.button:hover {background-color: #00b3ed;}
+
+.button2 {
+    border: none;
+    color: white;
+    padding: 30px 64px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #008CBA;
+    position: absolute;
+    margin-left: 30%;
+    margin-right: -70%;
+    transform: translate(-50%, -50%);
+    border-radius: 25%;
+}
+
+.button2:hover {background-color: #00b3ed;}
+
+.ananke-socials a {
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    fill: currentColor;
+}

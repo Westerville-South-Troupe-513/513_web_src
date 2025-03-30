@@ -1,1 +1,54 @@
+title = "Troupe 513"
+baseURL = "https://gohugo-theme-ananke.pages.dev"
+languageCode = "en-us"
 theme = ["github.com/theNewDynamic/gohugo-theme-ananke/v2"]
+resourceDir = "resources"
+
+DefaultContentLanguage = "en"
+SectionPagesMenu = "main"
+Paginate = 3                  # this is set low for demonstrating with dummy content. Set to a higher number
+googleAnalytics = ""
+enableRobotsTXT = true
+
+[languages]
+[languages.en]
+title = "Troupe 513"
+weight = 1
+contentDir = "content/en"
+
+[sitemap]
+changefreq = "monthly"
+priority = 0.5
+filename = "sitemap.xml"
+
+[params]
+custom_css = ["main.css"]
+text_color = ""
+author = ""
+favicon = ""
+site_logo = ""
+description = "The last theme you'll ever need. Maybe."
+# choose a background color from any on this page: https://tachyons.io/docs/themes/skins/ and preface it with "bg-"
+background_color_class = "bg-black"
+recent_posts_number = 3
+
+[params.ananke.social.follow]
+new_window_icon = false
+networks = [
+  "instagram",
+  "facebook"
+]
+
+[params.ananke.social.instagram]
+username = "wshstheatre.513"
+
+[params.ananke.social.facebook]
+profilelink = "https://www.facebook.com/profile.php?id=61559499195689"
+
+[params.ananke.social.share]
+icons = true
+sharetext = true
+networks = [
+  "instagram",
+  "facebook"
+]
