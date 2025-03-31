@@ -10,9 +10,11 @@
       <div class="nested-copy-line-height lh-copy f4 nested-links {{ $.Param "text_color" | default "mid-gray helvetica" }}">
         {{ .Content }}
       </div>
+        {{ if eq .Title "Upcoming Shows"}}
       <button type="button" class="button2" onclick="window.open('https://westerville.hometownticketing.com/embed/all?schools=14&depts=3', '_blank').focus();">
         Buy Tickets!
       </button>
+        {{ end }}
     </article>
   </div>
 {{ end }}
