@@ -4,7 +4,7 @@ description: "Meet our amazing boosters!"
 featured_image: '/images/board_banner.jpg'
 menu:
   main:
-    weight: 1
+    weight: 30
 ---
 {{< figure title="Niki Ducy - President" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 {{< figure src="/images/niki_ducy.jpg" >}}

@@ -4,7 +4,7 @@ description: "Check out Troupe 513's past productions!"
 featured_image: '/images/past_banner.jpg'
 menu:
   main:
-    weight: 1
+    weight: 10
 ---
 {{< figure title="2024-2025" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 

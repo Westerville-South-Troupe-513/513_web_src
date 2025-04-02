@@ -4,7 +4,7 @@ description: "Check out Troupe 513's upcoming productions!"
 featured_image: '/images/upcoming_banner_1.jpg'
 menu:
   main:
-    weight: 1
+    weight: 01
 ---
 {{< figure title="Charlie and the Chocolate Factory" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 {{< figure src="/images/Charlie_logo.png" >}}

@@ -1,8 +1,9 @@
 title = "Troupe 513"
-baseURL = "https://gohugo-theme-ananke.pages.dev"
+baseURL = "https://wshstheatre.org"
 languageCode = "en-us"
 theme = ["github.com/theNewDynamic/gohugo-theme-ananke/v2"]
 resourceDir = "resources"
+publishDir = "../513.github.io"
 
 DefaultContentLanguage = "en"
 SectionPagesMenu = "main"

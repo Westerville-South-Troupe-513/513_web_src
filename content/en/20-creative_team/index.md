@@ -4,7 +4,7 @@ description: "Meet the fantastic directors behind our shows!"
 featured_image: '/images/creative_banner.jpg'
 menu:
   main:
-    weight: 1
+    weight: 20
 ---
 {{< figure title="Matt Wolfe - Director" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 {{< figure src="/images/matt_wolfe.jpg" >}}
