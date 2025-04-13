@@ -23,5 +23,6 @@ Niki Ducy has 3 children, 2 of which have done theatre at Westerville South. Her
 Colleen Light is a lifelong Westerville resident and Wildcat Alumnus. She has 2 children, one in college, and her youngest is a WS junior, currently involved in Troupe 513, both on stage and off. She has been an active supporter of Troupe 513 before joining the board this season.
 
 {{< figure title="Christy Vincent - Fundraising Officer" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
+{{< figure src="/images/christy_vincint.jpg" >}}
 
-{{< figure title="Cindy Vanderbilt - Head of the Meal Committee" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
+Christy Vincent is a mom to two boys in Westerville schools who are busy in theatre and athletics along with their academic pursuits. Christy works as an Occupational Therapist for New Albany Plain Local Schools and enjoys being outside and volunteering in multiple capacities. 

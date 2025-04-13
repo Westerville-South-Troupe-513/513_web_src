@@ -12,6 +12,7 @@
     position: absolute;
     margin-left: 50%;
     margin-right: -50%;
+    margin-top: 2%;
     transform: translate(-50%, -50%);
     border-radius: 25%;
 }
@@ -32,7 +33,8 @@
     position: absolute;
     margin-left: 30%;
     margin-right: -70%;
-    transform: translate(-50%, -50%);
+    margin-top: 2%;
+    transform: translate(-70%, -30%);
     border-radius: 25%;
 }
 
