@@ -26,7 +26,7 @@ filename = "sitemap.xml"
 custom_css = ["main.css"]
 text_color = ""
 author = ""
-favicon = ""
+favicon = "/images/favicon.ico"
 site_logo = ""
 description = "The last theme you'll ever need. Maybe."
 # choose a background color from any on this page: https://tachyons.io/docs/themes/skins/ and preface it with "bg-"
