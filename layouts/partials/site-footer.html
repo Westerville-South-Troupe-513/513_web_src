@@ -1,0 +1,31 @@
+<figure class="sponsors">
+  <h1 class="sponsors-title">
+    Please support our sponsors!
+  </h1>
+  <img src="/images/sponsors/alex_sunnyside_playroom.jpg" class="sponsor">
+  <img src="/images/sponsors/central_oh_women_in_the_trades.jpg" class="sponsor">
+  <img src="/images/sponsors/david_myers.jpg" class="sponsor">
+  <img src="/images/sponsors/deja_vu.jpg" class="sponsor">
+  <img src="/images/sponsors/family_room_coffee_and_bake_shop.jpg" class="sponsor">
+  <img src="/images/sponsors/good_medicine.jpg" class="sponsor">
+  <img src="/images/sponsors/horvath_vision_care_northwoods.jpg" class="sponsor">
+  <img src="/images/sponsors/jersey_mikes.jpg" class="sponsor">
+  <img src="/images/sponsors/laughing_ogre.jpg" class="sponsor">
+  <img src="/images/sponsors/lime_light_media_line.jpg" class="sponsor">
+  <img src="/images/sponsors/mat_piamonte_f&m_cpa.jpg" class="sponsor">
+  <img src="/images/sponsors/musicologie.jpg" class="sponsor">
+  <img src="/images/sponsors/mylin_ltd.jpg" class="sponsor">
+  <img src="/images/sponsors/neighborhood_bridges.jpg" class="sponsor">
+  <img src="/images/sponsors/north_high.jpg" class="sponsor">
+  <img src="/images/sponsors/staufs_coffee.jpg" class="sponsor">
+  <img src="/images/sponsors/straub_dance_center.jpg" class="sponsor">
+  <img src="/images/sponsors/westerville_north_music_boosters.jpg" class="sponsor">
+</figure>
+<footer class="{{ .Site.Params.background_color_class | default "bg-black" }} bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="{{ .Site.Home.Permalink }}" >
+    &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}} {{ end }}
+  </a>
+    <div>{{ partialCached "social/follow.html" . }}</div>
+  </div>
+</footer>

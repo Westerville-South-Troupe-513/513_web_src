@@ -45,3 +45,16 @@
     color: #fff;
     fill: currentColor;
 }
+
+.sponsor {
+    height: 50px;
+    width: auto;
+}
+
+.sponsors {
+    text-align: center;
+}
+
+.sponsors-title {
+    margin-bottom: 3%;
+}
