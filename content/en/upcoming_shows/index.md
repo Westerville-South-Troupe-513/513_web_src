@@ -6,3 +6,5 @@ menu:
   main:
     weight: 01
 ---
+{{< figure title="Looking forward to next year!" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
+{{< figure src="/images/mainstage_season.jpg" >}}
