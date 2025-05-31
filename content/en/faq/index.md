@@ -6,52 +6,6 @@ menu:
   main:
     weight: 40
 ---
-[What is the CAPA Marquee Program?](https://wshstheatre.org/faq/?scroll=0.08530615736383745)
-
-[What are troupe dues and why should my child join?](https://wshstheatre.org/faq/?scroll=0.13884086980256574)
-
-[What is Booster membership and why should I join?](https://wshstheatre.org/faq/?scroll=0.17552542545463334)
-
-[What is the One Stop Shop?](https://wshstheatre.org/faq/?scroll=0.21432081681887452)
-
-[What is Fall Conference?](https://wshstheatre.org/faq/?scroll=0.26552633084739785)
-
-[What is a student-directed one-act?](https://wshstheatre.org/faq/?scroll=0.29704303965318213)
-
-[What happens when my kid gets cast in a main stage show?](https://wshstheatre.org/faq/?scroll=0.3283413746545469)
-
-[What is tech week or a tech practice?](https://wshstheatre.org/faq/?scroll=0.3811482299438177)
-
-[What is Scho Show?](https://wshstheatre.org/faq/?scroll=0.40778819033754893)
-
-[How can adults get involved?](https://wshstheatre.org/faq/?scroll=0.4457101086968884)
-
-[What are the volunteer jobs over show weekend?](https://wshstheatre.org/faq/?scroll=0.4815576202972887)
-
-[Who can I contact?](https://wshstheatre.org/faq/?scroll=0.5422254660773588)
-
-[What is the company party?](https://wshstheatre.org/faq/?scroll=0.5878628146039941)
-
-[What is a dance rehersal like?](https://wshstheatre.org/faq/?scroll=0.6489309346141161)
-
-[What is show week like?](https://wshstheatre.org/faq/?scroll=0.6989718772035074)
-
-[What is black box theatre?](https://wshstheatre.org/faq/?scroll=0.7550905463845419)
-
-[What is Winter Cabaret?](https://wshstheatre.org/faq/?scroll=0.7826767710513147)
-
-[What are the CAPA Marquee Master Classes?](https://wshstheatre.org/faq/?scroll=0.7973796742789555)
-
-[What is Giving Tuesday?](https://wshstheatre.org/faq/?scroll=0.8113183691486217)
-
-[What is the Black History Month (BHM) show?](https://wshstheatre.org/faq/?scroll=0.8480029470134656)
-
-[Who are the other adults that work with the troupe (besides Wolfe)?](https://wshstheatre.org/faq/?scroll=0.861104575618688)
-
-[What is Theatremas?](https://wshstheatre.org/faq/?scroll=0.8957146578734874)
-
-[What is state thespian conference?](https://wshstheatre.org/faq/?scroll=0.9200254753889546)
-
 {{< figure title="What is the CAPA Marquee Program?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
 The CAPA Marquee program is part of the Columbus Association for the Performing Arts (CAPA). Because CAPA is a member of the Broadway League, Columbus is an official Regional Awards Program of The Jimmy Awards®/National High School Musical Theatre Awards®. CAPA sponsors the prestigious national program for high school musical theatre students through its local awards program—the CAPA Marquee Awards.
