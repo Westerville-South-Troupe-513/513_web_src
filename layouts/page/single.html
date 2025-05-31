@@ -16,7 +16,11 @@
     const collection = document.getElementsByClassName("nested-copy-line-height");
     const q = new URLSearchParams(window.location.search).get('q');
     if (q != null) {
-      window.scrollTo(0, collection[q].getBoundingClientRect().top);
+      if (q == 0) {
+        window.scrollTo(0, 0);
+      } else {
+        window.scrollTo(0, collection[q].getBoundingClientRect().top);
+      }
     }
   </script>
 <!--      {{ if eq .Title "Upcoming Shows"}}

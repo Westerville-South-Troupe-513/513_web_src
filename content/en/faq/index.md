@@ -64,7 +64,9 @@ OK, that's a lot of information (pulled from the CAPA website), but what does it
 - Discounted tickets to CAPA Broadway shows. Because of Troupe 513's involvement in the CAPA Marquee program, we receive information to buy tickets to Broadway in Columbus shows at a discount.
 - Access for the students to participate in Marquee Broadway Master Classes. When many of the touring shows come to town, a company member will teach a master class. Enrollment is at first limited to one student from each Marquee school, but then spots open up and are first come, first served to students from Marquee schools. [Here's more information on the master classes](https://www.capamarqueeawards.com/workshops-masterclasses/).
 
-Being a part of the CAPA Marquee program has a lot of benefits, as you can see. For the students participating in the Marquee musical, it's the chance to perform on stage at the Ohio Theatre at the end of the year. Troupe 513 has had two Marquee winners in just the past five years (Caleb Jingo for lead actor in "Catch Me If You Can" in 2019 and Bella Price for lead actress in "Bright Star" in 2022). 
+Being a part of the CAPA Marquee program has a lot of benefits, as you can see. For the students participating in the Marquee musical, it's the chance to perform on stage at the Ohio Theatre at the end of the year. Troupe 513 has had two Marquee winners in just the past five years (Caleb Jingo for lead actor in "Catch Me If You Can" in 2019 and Bella Price for lead actress in "Bright Star" in 2022).
+
+[Back to top](https://wshstheatre.org/faq/?q=0)
 
 {{< figure title="What are troupe dues and why should my child join?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
@@ -80,6 +82,8 @@ As a rule, if a student is involved heavily with two Main Stage shows and one ex
 
 At the end-of-year induction & awards ceremony, new thespians are inducted, and kids who are already members are recognized for earning more points and achieving various honor ranks.
 
+[Back to top](https://wshstheatre.org/faq/?q=0)
+
 {{< figure title="What is Booster membership and why should I join?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
 Booster membership is for the grownups! (Thespian membership is for the kids.) Our booster group is very active, having meetings once a month and doing numerous things to support Troupe 513. We also take care of concessions at main stage shows, coordinate snacks and meals for the company of main stage shows, offer fundraisers, provide programs for shows, offer scholarships to seniors, and so much more!
@@ -89,6 +93,8 @@ And to do all that, we need a large and varied membership! We need and want to h
 So follow the membership link and join today! Our membership right now doesn't reflect the numbers we have in this Facebook group, so if you haven't taken the couple minutes to join, please do today!
 
 Members have voting privileges at all meetings and can hold office too! Becoming a member also makes sure you're on the email list so announcements, updates, and events come straight to your inbox. Other membership benefits include having your name listed in the program, being told first when tickets go on sale, and that good feeling you get when you help a non-profit dedicated to helping theatre kids.
+
+[Back to top](https://wshstheatre.org/faq/?q=0)
 
 {{< figure title="What is the One Stop Shop?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
@@ -110,6 +116,8 @@ Financial Assistance Donations. If you would like to make a donation in any amou
 
 Program Ads and Shout Outs. For each mainstage production, we produce a lovely program. Ads help us pay the costs of the program, raise a little money, and celebrate your thespian! An ad can be a variety of sizes (see information in the form) and include a picture or several. A shout out is a one-line ad of 10 words maximum.
 
+[Back to top](https://wshstheatre.org/faq/?q=0)
+
 {{< figure title="What is Fall Conference?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
 Ohio Fall Conference is a one-day event that rolls five fantastic events into one. It includes the Ohio Unified Auditions and interviews, the All-Ohio Show auditions and interviews, the Thespy Competition, the Technical Theatre & Design Symposium, and the Theatre College & University Fair. 
@@ -122,6 +130,8 @@ Thespys:
 
 Thespys are an International Thespian Society event and the Fall Conference holds the regional competition. Thespians prepare performances, and tech presentations, write plays, and create films. Those who earn a double superior may be invited to perform at the Spring State Conference. More on Thespys [here](https://www.ohedta.com/thespy-competition#).
 
+[Back to top](https://wshstheatre.org/faq/?q=0)
+
 {{< figure title="What is a student-directed one-act?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
 A student-directed one-act is ... a one-act play directed by a student. But it's a lot more than that! These short plays are so much fun for the company and the audience! And they are a great way for thespians to get experience -- maybe in a new genre of play or with castmates they haven't worked with before. And of course it's a great opportunity and experience for the student-directors!
@@ -129,6 +139,8 @@ A student-directed one-act is ... a one-act play directed by a student. But it's
 How are student-directors chosen? Wolfe asks troupe members to fill out an interest form in early spring, and then the student-directors for the next school year are announced at our end-of-year celebration. Student-directors get to choose the one-act they wish to direct, hold auditions, choose their cast, decide costumes, block (figure out where the actors will sit/stand/etc.) and then DIRECT!
 
 If your kiddo is cast in a student-directed one-act, flexibility is key. Our student-directors are completely in charge of scheduling rehearsals, coordinating the use of rehearsal space with the other student-directors, finding rehearsal times that work for most of the cast, etc. Things change. The student-directors are learning right along with your child, and we can support all this fabulous theatre and learning with our patience and understanding.
+
+[Back to top](https://wshstheatre.org/faq/?q=0)
 
 {{< figure title="What happens when my kid gets cast in a main stage show?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
@@ -142,6 +154,8 @@ For the casts of the mainstage shows, now the fun and work begin. And for the gr
 - Please keep an eye out for rehearsal schedules! Those come from the director (usually Wolfe), and they are subject to change. This is where your thespian can really flex those organization and scheduling muscles to make sure they are available for those rehearsals and are communicating with Wolfe whenever a problem arises.
 - Start sharing about the shows on your social media platforms, etc. Usually an event will be created on our public theatre page, so you can easily share those events! Sharing early (and often) helps our friends, families, and neighbors get these events on their calendars now. As we get closer to each show, we will ask you to change your profile pictures to the show logos, etc. Our kids really love performing to big audiences, and the best way to fill seats is to get the word out!
 
+[Back to top](https://wshstheatre.org/faq/?q=0)
+
 {{< figure title="What is tech week or a tech practice?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
 Tech week is Seth’s favorite week of the show as a tech director because this is the week where the cast and crew merge and start to slowly piece everything together and work creatively as one to make a show feel like a show.
@@ -151,6 +165,8 @@ At South we tend to break down the week into various cue-to-cue days where we go
 How does the set move with the actors dancing? When does the mic turn on? What lights turn on when? etc.
 
 We're working through the whole show VERY slowly to allow us to safely account for every aspect of the show before full dress runs start and the pit joins the fun. This is truly where all the strong individual parts of the show start to come together to make something even better than the sum of its parts! Live theatre is MAGICAL like that!
+
+[Back to top](https://wshstheatre.org/faq/?q=0)
 
 {{< figure title="What is Scho Show?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
@@ -165,6 +181,8 @@ What does Scho Show mean for us as parents/families/boosters?
 The money raised at Scho Show goes directly to support troupe scholarships, which are presented in the spring at our end-of-year banquet. Our goal is to raise $5,000 from ticket sales, concessions, and the 50/50 raffle held that night.
 
 So please encourage your kid/s to get involved in Scho Show in some way! And please buy tickets for yourself and your friends and family, share ticket information with your social networks, be ready to buy raffle tickets and concessions, and let's show our seniors how much we love and support them!
+
+[Back to top](https://wshstheatre.org/faq/?q=0)
 
 {{< figure title="How can adults get involved?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
@@ -182,6 +200,8 @@ There are many ways to help support the theatre program at South, they include, 
 - Get dinner out on dine out nights
 - Reach out to the booster board if you have any other skills that might be helpful
 
+[Back to top](https://wshstheatre.org/faq/?q=0)
+
 {{< figure title="What are the volunteer jobs over show weekend?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
 We're going to break down the different ways to help for each of our mainstage shows. 
@@ -197,6 +217,8 @@ Concessions help: We ask five people to sell concessions for each performance. Y
 Box office helper/scanner: We ask five people to help with this as well, and we also ask that you arrive an hour before showtime. We encourage people to buy tickets in advance, so there are a lot of tickets to scan. We'll set you up with the tech and the instructions on how to do that. Scanning is a great job if you want to avoid handling money. A few of the box office helpers will sell tickets, following the seating chart for what's available. Again, this job is a fun way to get to see friends and family coming to the show. You'll be done with your duties a few minutes after curtain, and you are then done for the night! No work at intermission.
 
 50/50 raffle: Boosters sell 50/50 raffle tickets. We will station one helper in the commons, and the other will roam the auditorium, shaming people into buying tickets. (Who is still reading? This is a test.) You'll receive instructions before you get started. We sell before the show and at intermission.
+
+[Back to top](https://wshstheatre.org/faq/?q=0)
 
 {{< figure title="Who can I contact?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
@@ -232,6 +254,8 @@ niki@ducy.org
 
 Niki is the booster president for the 2025-2026 school year. If you have a time sensitive question, feel free to text instead of email.
 
+[Back to top](https://wshstheatre.org/faq/?q=0)
+
 {{< figure title="What is the company party?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
 At some point in the run of every mainstage show, we have a company party. (We used to call them cast parties, but it's for EVERYONE involved in the show in ANY way, so we have started calling them company parties.)
@@ -256,6 +280,8 @@ Where is it? Wolfe will send out the name of the hosting family and address prio
 
 When does it end? Usually the party ends around midnight, but kids leave these parties whenever their grownup tells them to, so please do what is best for you and your thespian if they need to leave earlier.
 
+[Back to top](https://wshstheatre.org/faq/?q=0)
+
 {{< figure title="What is a dance rehersal like?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
 
@@ -271,6 +297,8 @@ When we arrive at dance rehearsal, we often do a quick warm-up like jumping jack
 In the first rehearsal, we are creating a rough draft, giving us the opportunity to make changes as needed when all of the pieces come together. The performer's responsibility is to learn the material and memorize the dances. We make videos of the dances for the cast to use to practice and get ready for the stage.
 
 Performers are expected to know the material that was taught at the first session the next time we do the dance. There just isn't time to go back and re-teach the dances. Rehearsals after the first day will focus on making sure we are performance ready -- places defined, details set, and the singing and dancing combined! Singing and dancing at the same time can be very difficult! Give it a try!
+
+[Back to top](https://wshstheatre.org/faq/?q=0)
 
 {{< figure title="What is show week like?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
@@ -288,6 +316,8 @@ Things you can do to get ready for show week:
 - We'll be selling candy grams for company members too. A candy gram can be purchased for $1, or you can add a shoutout to any purchased candy at the above price (no added cost).
 - Show week is such an exciting time! The kids (and adults) have worked so hard, and now all that hard work pays off with terrific shows! Keep sharing the tickets and show information so we can pack the house! See you there!
 
+[Back to top](https://wshstheatre.org/faq/?q=0)
+
 {{< figure title="What is black box theatre?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
 Proscenium stage vs. Black Box
@@ -298,13 +328,19 @@ A black box theatre is a simple performance space, typically a square room with 
 
 Most of South’s shows have been on the traditional stage (Charlie Brown, Peter and the Starcatcher, Mamma Mia, etc). But we often use the black box format to achieve a more intimate space. Our black box is on the stage and uses risers to have seats set up on three sides of the performance space. The black box was used for Blood at the Root and Peerless, and is often used for student directed full length shows. The black box set up seats about 80.
 
+[Back to top](https://wshstheatre.org/faq/?q=0)
+
 {{< figure title="What is Winter Cabaret?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
 Winter Cabaret is South Troupe 513's annual variety show put on by the students. Any student can sign up for any kind of performance they want to give -- some do short skits, some sing, some dance, some play instruments, some do it all! It's a really fun evening, and you'll see kids push themselves in doing things they don't usually do. As Wolfe tells us, "It's a chance for students to perform on stage, gain confidence and perform for one another."
 
+[Back to top](https://wshstheatre.org/faq/?q=0)
+
 {{< figure title="What are the CAPA Marquee Master Classes?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
 Troupe 513 is part of CAPA's Marquee program. One of the amazing perks of this program is access for the students to participate in Marquee Broadway Master Classes. When many of the touring shows come to town, a company member will teach a master class. Enrollment is at first limited to one student from each Marquee school, but then spots open up and are first come, first served to students from Marquee schools.
+
+[Back to top](https://wshstheatre.org/faq/?q=0)
 
 {{< figure title="What is Giving Tuesday?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
@@ -314,15 +350,18 @@ In the past few years, Troupe 513 Theatre Boosters has asked our supporters to p
 
 How you can help: Please, before Giving Tuesday (like, today would be great ) invite friends, family, and neighbors to join our public Facebook page. This public page makes creating events and sharing posts about Giving Tuesday very easy, as all those posts can be shared much more easily than they can be from our private booster group. You can explain that the public page gives your friends, family, and neighbors an easy way to stay updated on Troupe 513 events and links to buy tickets to our wonderful shows, etc.
 
-
 [Here's the public Facebook page](https://www.facebook.com/profile.php?id=61559499195689)
 
 Share the Giving Tuesday posts: Please share at least one (but more/all would be even better) post on your personal page on Giving Tuesday. The earlier in the day, the better. And when you share, you could include what Troupe 513 means to yourself and your kid/s.
 As we get closer to Giving Tuesday, please keep an eye on out for further instructions. And if you have any ideas of how to promote Giving Tuesday in support of Troupe 513, please share them.
 
+[Back to top](https://wshstheatre.org/faq/?q=0)
+
 {{< figure title="What is the Black History Month (BHM) show?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
 The BHM show is written, choreographed, directed, and performed by students. The BHM show is put on each year by a club, and that club is separate from Troupe 513 and from our boosters. It's a fantastic show, and we are so glad to support the BHM company! We will be selling concessions at each show, so come on out and get that candy!
+
+[Back to top](https://wshstheatre.org/faq/?q=0)
 
 {{< figure title="Who are the other adults that work with the troupe (besides Wolfe)?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
@@ -340,6 +379,8 @@ Katie Smith -- costume designer
 
 Thank you to all these adults who are so generous with their time and talents! Watching them work with our kids is such a treat, and we're so lucky to have them as part of Troupe 513!
 
+[Back to top](https://wshstheatre.org/faq/?q=0)
+
 {{< figure title="What is Theatremas?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
 Theatremas is a fun way for our troupe members to spend time together outside a show. It brings together ALL the troupe kids, so please encourage your thespian to join the fun!
@@ -349,6 +390,8 @@ The kids gather in the auditorium. There will be some kind of treat and a white 
 To be part of the gift exchange where kids can "steal" presents from each other, students just need to bring in a gift that costs $10 max! If a student needs help getting a gift, they should please talk to Wolfe. He always has extras, but he'll want to make sure everyone is covered.
 
 And tell your thespian to wear their best "ugly holiday" sweater/shirt/sweatshirt/outfit!
+
+[Back to top](https://wshstheatre.org/faq/?q=0)
 
 {{< figure title="What is state thespian conference?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
@@ -370,3 +413,5 @@ All Ohio show: At the Fall Conference there are auditions and interviews for the
 Wolfe, Seth, Katie, and at least 4 parent chaperones will be there the whole weekend and are available if the kids have any questions or needs etc. 
 
 This is a long weekend, I encourage everyone to be well fed, well hydrated, and ready to have fun and learn some things. You can send your kid with money for concessions, ducks, silent auction, and vendors. But money is not necessary - some kids don’t spend any money.
+
+[Back to top](https://wshstheatre.org/faq/?q=0)
