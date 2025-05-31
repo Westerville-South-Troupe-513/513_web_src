@@ -13,9 +13,10 @@
     </article>
   </div>
   <script>
+    console.log(window.scrollY / document.documentElement.scrollHeight);
     const scroll = new URLSearchParams(window.location.search).get('scroll');
     if (scroll != null) {
-      window.scrollTo(0, scroll);
+      window.scrollTo(0, document.documentElement.scrollHeight * scroll);
     }
   </script>
 <!--      {{ if eq .Title "Upcoming Shows"}}
