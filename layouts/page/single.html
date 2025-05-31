@@ -13,10 +13,10 @@
     </article>
   </div>
   <script>
-    console.log(window.scrollY / document.documentElement.scrollHeight);
-    const scroll = new URLSearchParams(window.location.search).get('scroll');
-    if (scroll != null) {
-      window.scrollTo(0, document.documentElement.scrollHeight * scroll);
+    const collection = document.getElementsByClassName("nested-copy-line-height");
+    const q = new URLSearchParams(window.location.search).get('q');
+    if (q != null) {
+      window.scrollTo(0, collection[q].getBoundingClientRect().top);
     }
   </script>
 <!--      {{ if eq .Title "Upcoming Shows"}}

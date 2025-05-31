@@ -6,6 +6,52 @@ menu:
   main:
     weight: 40
 ---
+[What is the CAPA Marquee Program?](https://wshstheatre.org/faq/?q=1)
+
+[What are troupe dues and why should my child join?](https://wshstheatre.org/faq/?q=2)
+
+[What is Booster membership and why should I join?](https://wshstheatre.org/faq/?q=3)
+
+[What is the One Stop Shop?](https://wshstheatre.org/faq/?q=4)
+
+[What is Fall Conference?](https://wshstheatre.org/faq/?q=5)
+
+[What is a student-directed one-act?](https://wshstheatre.org/faq/?q=6)
+
+[What happens when my kid gets cast in a main stage show?](https://wshstheatre.org/faq/?q=7)
+
+[What is tech week or a tech practice?](https://wshstheatre.org/faq/?q=8)
+
+[What is Scho Show?](https://wshstheatre.org/faq/?q=9)
+
+[How can adults get involved?](https://wshstheatre.org/faq/?q=10)
+
+[What are the volunteer jobs over show weekend?](https://wshstheatre.org/faq/?q=11)
+
+[Who can I contact?](https://wshstheatre.org/faq/?q=12)
+
+[What is the company party?](https://wshstheatre.org/faq/?q=13)
+
+[What is a dance rehersal like?](https://wshstheatre.org/faq/?q=14)
+
+[What is show week like?](https://wshstheatre.org/faq/?q=15)
+
+[What is black box theatre?](https://wshstheatre.org/faq/?q=16)
+
+[What is Winter Cabaret?](https://wshstheatre.org/faq/?q=17)
+
+[What are the CAPA Marquee Master Classes?](https://wshstheatre.org/faq/?q=18)
+
+[What is Giving Tuesday?](https://wshstheatre.org/faq/?q=19)
+
+[What is the Black History Month (BHM) show?](https://wshstheatre.org/faq/?q=20)
+
+[Who are the other adults that work with the troupe (besides Wolfe)?](https://wshstheatre.org/faq/?q=21)
+
+[What is Theatremas?](https://wshstheatre.org/faq/?q=22)
+
+[What is state thespian conference?](https://wshstheatre.org/faq/?q=23)
+
 {{< figure title="What is the CAPA Marquee Program?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
 The CAPA Marquee program is part of the Columbus Association for the Performing Arts (CAPA). Because CAPA is a member of the Broadway League, Columbus is an official Regional Awards Program of The Jimmy Awards®/National High School Musical Theatre Awards®. CAPA sponsors the prestigious national program for high school musical theatre students through its local awards program—the CAPA Marquee Awards.
