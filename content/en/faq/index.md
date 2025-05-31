@@ -6,6 +6,52 @@ menu:
   main:
     weight: 40
 ---
+[What is the CAPA Marquee Program?](http://localhost:1313/faq/?scroll=1880)
+
+[What are troupe dues and why should my child join?](http://localhost:1313/faq/?scroll=3056)
+
+[What is Booster membership and why should I join?](http://localhost:1313/faq/?scroll=3860)
+
+[What is the One Stop Shop?](http://localhost:1313/faq/?scroll=4712)
+
+[What is Fall Conference?](http://localhost:1313/faq/?scroll=5836)
+
+[What is a student-directed one-act?](http://localhost:1313/faq/?scroll=6538)
+
+[What happens when my kid gets cast in a main stage show?](http://localhost:1313/faq/?scroll=7223)
+
+[What is tech week or a tech practice?](http://localhost:1313/faq/?scroll=8376)
+
+[What is Scho Show?](http://localhost:1313/faq/?scroll=8962)
+
+[How can adults get involved?](http://localhost:1313/faq/?scroll=9796)
+
+[What are the volunteer jobs over show weekend?](http://localhost:1313/faq/?scroll=10576)
+
+[Who can I contact?](http://localhost:1313/faq/?scroll=11916)
+
+[What is the company party?](http://localhost:1313/faq/?scroll=12916)
+
+[What is a dance rehersal like?](http://localhost:1313/faq/?scroll=14269)
+
+[What is show week like?](http://localhost:1313/faq/?scroll=15368)
+
+[What is black box theatre?](http://localhost:1313/faq/?scroll=16602)
+
+[What is Winter Cabaret?](http://localhost:1313/faq/?scroll=17208)
+
+[What are the CAPA Marquee Master Classes?](http://localhost:1313/faq/?scroll=17516)
+
+[What is Giving Tuesday?](http://localhost:1313/faq/?scroll=17835)
+
+[What is the Black History Month (BHM) show?](http://localhost:1313/faq/?scroll=18655)
+
+[Who are the other adults that work with the troupe (besides Wolfe)?](http://localhost:1313/faq/?scroll=18935)
+
+[What is Theatremas?](http://localhost:1313/faq/?scroll=19695)
+
+[What is state thespian conference?](http://localhost:1313/faq/?scroll=20214)
+
 {{< figure title="What is the CAPA Marquee Program?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
 The CAPA Marquee program is part of the Columbus Association for the Performing Arts (CAPA). Because CAPA is a member of the Broadway League, Columbus is an official Regional Awards Program of The Jimmy Awards®/National High School Musical Theatre Awards®. CAPA sponsors the prestigious national program for high school musical theatre students through its local awards program—the CAPA Marquee Awards.
@@ -64,9 +110,9 @@ Financial Assistance Donations. If you would like to make a donation in any amou
 
 Program Ads and Shout Outs. For each mainstage production, we produce a lovely program. Ads help us pay the costs of the program, raise a little money, and celebrate your thespian! An ad can be a variety of sizes (see information in the form) and include a picture or several. A shout out is a one-line ad of 10 words maximum.
 
-{{< figure title="What is Fall conference?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
+{{< figure title="What is Fall Conference?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
-Ohio Fall conference is a one-day event that rolls five fantastic events into one. It includes the Ohio Unified Auditions and interviews, the All-Ohio Show auditions and interviews, the Thespy Competition, the Technical Theatre & Design Symposium, and the Theatre College & University Fair. 
+Ohio Fall Conference is a one-day event that rolls five fantastic events into one. It includes the Ohio Unified Auditions and interviews, the All-Ohio Show auditions and interviews, the Thespy Competition, the Technical Theatre & Design Symposium, and the Theatre College & University Fair. 
 
 All-Ohio Auditions & Interviews
 
@@ -319,7 +365,7 @@ Let's talk about food. The conference supplies lunch and dinner on Saturday, and
 
 The conference will be full of workshops and performances, bookended by an opening ceremony and a closing ceremony. Download the app once it is available and you can see all of the workshops and performances that will be available. If you click on any of the choices there will be a description of the workshop or performance.  In addition to the workshops and performances, there will be an area with vendors and college reps. This is a good place to talk to different colleges if your thespian is interested in going into theatre (both performance and the tech side). You do not need to sign up for the workshops - you just show up at the time it says on the app. There are a couple of workshops that are invite only, but those are indicated on the app.
 
-All Ohio show: At the fall conference there are auditions and interviews for the All Ohio show.  Kids from all over Ohio participate in putting together this show, which is a play in odd years and a musical in even years. They basically work on the All Ohio show on 3 day weekends. The kids from out of town, stay with host families. There is usually a public viewing of the show the Thursday before the conference starts. The All Ohio show will be shown twice during the conference.
+All Ohio show: At the Fall Conference there are auditions and interviews for the All Ohio show.  Kids from all over Ohio participate in putting together this show, which is a play in odd years and a musical in even years. They basically work on the All Ohio show on 3 day weekends. The kids from out of town, stay with host families. There is usually a public viewing of the show the Thursday before the conference starts. The All Ohio show will be shown twice during the conference.
 
 Wolfe, Seth, Katie, and at least 4 parent chaperones will be there the whole weekend and are available if the kids have any questions or needs etc. 
 

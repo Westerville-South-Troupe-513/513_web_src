@@ -12,6 +12,12 @@
       </div>
     </article>
   </div>
+  <script>
+    const scroll = new URLSearchParams(window.location.search).get('scroll');
+    if (scroll != null) {
+      window.scrollTo(0, scroll);
+    }
+  </script>
 <!--      {{ if eq .Title "Upcoming Shows"}}
     <button type="button" class="button2" onclick="window.open('https://westerville.hometownticketing.com/embed/all?schools=14&depts=3', '_blank').focus();">
       Buy Tickets!
