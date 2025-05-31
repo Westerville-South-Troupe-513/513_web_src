@@ -6,51 +6,51 @@ menu:
   main:
     weight: 40
 ---
-[What is the CAPA Marquee Program?](http://localhost:1313/faq/?scroll=1880)
+[What is the CAPA Marquee Program?](https://wshstheatre.org/faq/?scroll=1880)
 
-[What are troupe dues and why should my child join?](http://localhost:1313/faq/?scroll=3056)
+[What are troupe dues and why should my child join?](https://wshstheatre.org/faq/?scroll=3056)
 
-[What is Booster membership and why should I join?](http://localhost:1313/faq/?scroll=3860)
+[What is Booster membership and why should I join?](https://wshstheatre.org/faq/?scroll=3860)
 
-[What is the One Stop Shop?](http://localhost:1313/faq/?scroll=4712)
+[What is the One Stop Shop?](https://wshstheatre.org/faq/?scroll=4712)
 
-[What is Fall Conference?](http://localhost:1313/faq/?scroll=5836)
+[What is Fall Conference?](https://wshstheatre.org/faq/?scroll=5836)
 
-[What is a student-directed one-act?](http://localhost:1313/faq/?scroll=6538)
+[What is a student-directed one-act?](https://wshstheatre.org/faq/?scroll=6538)
 
-[What happens when my kid gets cast in a main stage show?](http://localhost:1313/faq/?scroll=7223)
+[What happens when my kid gets cast in a main stage show?](https://wshstheatre.org/faq/?scroll=7223)
 
-[What is tech week or a tech practice?](http://localhost:1313/faq/?scroll=8376)
+[What is tech week or a tech practice?](https://wshstheatre.org/faq/?scroll=8376)
 
-[What is Scho Show?](http://localhost:1313/faq/?scroll=8962)
+[What is Scho Show?](https://wshstheatre.org/faq/?scroll=8962)
 
-[How can adults get involved?](http://localhost:1313/faq/?scroll=9796)
+[How can adults get involved?](https://wshstheatre.org/faq/?scroll=9796)
 
-[What are the volunteer jobs over show weekend?](http://localhost:1313/faq/?scroll=10576)
+[What are the volunteer jobs over show weekend?](https://wshstheatre.org/faq/?scroll=10576)
 
-[Who can I contact?](http://localhost:1313/faq/?scroll=11916)
+[Who can I contact?](https://wshstheatre.org/faq/?scroll=11916)
 
-[What is the company party?](http://localhost:1313/faq/?scroll=12916)
+[What is the company party?](https://wshstheatre.org/faq/?scroll=12916)
 
-[What is a dance rehersal like?](http://localhost:1313/faq/?scroll=14269)
+[What is a dance rehersal like?](https://wshstheatre.org/faq/?scroll=14269)
 
-[What is show week like?](http://localhost:1313/faq/?scroll=15368)
+[What is show week like?](https://wshstheatre.org/faq/?scroll=15368)
 
-[What is black box theatre?](http://localhost:1313/faq/?scroll=16602)
+[What is black box theatre?](https://wshstheatre.org/faq/?scroll=16602)
 
-[What is Winter Cabaret?](http://localhost:1313/faq/?scroll=17208)
+[What is Winter Cabaret?](https://wshstheatre.org/faq/?scroll=17208)
 
-[What are the CAPA Marquee Master Classes?](http://localhost:1313/faq/?scroll=17516)
+[What are the CAPA Marquee Master Classes?](https://wshstheatre.org/faq/?scroll=17516)
 
-[What is Giving Tuesday?](http://localhost:1313/faq/?scroll=17835)
+[What is Giving Tuesday?](https://wshstheatre.org/faq/?scroll=17835)
 
-[What is the Black History Month (BHM) show?](http://localhost:1313/faq/?scroll=18655)
+[What is the Black History Month (BHM) show?](https://wshstheatre.org/faq/?scroll=18655)
 
-[Who are the other adults that work with the troupe (besides Wolfe)?](http://localhost:1313/faq/?scroll=18935)
+[Who are the other adults that work with the troupe (besides Wolfe)?](https://wshstheatre.org/faq/?scroll=18935)
 
-[What is Theatremas?](http://localhost:1313/faq/?scroll=19695)
+[What is Theatremas?](https://wshstheatre.org/faq/?scroll=19695)
 
-[What is state thespian conference?](http://localhost:1313/faq/?scroll=20214)
+[What is state thespian conference?](https://wshstheatre.org/faq/?scroll=20214)
 
 {{< figure title="What is the CAPA Marquee Program?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
