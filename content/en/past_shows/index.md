@@ -25,6 +25,11 @@ Clue - Winter Play
 
 Where the Truth Lies - Student Directed Full Length
 
+Almost Main - Extra Director Project
+
+Charlie and the Chocolate Factory - Spring Musical
+ - [Playbill](https://drive.google.com/file/d/1-iHx04yEOtZ6Z4v2PFj9WsTERPQKADQ8/view?usp=sharing) 
+
 {{< figure title="2023-2024" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
 Blood at the Root - Diverse Voices Project
