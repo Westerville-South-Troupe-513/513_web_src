@@ -58,3 +58,8 @@
 .sponsors-title {
     margin-bottom: 3%;
 }
+
+.image-size {
+    max-width: 25%;
+    max-height: 25%;
+}

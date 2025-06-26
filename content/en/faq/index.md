@@ -6,29 +6,29 @@ menu:
   main:
     weight: 40
 ---
-[What is the CAPA Marquee Program?](https://wshstheatre.org/faq/?q=1)
+[Who can I contact?](https://wshstheatre.org/faq/?q=1)
 
-[What are troupe dues and why should my child join?](https://wshstheatre.org/faq/?q=2)
+[What is the CAPA Marquee Program?](https://wshstheatre.org/faq/?q=2)
 
-[What is Booster membership and why should I join?](https://wshstheatre.org/faq/?q=3)
+[What are troupe dues and why should my child join?](https://wshstheatre.org/faq/?q=3)
 
-[What is the One Stop Shop?](https://wshstheatre.org/faq/?q=4)
+[What is Booster membership and why should I join?](https://wshstheatre.org/faq/?q=4)
 
-[What is Fall Conference?](https://wshstheatre.org/faq/?q=5)
+[What is the One Stop Shop?](https://wshstheatre.org/faq/?q=5)
 
-[What is a student-directed one-act?](https://wshstheatre.org/faq/?q=6)
+[What is Fall Conference?](https://wshstheatre.org/faq/?q=6)
 
-[What happens when my kid gets cast in a main stage show?](https://wshstheatre.org/faq/?q=7)
+[What is a student-directed one-act?](https://wshstheatre.org/faq/?q=7)
 
-[What is tech week or a tech practice?](https://wshstheatre.org/faq/?q=8)
+[What happens when my kid gets cast in a main stage show?](https://wshstheatre.org/faq/?q=8)
 
-[What is Scho Show?](https://wshstheatre.org/faq/?q=9)
+[What is tech week or a tech practice?](https://wshstheatre.org/faq/?q=9)
 
-[How can adults get involved?](https://wshstheatre.org/faq/?q=10)
+[What is Scho Show?](https://wshstheatre.org/faq/?q=10)
 
-[What are the volunteer jobs over show weekend?](https://wshstheatre.org/faq/?q=11)
+[How can adults get involved?](https://wshstheatre.org/faq/?q=11)
 
-[Who can I contact?](https://wshstheatre.org/faq/?q=12)
+[What are the volunteer jobs over show weekend?](https://wshstheatre.org/faq/?q=12)
 
 [What is the company party?](https://wshstheatre.org/faq/?q=13)
 
@@ -51,6 +51,42 @@ menu:
 [What is Theatremas?](https://wshstheatre.org/faq/?q=22)
 
 [What is state thespian conference?](https://wshstheatre.org/faq/?q=23)
+
+{{< figure title="Who can I contact?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
+
+- Matt Wolfe
+
+wolfem@westerville.k12.oh.us
+
+Wolfe is our director and is a great resource
+
+- Seth Sprang
+
+sethsprang@gmail.com
+
+Seth is one of our tech directors and is a great resource for tech/crew questions
+
+- Katie Smith
+
+smithk@westerville.k12.oh.us
+
+Katie is our costume director. She is a great resource if you have a question about costumes. Katie is also the attendance clerk at South.
+
+- Booster email
+
+troupe513boosters@gmail.com
+
+This is the general booster email that you can use for booster type questions, or if you aren’t sure who to ask
+
+- Niki Ducy
+
+niki@ducy.org
+
+314-495-5383
+
+Niki is the booster president for the 2025-2026 school year. If you have a time sensitive question, feel free to text instead of email.
+
+[Back to top](https://wshstheatre.org/faq/?q=0)
 
 {{< figure title="What is the CAPA Marquee Program?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
@@ -76,7 +112,7 @@ International Thespians is the honor society that Troupe 513 is part of. Our tro
 
 If your student wants to be an inducted thespian, they need to have paid dues. The form and payment need to be turned in to Wolfe, not the Boosters.
 
-If your student is a freshman and pays now, your student gets credit for points earned through this whole year. If your student is a sophomore and joins/pays now, they get credit for points earned this year (freshman year points won’t carry over).
+If your student is a freshman and pays now, your student gets credit for points earned through this whole year. If your student is a sophomore and joins/pays now, they get credit for points earned this year (freshman year points won’t carry over unless you paid dues your freshman year).
 
 As a rule, if a student is involved heavily with two Main Stage shows and one extra thing (like Scho Show, a student-directed one-act, Drama Camp, etc.), they will earn enough points to become a thespian. This counts for pit, crew, and cast.
 
@@ -108,7 +144,7 @@ One t-shirt/sweatshirt (included in the OSS fee). You can order more for an addi
 
 Company Meals (included in the OSS fee). Boosters will provide multiple meals and snacks, usually on longer rehearsal days and during tech week. Meal dates will be announced ahead of time by the director.
 
-Concessions Donation (included in the OSS fee). Boosters will bulk purchase concession items and water with the monetary concession donations. Families will no longer have to purchase and deliver items for concession stand sales.
+Concessions Donation (included in the OSS fee). Boosters will bulk purchase concession items and water with the monetary concession donations.
 
 Company Party (included in the OSS fee). Boosters will pass on these funds to the company party host during show weekend to help with food costs.
 
@@ -220,42 +256,6 @@ Box office helper/scanner: We ask five people to help with this as well, and we 
 
 [Back to top](https://wshstheatre.org/faq/?q=0)
 
-{{< figure title="Who can I contact?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
-
-- Matt Wolfe
-
-wolfem@westerville.k12.oh.us
-
-Wolfe is our director and is a great resource
-
-- Seth Sprang
-
-sethsprang@gmail.com
-
-Seth is one of our tech directors and is a great resource for tech/crew questions
-
-- Katie Smith
-
-smithk@westerville.k12.oh.us
-
-Katie is our costume director. She is a great resource if you have a question about costumes. Katie is also the attendance clerk at South.
-
-- Booster email
-
-troupe513boosters@gmail.com
-
-This is the general booster email that you can use for booster type questions, or if you aren’t sure who to ask
-
-- Niki Ducy
-
-niki@ducy.org
-
-314-495-5383
-
-Niki is the booster president for the 2025-2026 school year. If you have a time sensitive question, feel free to text instead of email.
-
-[Back to top](https://wshstheatre.org/faq/?q=0)
-
 {{< figure title="What is the company party?" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
 At some point in the run of every mainstage show, we have a company party. (We used to call them cast parties, but it's for EVERYONE involved in the show in ANY way, so we have started calling them company parties.)
@@ -266,7 +266,7 @@ What will they do? Mostly they hang out, play games, eat, laugh, and get VERY lo
 
 Are they supervised? Yes, the parent(s) will be home, and they make the rounds and show their faces.
 
-When does it start? Basically after the show, whenever the kids arrive. It is usually (but not always) after the Friday show. No one should feel rushed; they'll have plenty of time to hang out and have fun. We're doing it after the Friday show because the Saturday show call won't be super early.
+When does it start? Basically after the show, whenever the kids arrive. It is usually (but not always) after the Friday show. No one should feel rushed; they'll have plenty of time to hang out and have fun.
 
 What can my thespian bring? Sometimes a suggested list will go out by class. Example: seniors bring soda, juniors chips, etc.
 
