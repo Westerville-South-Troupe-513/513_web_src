@@ -7,4 +7,4 @@ theme_version: '2.8.2'
 cascade:
   featured_image: '/images/main_banner.jpg'
 ---
-The mission of the Westerville South High School Theatre Boosters is to lend all possible support, both moral and financial, to the general theatre program and related activities of Westerville South High School.
+Westerville South High School Theatre Boosters Inc. is a nonprofit whose mission is to lend all possible support, both moral and financial, to the general theatre program and related activities of Westerville South High School.
