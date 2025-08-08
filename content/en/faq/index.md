@@ -1,7 +1,7 @@
 ---
 title: "FAQ"
 description: "Frequently asked questions"
-featured_image: '/images/faq_banner.jpg'
+featured_image: '/images/faq_banner.png'
 menu:
   main:
     weight: 40

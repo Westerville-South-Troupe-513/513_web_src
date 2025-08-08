@@ -1,7 +1,7 @@
 ---
 title: "Past Shows"
 description: "Check out Troupe 513's past productions!"
-featured_image: '/images/past_banner.jpg'
+featured_image: '/images/past_banner.png'
 menu:
   main:
     weight: 10
