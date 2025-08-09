@@ -1,5 +1,5 @@
 title = "Troupe 513"
-# baseURL = "https://wshstheatre.org"
+baseURL = "https://wshstheatre.org"
 languageCode = "en-us"
 theme = ["github.com/theNewDynamic/gohugo-theme-ananke/v2"]
 resourceDir = "resources"

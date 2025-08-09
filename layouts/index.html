@@ -9,6 +9,10 @@
   {{ $section := where $.Site.RegularPages "Section" "in" $mainSections }}
   {{ $section_count := len $section }}
 
+  <head>
+    <meta property="og:image" content="https://wshstheatre.org/images/android-chrome-512x512.png">
+  </head>
+
   <button type="button" class="button" onclick="window.open('https://www.zeffy.com/donation-form/donate-to-support-south-theatre', '_blank').focus();">
     Donate Here!
   </button>
