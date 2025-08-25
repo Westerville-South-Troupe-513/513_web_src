@@ -49,6 +49,7 @@
 .sponsor {
     height: 50px;
     width: auto;
+    border: none;
 }
 
 .sponsors {
