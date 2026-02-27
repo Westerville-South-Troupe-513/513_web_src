@@ -6,6 +6,18 @@ menu:
   main:
     weight: 10
 ---
+{{< figure title="2025-2026" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
+
+Les Misérables - Fall Musical
+ - [Playbill](https://drive.google.com/file/d/1d9E8p4JjmgNFtkiTgeJILjTXy_tRl4Cx/view?usp=sharing)
+
+Time Stands Still - Student Directed Full Length
+
+Where There's No Will - Student Directed Full Length
+
+Dead Man Walking - Winter Musical
+ - [Playbill](https://drive.google.com/file/d/1hluGZRg6m2KbiI8XofC6Qf7zKMifRVn5/view?usp=sharing)
+
 {{< figure title="2024-2025" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
 
 Last Five Years - Student Directed Full Length

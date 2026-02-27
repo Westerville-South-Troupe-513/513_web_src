@@ -6,7 +6,12 @@ menu:
   main:
     weight: 01
 ---
-{{< figure title="Les Misérables" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
-{{< figure src="/images/les_mis_logo.png" >}}
+{{< figure title="Boeing Boeing" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
+{{< figure src="/images/boeing_boeing_logo.png" >}}
 
-In nineteenth century France, Jean Valjean is released from years of unjust imprisonment, but finds nothing in store for him but mistrust and mistreatment. He breaks his parole in hopes of starting a new life, initiating a lifelong struggle for redemption as he is relentlessly pursued by police inspector Javert, who refuses to believe Valjean can change his ways. Finally, during the Paris student uprising of 1832, Javert must confront his ideals after Valjean spares his life and saves that of the student revolutionary who has captured the heart of Valjean's adopted daughter.
+This 1960s French farce adapted for the English-speaking stage features self-styled Parisian lothario Bernard, who has Italian, German and American fiancées, each a beautiful airline hostess with frequent “layovers.” He keeps “one up, one down, and one pending” – until unexpected schedule changes bring all three to Paris, and Bernard’s apartment, at the same time.
+
+{{< figure title="Grease" class="nested-copy-line-height lh-copy f4 nested-links black helvetica" >}}
+{{< figure src="/images/grease_logo.png" >}}
+
+Grease, based on the timeless classic musical movie will come to life on the South Stage. Join Sandy, Danny, Rizzo, Eugene, Ms Lynch and the rest of Rydell HS and enjoy the songs you know by heart!
