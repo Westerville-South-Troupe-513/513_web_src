@@ -2,26 +2,30 @@ name: Build and Deploy Hugo to GH Pages
 on:
   push:
     branches:
-      - main  # Change to "master" if your default branch uses the old naming convention
+      - main
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write    # Grants permission to push to the gh-pages branch
+      pages: write       # Needed if utilizing native GitHub Pages deployments
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          submodules: true  # Fetch Hugo themes if they are added as submodules
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod features
+          submodules: true  # Fetches your ananke theme submodule
+          fetch-depth: 0    # Fetches all history
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
-          extended: true    # Set to true if your theme requires Hugo Extended (SASS/SCSS support)
+          extended: true    # Important for themes like Ananke that process SCSS
       - name: Build Hugo Site
-        run: hugo --minify
+        run: hugo --minify -d public   # Forces the output directory into 'public'
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages
+
