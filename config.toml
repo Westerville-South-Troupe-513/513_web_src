@@ -3,7 +3,6 @@ baseURL = "https://wshstheatre.org"
 languageCode = "en-us"
 theme = ["github.com/theNewDynamic/gohugo-theme-ananke/v2"]
 resourceDir = "resources"
-publishDir = "../westerville-south-troupe-513.github.io"
 
 DefaultContentLanguage = "en"
 SectionPagesMenu = "main"
