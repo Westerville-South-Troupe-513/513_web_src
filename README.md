@@ -96,7 +96,7 @@ Do not edit ordinary generated files on `gh-pages`; content and layout changes b
 
 ## Contributing
 
-Keep commits focused and use short, descriptive subjects. Pull requests should summarize the user-visible change, describe validation performed, and include screenshots for visual changes. See [AGENTS.md](AGENTS.md) for detailed repository conventions.
+Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for setup, validation, and pull request instructions. Project contributors and community acknowledgements are listed in [contributors.md](contributors.md). Repository-specific conventions are documented in [AGENTS.md](AGENTS.md).
 
 ## License
 
