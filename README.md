@@ -16,6 +16,14 @@ On macOS, Hugo can be installed with Homebrew:
 brew install hugo
 ```
 
+Verify that your shell is using the Extended edition:
+
+```sh
+hugo version
+```
+
+The output must include `+extended`. If it does not, check for another installation with `which -a hugo`, then reinstall the Homebrew build with `brew reinstall hugo` and restart the shell (or run `hash -r`). The Ananke theme uses LibSass and cannot build with Hugo's standard edition.
+
 ## Local Development
 
 Clone the repository and start Hugo's development server:
