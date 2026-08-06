@@ -14,7 +14,7 @@ Set up and refined the GitHub Actions deployment process, production build confi
 
 ### [Ryan Battles](https://github.com/ryanbattles)
 
-Improved project documentation, contributor guidance, local Hugo setup instructions, and deployment validation.
+Set up local Hugo setup instructions, and deployment validation.
 
 ### Troupe 513 Theatre Boosters
 
