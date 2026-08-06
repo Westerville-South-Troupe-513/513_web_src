@@ -16,7 +16,7 @@ menu:
 
 [What is the One Stop Shop?](https://wshstheatre.org/faq/?q=5)
 
-[What is Fall Conference?](https://wshstheatre.org/faq/?q=6)
+[What is the Fall Conference?](https://wshstheatre.org/faq/?q=6)
 
 [What is a student-directed one-act?](https://wshstheatre.org/faq/?q=7)
 
