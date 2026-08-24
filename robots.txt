@@ -1,3 +1,1 @@
 User-agent: *
-Allow: /
-Sitemap: https://wshstheatre.org/sitemap.xml

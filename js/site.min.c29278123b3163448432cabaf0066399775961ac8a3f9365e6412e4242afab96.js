@@ -1,0 +1,1 @@
+const menuButton=document.querySelector("[data-menu-button]"),menu=document.querySelector("[data-menu]");menuButton&&menu&&menuButton.addEventListener("click",()=>{const e=menuButton.getAttribute("aria-expanded")==="true";menuButton.setAttribute("aria-expanded",String(!e)),menu.toggleAttribute("data-open",!e)})
