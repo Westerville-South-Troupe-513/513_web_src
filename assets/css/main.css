@@ -286,6 +286,7 @@ button:focus-visible {
 
 .menu-button {
   display: none;
+  position: relative;
   align-items: center;
   justify-content: center;
   width: 2.75rem;
@@ -301,6 +302,10 @@ button:focus-visible {
 
 .menu-button svg {
   display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .hero {
@@ -2432,9 +2437,9 @@ button:focus-visible {
 @media (max-width: 48rem) {
   .section { padding-block: 5rem; }
   .page-hero { padding-block: 5rem; }
+  .hero-poster-column { display: none; }
   .hero-inner {
     grid-template-columns: 1fr;
-    gap: 3.75rem;
     padding-block: 5rem;
   }
   .production-section-header,
@@ -2456,6 +2461,8 @@ button:focus-visible {
   }
   .people-grid { grid-template-columns: 1fr; }
   .sponsor-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sponsor-card { min-height: 7rem; padding: 1rem; font-size: 1.1rem; }
+  .sponsor-card img { max-height: 4rem; }
   .faq-layout {
     grid-template-columns: 1fr;
     gap: 3.5rem;
@@ -2530,6 +2537,14 @@ button:focus-visible {
   .hero-inner { min-height: auto; }
   .show-grid { grid-template-columns: 1fr; }
   .show-card { max-width: 25rem; }
+  .hero + .section .show-card {
+    width: calc(100% - .85rem);
+  }
+  .hero + .section .show-card-poster,
+  .hero + .section .show-card-poster:hover {
+    transform: none;
+    box-shadow: .85rem .85rem 0 rgba(216, 58, 32, .8);
+  }
   .feature-grid,
   .footer-grid { grid-template-columns: 1fr; }
   .person-card { grid-template-columns: 1fr; }
