@@ -8,8 +8,10 @@
         class="show-art show-art-{{ $art.kind }}"
         src="{{ $art.src }}"
         {{ if $art.srcLarge }}srcset="{{ $art.src }} {{ $art.smallWidth }}w, {{ $art.srcLarge }} {{ $art.largeWidth }}w" sizes="(max-width: 34rem) calc(100vw - 2rem), (max-width: 48rem) 50vw, (max-width: 68rem) 33vw, 18vw"{{ end }}
+        {{ if and $art.width $art.height }}width="{{ $art.width }}" height="{{ $art.height }}"{{ end }}
         alt="{{ $show.Title }} poster"
-        loading="lazy">
+        loading="lazy"
+        decoding="async">
     {{ else }}
       <span class="poster-fallback">
         {{ partial "poster-brand.html" . }}

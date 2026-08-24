@@ -7,7 +7,8 @@
         {{ $logo := . }}
         {{ $optimizedLogo := replaceRE `(?i)\.(png|jpe?g)$` ".webp" $logo }}
         {{ if not (fileExists (printf "static%s" $optimizedLogo)) }}{{ $optimizedLogo = $logo }}{{ end }}
-        <img src="{{ $optimizedLogo }}" alt="{{ $sponsor.Title }}" loading="lazy" decoding="async">
+        {{ $dimensions := partial "image-dimensions.html" $optimizedLogo }}
+        <img src="{{ $optimizedLogo }}" alt="{{ $sponsor.Title }}"{{ if and $dimensions.width $dimensions.height }} width="{{ $dimensions.width }}" height="{{ $dimensions.height }}"{{ end }} loading="lazy" decoding="async">
       {{ else }}<span>{{ $sponsor.Title }}</span>{{ end }}
     {{ if .Params.website_url }}</a>{{ else }}</div>{{ end }}
   {{ end }}

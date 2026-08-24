@@ -2,8 +2,12 @@
   <header class="page-hero about-page-hero">
     <div class="container-wide image-hero-layout">
       {{ with .Params.hero_image }}
+        {{ $heroImage := . }}
+        {{ $heroLarge := $.Params.hero_image_large | default "" }}
+        {{ $dimensions := partial "image-dimensions.html" $heroImage }}
+        {{ $largeDimensions := partial "image-dimensions.html" $heroLarge }}
         <div class="image-hero-media">
-          <img src="{{ . }}" alt="{{ $.Params.hero_image_alt }}" loading="eager" decoding="async">
+          <img src="{{ $heroImage }}"{{ with $heroLarge }} srcset="{{ $heroImage }} {{ $dimensions.width }}w, {{ . }} {{ $largeDimensions.width }}w" sizes="(max-width: 48rem) calc(100vw - 2rem), 34rem"{{ end }} alt="{{ $.Params.hero_image_alt }}"{{ if and $dimensions.width $dimensions.height }} width="{{ $dimensions.width }}" height="{{ $dimensions.height }}"{{ end }} loading="eager" fetchpriority="high" decoding="async">
         </div>
       {{ end }}
       <div class="page-hero-copy image-hero-copy">

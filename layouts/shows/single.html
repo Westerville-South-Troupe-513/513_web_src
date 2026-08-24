@@ -11,7 +11,11 @@
             class="show-art show-art-{{ $art.kind }}"
             src="{{ $art.src }}"
             {{ if $art.srcLarge }}srcset="{{ $art.src }} {{ $art.smallWidth }}w, {{ $art.srcLarge }} {{ $art.largeWidth }}w" sizes="(max-width: 48rem) 78vw, 27rem"{{ end }}
-            alt="{{ $.Title }} poster">
+            {{ if and $art.width $art.height }}width="{{ $art.width }}" height="{{ $art.height }}"{{ end }}
+            alt="{{ $.Title }} poster"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async">
         {{ else }}
           <div class="poster-fallback">
             {{ partial "poster-brand.html" . }}
@@ -123,7 +127,12 @@
       <div class="container-wide">
         <p class="eyebrow">From the Stage</p>
         <h2 class="section-title" id="gallery-heading">Production Photos</h2>
-        <div class="gallery-grid">{{ range . }}<img src="{{ . }}" alt="Production photo from {{ $.Title }}" loading="lazy">{{ end }}</div>
+        <div class="gallery-grid">
+          {{ range . }}
+            {{ $dimensions := partial "image-dimensions.html" . }}
+            <img src="{{ . }}" alt="Production photo from {{ $.Title }}"{{ if and $dimensions.width $dimensions.height }} width="{{ $dimensions.width }}" height="{{ $dimensions.height }}"{{ end }} loading="lazy" decoding="async">
+          {{ end }}
+        </div>
       </div>
     </section>
   {{ end }}

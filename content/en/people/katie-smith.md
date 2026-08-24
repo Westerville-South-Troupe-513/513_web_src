@@ -2,7 +2,7 @@
 title: "Katie Smith"
 role: "Costume Director"
 group: "Creative Team"
-photo: "/images/katie_smith.png"
+photo: "/images/katie_smith.webp"
 sort_order: 40
 active: true
 ---

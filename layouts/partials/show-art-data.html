@@ -4,6 +4,8 @@
 {{- $kind := "" -}}
 {{- $smallWidth := 0 -}}
 {{- $largeWidth := 0 -}}
+{{- $width := 0 -}}
+{{- $height := 0 -}}
 {{- with $show.Params.poster -}}
   {{- $src = . -}}
   {{- $srcLarge = $show.Params.poster_large | default "" -}}
@@ -24,4 +26,9 @@
     {{- end -}}
   {{- end -}}
 {{- end -}}
-{{- return (dict "src" $src "srcLarge" $srcLarge "kind" $kind "smallWidth" $smallWidth "largeWidth" $largeWidth) -}}
+{{- with $src -}}
+  {{- $dimensions := partial "image-dimensions.html" . -}}
+  {{- $width = $dimensions.width -}}
+  {{- $height = $dimensions.height -}}
+{{- end -}}
+{{- return (dict "src" $src "srcLarge" $srcLarge "kind" $kind "smallWidth" $smallWidth "largeWidth" $largeWidth "width" $width "height" $height) -}}

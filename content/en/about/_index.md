@@ -2,7 +2,8 @@
 title: "Theatre Boosters"
 description: "Meet the families and community members working behind the scenes to help Westerville South Theatre students thrive."
 faq_categories: ["Parents"]
-hero_image: "/images/production_ensemble_color.webp"
+hero_image: "/images/production_ensemble_color_medium.webp"
+hero_image_large: "/images/production_ensemble_color.webp"
 hero_image_alt: "Student performers dance beneath colorful stage lights."
 legal_name: "Westerville South High School Theatre Boosters Inc."
 ein: "80-0336357"

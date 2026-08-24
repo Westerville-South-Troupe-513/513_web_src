@@ -1,1 +1,2 @@
-<img class="content-photo" src="{{ .Destination | safeURL }}" alt="{{ .Text }}" loading="lazy" decoding="async">
+{{- $dimensions := partial "image-dimensions.html" .Destination -}}
+<img class="content-photo" src="{{ .Destination | safeURL }}" alt="{{ .Text }}"{{ if and $dimensions.width $dimensions.height }} width="{{ $dimensions.width }}" height="{{ $dimensions.height }}"{{ end }} loading="lazy" decoding="async">

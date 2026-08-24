@@ -2,7 +2,7 @@
 title: "Cindy Straub"
 role: "Choreographer"
 group: "Creative Team"
-photo: "/images/cindy_straub.png"
+photo: "/images/cindy_straub.webp"
 sort_order: 30
 active: true
 ---

@@ -26,7 +26,11 @@
               class="show-art show-art-{{ $featuredArt.kind }}"
               src="{{ $featuredArt.src }}"
               {{ if $featuredArt.srcLarge }}srcset="{{ $featuredArt.src }} {{ $featuredArt.smallWidth }}w, {{ $featuredArt.srcLarge }} {{ $featuredArt.largeWidth }}w" sizes="(max-width: 48rem) 78vw, 25rem"{{ end }}
-              alt="{{ $featured.Title }} poster">
+              {{ if and $featuredArt.width $featuredArt.height }}width="{{ $featuredArt.width }}" height="{{ $featuredArt.height }}"{{ end }}
+              alt="{{ $featured.Title }} poster"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async">
           {{ else }}
             <div class="poster-fallback">
               {{ partial "poster-brand.html" . }}

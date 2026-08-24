@@ -2,7 +2,7 @@
 title: "Chris Tucker"
 role: "Scenic Director"
 group: "Creative Team"
-photo: "/images/chris_tucker.png"
+photo: "/images/chris_tucker.webp"
 sort_order: 60
 active: true
 ---

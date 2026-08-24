@@ -1,0 +1,13 @@
+{{- $src := . | default "" -}}
+{{- $width := 0 -}}
+{{- $height := 0 -}}
+{{- if strings.HasPrefix $src "/" -}}
+  {{- $path := printf "static%s" $src -}}
+  {{- if fileExists $path -}}
+    {{- with images.Config $path -}}
+      {{- $width = .Width -}}
+      {{- $height = .Height -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return (dict "width" $width "height" $height) -}}

@@ -2,7 +2,7 @@
 title: "Tyler Domer"
 role: "Vocal Director & Pit Director"
 group: "Creative Team"
-photo: "/images/tyler_domer.png"
+photo: "/images/tyler_domer.webp"
 sort_order: 20
 active: true
 ---

@@ -6,7 +6,10 @@
       {{ range sort $people ".Params.sort_order" }}
         {{ $person := . }}
         <article class="person-card">
-          {{ with .Params.photo }}<img class="person-photo" src="{{ . }}" alt="Portrait of {{ $person.Title }}" loading="lazy">{{ end }}
+          {{ with .Params.photo }}
+            {{ $dimensions := partial "image-dimensions.html" . }}
+            <img class="person-photo" src="{{ . }}" alt="Portrait of {{ $person.Title }}"{{ if and $dimensions.width $dimensions.height }} width="{{ $dimensions.width }}" height="{{ $dimensions.height }}"{{ end }} loading="lazy" decoding="async">
+          {{ end }}
           <div class="person-copy">
             <p class="eyebrow">{{ .Params.role }}</p>
             <h2>{{ .Title }}</h2>

@@ -173,6 +173,10 @@ content:
           - name: hero_image
             label: Hero image
             type: image
+          - name: hero_image_large
+            label: Hero image — large
+            type: image
+            description: "Optional larger version used on wide screens."
           - name: art_color
             label: Artwork fallback color
             type: string
@@ -633,6 +637,10 @@ content:
             label: Hero image
             type: image
             required: true
+          - name: hero_image_large
+            label: Hero image — large
+            type: image
+            description: "Optional larger version used on wide screens."
           - name: hero_image_alt
             label: Hero image description
             type: string
@@ -675,6 +683,10 @@ content:
             label: Hero image
             type: image
             required: true
+          - name: hero_image_large
+            label: Hero image — large
+            type: image
+            description: "Optional larger version used on wide screens."
           - name: hero_image_alt
             label: Hero image description
             type: string
@@ -730,6 +742,10 @@ content:
             label: Hero image
             type: image
             required: true
+          - name: hero_image_large
+            label: Hero image — large
+            type: image
+            description: "Optional larger version used on wide screens."
           - name: hero_image_alt
             label: Hero image description
             type: string
@@ -768,6 +784,10 @@ content:
             label: Hero image
             type: image
             required: true
+          - name: hero_image_large
+            label: Hero image — large
+            type: image
+            description: "Optional larger version used on wide screens."
           - name: hero_image_alt
             label: Hero image description
             type: string

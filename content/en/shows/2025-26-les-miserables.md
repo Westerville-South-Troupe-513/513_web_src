@@ -10,5 +10,5 @@ featured: false
 draft: false
 art_color: "#34343a"
 playbill: "https://drive.google.com/file/d/1d9E8p4JjmgNFtkiTgeJILjTXy_tRl4Cx/view?usp=sharing"
-poster: "/images/les_mis_logo.png"
+poster: "/images/les_mis_logo.webp"
 ---

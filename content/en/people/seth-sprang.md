@@ -2,7 +2,7 @@
 title: "Seth Sprang"
 role: "Booth Director"
 group: "Creative Team"
-photo: "/images/seth_sprang.png"
+photo: "/images/seth_sprang.webp"
 sort_order: 50
 active: true
 ---

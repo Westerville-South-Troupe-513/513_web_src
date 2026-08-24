@@ -2,7 +2,7 @@
 title: "Matt Wolfe"
 role: "Director"
 group: "Creative Team"
-photo: "/images/matt_wolfe.png"
+photo: "/images/matt_wolfe.webp"
 sort_order: 10
 active: true
 ---

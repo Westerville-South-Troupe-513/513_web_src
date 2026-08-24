@@ -16,5 +16,5 @@
   <link rel="alternate" type="application/rss+xml" href="{{ .RelPermalink }}" title="{{ site.Title }}">
 {{ end }}
 {{ $organizationAddress := dict "@type" "PostalAddress" "postOfficeBoxNumber" "313" "addressLocality" "Westerville" "addressRegion" "OH" "postalCode" "43086" "addressCountry" "US" }}
-{{ $organization := dict "@context" "https://schema.org" "@type" "Organization" "name" hugo.Data.site.legal_name "url" site.BaseURL "logo" ("/images/troupe513-mark-white.png" | absURL) "description" hugo.Data.site.mission "email" hugo.Data.site.booster_email "taxID" hugo.Data.site.ein "address" $organizationAddress "sameAs" (slice hugo.Data.site.instagram_url hugo.Data.site.facebook_url) }}
+{{ $organization := dict "@context" "https://schema.org" "@type" "Organization" "name" hugo.Data.site.legal_name "url" site.BaseURL "logo" ("/images/troupe513-mark-white.webp" | absURL) "description" hugo.Data.site.mission "email" hugo.Data.site.booster_email "taxID" hugo.Data.site.ein "address" $organizationAddress "sameAs" (slice hugo.Data.site.instagram_url hugo.Data.site.facebook_url) }}
 <script type="application/ld+json">{{ $organization | jsonify | safeJS }}</script>

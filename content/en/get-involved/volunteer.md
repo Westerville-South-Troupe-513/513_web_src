@@ -2,7 +2,8 @@
 title: "Volunteer"
 description: "Support performances and students by volunteering with Troupe 513."
 faq_categories: ["Volunteering"]
-hero_image: "/images/production_comedy_scene.jpg"
+hero_image: "/images/production_comedy_scene_medium.webp"
+hero_image_large: "/images/production_comedy_scene.webp"
 hero_image_alt: "Two student actors perform a comic scene on a living-room set."
 ---
 Main-stage productions rely on adult and family volunteers for concessions, ticket scanning, box-office support, raffles, company meals, and other show-weekend needs.
