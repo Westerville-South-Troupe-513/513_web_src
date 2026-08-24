@@ -1,19 +1,64 @@
 {{ define "main" }}
-  <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy {{ $.Param "text_color" | default "black helvetica" }}">
-    {{ .Content }}
-  </article>
+  {{ $activeSeasons := where (where site.RegularPages "Section" "seasons") ".Params.active" true }}
+  {{ $activeSeason := index $activeSeasons 0 }}
+  {{ $seasonShows := where (where site.RegularPages "Section" "shows") ".Params.season" $activeSeason.Params.slug }}
+  {{ $seasonShows = $seasonShows.ByParam "opening_date" }}
+  {{ $mainStageShows := where $seasonShows ".Params.program" "main-stage" }}
+  {{ $studentShows := where $seasonShows ".Params.program" "ne" "main-stage" }}
+  {{ $featuredPages := where $mainStageShows ".Params.featured" true }}
+  {{ $featured := index $mainStageShows 0 }}
+  {{ with $featuredPages }}{{ $featured = index . 0 }}{{ end }}
+  {{ $featuredArt := partial "show-art-data.html" $featured }}
+  {{ $status := partial "show-status.html" $featured }}
+  <section class="hero" aria-labelledby="featured-show-title">
+    <div class="container-wide hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">{{ $status.label }} · {{ $activeSeason.Title }}</p>
+        <h1 class="display-title" id="featured-show-title">{{ $featured.Title }}</h1>
+        <p class="hero-meta">{{ $featured.Params.show_type }} · {{ $featured.Params.date_display }}</p>
+        {{ with $featured.Params.short_summary }}<p class="hero-summary">{{ . }}</p>{{ end }}
+        {{ partial "ticket-actions.html" (dict "show" $featured "showDetails" true) }}
+      </div>
+      <div class="hero-poster-column">
+        <a class="hero-poster" href="{{ $featured.RelPermalink }}" aria-label="View details for {{ $featured.Title }}" style="--show-color: {{ $featured.Params.art_color }}">
+          {{ if $featuredArt.src }}
+            <img
+              class="show-art show-art-{{ $featuredArt.kind }}"
+              src="{{ $featuredArt.src }}"
+              {{ if $featuredArt.srcLarge }}srcset="{{ $featuredArt.src }} {{ $featuredArt.smallWidth }}w, {{ $featuredArt.srcLarge }} {{ $featuredArt.largeWidth }}w" sizes="(max-width: 48rem) 78vw, 25rem"{{ end }}
+              alt="{{ $featured.Title }} poster">
+          {{ else }}
+            <div class="poster-fallback">
+              {{ partial "poster-brand.html" . }}
+              <span class="poster-fallback-title">{{ $featured.Title }}</span>
+              <span class="poster-fallback-type">{{ $featured.Params.show_type }} · {{ $featured.Params.date_display }}</span>
+            </div>
+          {{ end }}
+        </a>
+      </div>
+    </div>
+  </section>
 
-  {{/* Define a section to pull recent posts from. For Hugo 0.20 this will default to the section with the most number of pages. */}}
-  {{ $mainSections := site.Params.mainSections | default (slice "post") }}
-  {{ $show_recent_posts := site.Params.ananke.show_recent_posts }}
-  {{ $section := where $.Site.RegularPages "Section" "in" $mainSections }}
-  {{ $section_count := len $section }}
+  <section class="section section-dark" aria-labelledby="season-heading">
+    <div class="container-wide">
+      <header class="section-header">
+        <div><p class="eyebrow">On Our Stage</p><h2 class="section-title" id="season-heading">The 2026–27 Main Stage</h2></div>
+      </header>
+      <div class="show-grid">{{ range $mainStageShows }}{{ partial "show-card.html" . }}{{ end }}</div>
+    </div>
+  </section>
 
-  <head>
-    <meta property="og:image" content="https://wshstheatre.org/images/android-chrome-512x512.png">
-  </head>
+  {{ with $studentShows }}{{ partial "student-work-section.html" (dict "shows" .) }}{{ end }}
 
-  <button type="button" class="button" onclick="window.open('https://www.zeffy.com/donation-form/donate-to-support-south-theatre', '_blank').focus();">
-    Donate Here!
-  </button>
+  <section class="section section-dark" aria-labelledby="involved-heading">
+    <div class="container-wide">
+      <header class="section-header"><div><p class="eyebrow">Find Your Place</p><h2 class="section-title" id="involved-heading">Get Involved</h2></div></header>
+      <div class="feature-grid">
+        <a class="feature-link" href="{{ hugo.Data.site.school_theatre_url }}" target="_blank" rel="noopener"><span class="feature-number">01</span><span class="feature-title">Students</span><span class="feature-copy">Find the official calendar, troupe dues, communication channels, theatre gear, and current department resources.</span></a>
+        <a class="feature-link" href="/get-involved/volunteer/"><span class="feature-number">02</span><span class="feature-title">Volunteers</span><span class="feature-copy">Help with show nights, company meals, fundraising, promotion, and other behind-the-scenes needs.</span></a>
+        <a class="feature-link" href="/support/become-a-sponsor/"><span class="feature-number">03</span><span class="feature-title">Local Businesses</span><span class="feature-copy">Partner with Troupe 513 through sponsorships that support student theatre and connect your business with our community.</span></a>
+      </div>
+    </div>
+  </section>
+
 {{ end }}

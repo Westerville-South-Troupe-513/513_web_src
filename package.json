@@ -1,0 +1,12 @@
+{
+  "name": "westerville-south-theatre",
+  "private": true,
+  "scripts": {
+    "dev": "hugo server -D --renderToMemory --disableFastRender",
+    "build": "hugo --cleanDestinationDir --minify --panicOnWarning -d public"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.3.3",
+    "tailwindcss": "4.3.3"
+  }
+}

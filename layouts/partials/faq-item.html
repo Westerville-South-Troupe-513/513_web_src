@@ -1,0 +1,5 @@
+{{ $faq := . }}
+<details class="faq-item" id="{{ $faq.File.ContentBaseName }}">
+  <summary><span>{{ $faq.Title }}</span><span aria-hidden="true">+</span></summary>
+  <div class="faq-answer prose">{{ $faq.Content }}</div>
+</details>

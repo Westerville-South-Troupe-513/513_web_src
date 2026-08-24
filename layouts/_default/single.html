@@ -1,0 +1,34 @@
+{{ define "main" }}
+  {{ $isVolunteer := and (eq .Section "get-involved") (eq .File.ContentBaseName "volunteer") }}
+  {{ $isTickets := eq .RelPermalink "/tickets/" }}
+  {{ $isSponsor := eq .RelPermalink "/support/become-a-sponsor/" }}
+  <header class="page-hero{{ if $isVolunteer }} volunteer-page-hero{{ end }}{{ if $isTickets }} tickets-page-hero{{ end }}">
+    <div class="{{ if .Params.hero_image }}container-wide image-hero-layout{{ else }}container page-hero-copy{{ end }}">
+      {{ with .Params.hero_image }}
+        <div class="image-hero-media">
+          <img src="{{ . }}" alt="{{ $.Params.hero_image_alt }}" loading="eager" decoding="async">
+        </div>
+      {{ end }}
+      <div{{ if .Params.hero_image }} class="page-hero-copy image-hero-copy"{{ end }}>
+        <p class="eyebrow">Westerville South Theatre</p>
+        <h1 class="display-title">{{ .Title }}</h1>
+        {{ with .Description }}<p class="page-description">{{ . }}</p>{{ end }}
+      </div>
+    </div>
+  </header>
+  {{ if $isTickets }}
+    {{ partial "tickets-page-content.html" . }}
+  {{ else if $isVolunteer }}
+    {{ partial "volunteer-page-content.html" . }}
+    {{ with .Params.faq_categories }}
+      {{ partial "context-faq-section.html" (dict "categories" .) }}
+    {{ end }}
+  {{ else if $isSponsor }}
+    {{ partial "sponsor-page-content.html" . }}
+  {{ else }}
+    <div class="section"><article class="container prose">{{ .Content }}</article></div>
+    {{ with .Params.faq_categories }}
+      {{ partial "context-faq-section.html" (dict "categories" .) }}
+    {{ end }}
+  {{ end }}
+{{ end }}

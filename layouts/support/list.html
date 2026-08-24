@@ -1,0 +1,48 @@
+{{ define "main" }}
+  <header class="page-hero support-hero">
+    <div class="container-wide image-hero-layout">
+      <div class="image-hero-media">
+        <img src="/images/les_miserables_ensemble.webp" alt="The student cast of Les Misérables performs beneath a red flag" width="2733" height="1824" loading="eager" fetchpriority="high" decoding="async">
+      </div>
+      <div class="support-hero-copy image-hero-copy">
+        <p class="eyebrow">Support Student Theatre</p>
+        <h1 class="display-title">{{ .Title }}</h1>
+        {{ with .Description }}<p class="page-description">{{ . }}</p>{{ end }}
+      </div>
+    </div>
+  </header>
+
+  <section class="section" aria-labelledby="support-impact-heading">
+    <div class="container-wide support-layout">
+      <article class="prose support-content">
+        <h2 id="support-impact-heading">Your Gift Brings the Next Story to Life</h2>
+        {{ .Content }}
+      </article>
+
+      <aside class="support-donation-card" aria-labelledby="donation-card-heading">
+        <p class="eyebrow">Make an Impact</p>
+        <h2 id="donation-card-heading">Help Students Take the Stage</h2>
+        <p>Every gift helps Troupe 513 create meaningful productions, stronger student experiences, and a welcoming theatre community.</p>
+        <a class="button-primary" href="{{ hugo.Data.site.donate_url }}" target="_blank" rel="noopener">Donate Through Zeffy</a>
+        <small>You will complete your donation securely on Zeffy.</small>
+      </aside>
+    </div>
+  </section>
+
+  <section class="support-closing" aria-labelledby="support-closing-heading">
+    <div class="container-wide support-closing-inner">
+      <div class="support-closing-copy">
+        <p class="eyebrow">Every Contribution Matters</p>
+        <h2 class="section-title" id="support-closing-heading">Give South Theatre More Room to Create.</h2>
+        <p>Your support helps students build confidence, collaborate, and tell ambitious stories for our community.</p>
+        <div class="support-closing-actions">
+          <a class="button-dark" href="{{ hugo.Data.site.donate_url }}" target="_blank" rel="noopener">Make a Donation</a>
+          <a class="button-secondary" href="/support/become-a-sponsor/">Become a Sponsor</a>
+        </div>
+      </div>
+      <div class="support-closing-image">
+        <img src="/images/troupe_with_smj.webp" alt="Troupe 513 students rehearse together onstage with SMJ" width="960" height="960" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </section>
+{{ end }}

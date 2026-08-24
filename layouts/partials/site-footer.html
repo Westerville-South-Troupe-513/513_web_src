@@ -1,61 +1,57 @@
-<figure class="sponsors">
-  <h1 class="sponsors-title">
-    Please support our sponsors!
-  </h1>
-  <a href="http://www.hoffmanandkuhn.com/" target="_blank" class="sponsor">
-    <img src="/images/sponsors/hoffman_and_kuhn.png" class="sponsor">
-  </a>
-  <!--<img src="/images/sponsors/alex_sunnyside_playroom.png" class="sponsor">-->
-  <!--<img src="/images/sponsors/central_oh_women_in_the_trades_1.png" class="sponsor">-->
-  <a href="https://www.davidmyersart.com/" target="_blank" class="sponsor">
-    <img src="/images/sponsors/david_myers.png" class="sponsor">
-  </a>
-  <a></a>
-  <!--<img src="/images/sponsors/deja_vu.png" class="sponsor">-->
-  <!--<img src="/images/sponsors/family_room_coffee_and_bake_shop.png" class="sponsor">-->
-  <a href="https://www.goodmedicineproductions.org/" target="_blank">
-    <img src="/images/sponsors/good_medicine.png" class="sponsor">
-  </a>
-  <!--<img src="/images/sponsors/horvath_vision_care_northwoods.png" class="sponsor">-->
-  <a href="https://www.jerseymikes.com/2065/westerville-oh" target="_blank">
-    <img src="/images/sponsors/jersey_mikes.png" class="sponsor">
-  </a>
-  <!--<img src="/images/sponsors/laughing_ogre.png" class="sponsor">-->
-  <!--<img src="/images/sponsors/lime_light_media_line.png" class="sponsor">-->
-  <a href="https://www.fmcpallc.com/" target="_blank">
-    <img src="/images/sponsors/mat_piamonte_f&m_cpa.png" class="sponsor">
-  </a>
-  <a href="https://musicologie.com/locations/westerville" target="_blank">
-    <img src="/images/sponsors/musicologie.png" class="sponsor">
-  </a>
-  <!--<img src="/images/sponsors/mylin_ltd.png" class="sponsor">-->
-  <a href="https://neighborhoodbridges.org/" target="_blank">
-    <img src="/images/sponsors/neighborhood_bridges.png" class="sponsor">
-  </a>
-  <!--<img src="/images/sponsors/north_high.png" class="sponsor">-->
-  <!--<img src="/images/sponsors/staufs_coffee.png" class="sponsor">-->
-  <a href="https://cindystraubsperformingarts.com/" target="_blank">
-    <img src="/images/sponsors/straub_dance_center.png" class="sponsor">
-  </a>
-  <a href="www.wnmb.org" target="_blank">
-    <img src="/images/sponsors/westerville_north_music_boosters.png" class="sponsor">
-  </a>
-  <a href="https://www.meganleedesigns.com/" target="_blank">
-    <img src="/images/sponsors/megan_lee.png" class="sponsor">
-  </a>
-  <a href="https://swensonsdriveins.com/locations/polaris/">
-    <img src="images/sponsors/swensons.png" class="sponsor">
-  </a>
-  <a href="https://oxbs.com/" target="_blank">
-    <img src="images/sponsors/ox-bs.png" class="sponsor">
-  </a>
-  <img src="images/sponsors/tyler_domer.png" class="sponsor">
-</figure>
-<footer class="{{ .Site.Params.background_color_class | default "bg-black" }} bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="{{ .Site.Home.Permalink }}" >
-    &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}} {{ end }}
-  </a>
-    <div>{{ partialCached "social/follow.html" . }}</div>
+<footer class="site-footer">
+  {{ $venue := site.GetPage "/venues/south-auditorium" }}
+  <div class="container-wide">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/" aria-label="Westerville South Theatre home">
+          <img class="brand-mark" src="/images/troupe513-mark-white.png" alt="" width="600" height="600">
+          <span class="brand-copy">Westerville South Theatre<small>Theatre Troupe 513 Boosters</small></span>
+        </a>
+        <div class="footer-addresses">
+          <address class="footer-address"><strong>Theatre location</strong><br>Westerville South High School<br>{{ with $venue }}{{ partial "venue-address.html" . }}{{ else }}{{ hugo.Data.site.address }}{{ end }}</address>
+          <address class="footer-address"><strong>Booster mailing address</strong><br>{{ hugo.Data.site.mailing_address }}</address>
+        </div>
+      </div>
+      <nav aria-labelledby="footer-about">
+        <h2 class="footer-heading" id="footer-about">About</h2>
+        <ul class="footer-links">
+          <li><a href="/about/">Theatre Boosters</a></li>
+          <li><a href="/contact/">Contact Us</a></li>
+          <li><a href="/about/creative-team/">Creative Team</a></li>
+          <li><a href="/about/#booster-board">Booster Board</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="footer-shows">
+        <h2 class="footer-heading" id="footer-shows">Shows</h2>
+        <ul class="footer-links">
+          <li><a href="/shows/">Current Season</a></li>
+          <li><a href="/shows/archive/">Past Productions</a></li>
+          <li><a href="/tickets/">Tickets</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="footer-participate">
+        <h2 class="footer-heading" id="footer-participate">Participate</h2>
+        <ul class="footer-links">
+          <li><a href="/get-involved/volunteer/">Volunteer</a></li>
+          <li><a href="/support/">Donate</a></li>
+          <li><a href="/support/become-a-sponsor/">Become a Sponsor</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="footer-resources">
+        <h2 class="footer-heading" id="footer-resources">Resources</h2>
+        <ul class="footer-links">
+          <li><a href="{{ hugo.Data.site.school_theatre_url }}" target="_blank" rel="noopener">Official Student Resources</a></li>
+          <li><a href="{{ hugo.Data.site.instagram_url }}" target="_blank" rel="me noopener">Instagram</a></li>
+          <li><a href="{{ hugo.Data.site.facebook_url }}" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; {{ now.Format "2006" }} {{ hugo.Data.site.legal_name }}</span>
+      <div class="footer-bottom-meta">
+        <span>{{ hugo.Data.site.nonprofit_status }} · EIN {{ hugo.Data.site.ein }}</span>
+        <a href="/privacy/">Privacy Policy</a>
+      </div>
+    </div>
   </div>
 </footer>

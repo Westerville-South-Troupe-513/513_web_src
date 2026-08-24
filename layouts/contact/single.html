@@ -1,0 +1,34 @@
+{{ define "main" }}
+  <header class="page-hero about-page-hero contact-page-hero">
+    <div class="container page-hero-copy">
+      <p class="eyebrow">Westerville South Theatre Boosters</p>
+      <h1 class="display-title">{{ .Title }}</h1>
+      <p class="page-description">{{ .Description }}</p>
+    </div>
+  </header>
+
+  <section class="section" aria-labelledby="contact-heading">
+    <div class="container-wide contact-layout">
+      <div class="contact-introduction">
+        <p class="eyebrow">Start Here</p>
+        <h2 class="section-title" id="contact-heading">We’d love to hear from you.</h2>
+        <div class="prose">{{ .Content }}</div>
+        <p>For Booster membership, volunteering, donations, general questions, or website corrections, email our organization-wide inbox.</p>
+        <p><a class="button-primary" href="mailto:{{ hugo.Data.site.booster_email }}">Email the Boosters</a></p>
+        <address class="contact-mailing-address"><strong>Booster mailing address</strong><br>{{ hugo.Data.site.legal_name }}<br>{{ hugo.Data.site.mailing_address }}</address>
+      </div>
+      <aside class="contact-identity" aria-label="Booster organization details">
+        <p class="eyebrow">Nonprofit Information</p>
+        <h2>{{ hugo.Data.site.legal_name }}</h2>
+        <dl>
+          <div><dt>Status</dt><dd>{{ hugo.Data.site.nonprofit_status }}</dd></div>
+          <div><dt>Employer Identification Number</dt><dd>{{ hugo.Data.site.ein }}</dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:{{ hugo.Data.site.booster_email }}">{{ hugo.Data.site.booster_email }}</a></dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  {{ $venue := site.GetPage "/venues/south-auditorium" }}
+  {{ partial "plan-your-visit.html" $venue }}
+{{ end }}

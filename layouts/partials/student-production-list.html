@@ -1,0 +1,24 @@
+<div class="student-production-list">
+  {{ range . }}
+    {{ $status := partial "show-status.html" . }}
+    {{ $programLabel := partial "program-label.html" .Params.program }}
+    <article class="student-production">
+      <div class="student-production-date">
+        <span>{{ time.Format "Jan" (time.AsTime .Params.opening_date) }}</span>
+        <strong>{{ time.Format "2" (time.AsTime .Params.opening_date) }}</strong>
+        <small>{{ time.Format "2006" (time.AsTime .Params.opening_date) }}</small>
+      </div>
+      <div class="student-production-copy">
+        <p class="student-production-kicker">{{ $programLabel }} · {{ if eq $status.key "closed" }}Past Production{{ else }}{{ $status.label }}{{ end }}</p>
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        {{ with .Params.student_directors }}
+          <p class="student-production-credit">Directed by {{ delimit . ", " " &amp; " | safeHTML }}</p>
+        {{ else }}
+          <p class="student-production-credit">{{ .Params.show_type }}</p>
+        {{ end }}
+      </div>
+      <p class="student-production-full-date">{{ .Params.date_display }}</p>
+      <a class="student-production-link" href="{{ .RelPermalink }}" aria-label="View details for {{ .Title }}">Details <span aria-hidden="true">→</span></a>
+    </article>
+  {{ end }}
+</div>

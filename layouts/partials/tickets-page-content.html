@@ -1,0 +1,30 @@
+{{ $venue := site.GetPage "/venues/south-auditorium" }}
+
+<section class="section ticket-box-office" aria-labelledby="ticket-box-office-heading">
+  <div class="container-wide ticket-box-office-layout">
+    <div class="ticket-box-office-copy">
+      <p class="eyebrow">Plan Your Night</p>
+      <h2 class="section-title" id="ticket-box-office-heading">Your Seat Is Waiting.</h2>
+      <div class="prose">{{ .Content }}</div>
+      <dl class="ticket-quick-facts">
+        <div>
+          <dt>Where</dt>
+          <dd>{{ with $venue }}{{ partial "venue-address.html" . }}{{ end }}</dd>
+        </div>
+        <div>
+          <dt>When</dt>
+          <dd>The portal lists every Westerville South Theatre performance currently on sale.</dd>
+        </div>
+      </dl>
+    </div>
+    <aside class="ticket-portal-card" aria-label="Online ticket portal">
+      <p class="eyebrow">Online Box Office</p>
+      <h2>View Available Tickets</h2>
+      <p>One box-office portal serves every production. Open it to see all shows and performances currently available for purchase.</p>
+      <a class="button-primary" href="{{ hugo.Data.site.ticket_url }}" target="_blank" rel="noopener">View Available Tickets</a>
+      <small>If no events appear, ticket sales have not opened yet or there are no performances currently on sale.</small>
+    </aside>
+  </div>
+</section>
+
+{{ partial "plan-your-visit.html" $venue }}

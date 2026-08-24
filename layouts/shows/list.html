@@ -1,0 +1,35 @@
+{{ define "main" }}
+  {{ $activeSeasons := where (where site.RegularPages "Section" "seasons") ".Params.active" true }}
+  {{ $activeSeason := index $activeSeasons 0 }}
+  {{ $shows := where (where site.RegularPages "Section" "shows") ".Params.season" $activeSeason.Params.slug }}
+  {{ $shows = $shows.ByParam "opening_date" }}
+  {{ $mainStageShows := where $shows ".Params.program" "main-stage" }}
+  {{ $studentShows := where $shows ".Params.program" "ne" "main-stage" }}
+  <header class="page-hero shows-page-hero">
+    <div class="container page-hero-copy">
+      <p class="eyebrow">{{ $activeSeason.Title }}</p>
+      <h1 class="display-title">{{ .Title }}</h1>
+      <p class="page-description">{{ .Description }}</p>
+    </div>
+  </header>
+  <section class="section section-main-stage" aria-labelledby="main-stage-heading">
+    <div class="container-wide">
+      <header class="section-header production-section-header">
+        <div class="production-section-image">
+          <img src="/images/main_banner.webp" alt="Student cast performing together on the Westerville South stage" width="2000" height="1155" loading="lazy" decoding="async">
+        </div>
+        <div class="production-section-copy">
+          <p class="eyebrow">On Our Stage</p>
+          <h2 class="section-title" id="main-stage-heading">Main Stage</h2>
+          <p class="section-intro">From intimate plays to full-scale musicals, the Main Stage season brings bold stories and unforgettable performances to South’s theatre.</p>
+        </div>
+      </header>
+      {{ partial "student-production-list.html" $mainStageShows }}
+    </div>
+  </section>
+  {{ with $studentShows }}{{ partial "student-work-section.html" (dict "shows" .) }}{{ end }}
+  {{ with .Params.faq_categories }}
+    {{ partial "context-faq-section.html" (dict "categories" .) }}
+  {{ end }}
+  {{ partial "past-productions-section.html" . }}
+{{ end }}

@@ -1,0 +1,28 @@
+{{ $venue := . }}
+{{ if $venue }}
+  <section class="section section-dark">
+    <div class="container visit-grid">
+      <div class="visit-copy">
+        <p class="eyebrow">Plan Your Visit</p>
+        <h2 class="section-title">{{ $venue.Title }}</h2>
+        <p class="page-description">{{ partial "venue-address.html" $venue }}</p>
+        {{ with $venue.Params.map_url }}<p class="visit-directions-link"><a class="button-secondary" href="{{ . }}" target="_blank" rel="noopener">Open in Google Maps</a></p>{{ end }}
+        <dl class="visit-details">
+          {{ with $venue.Params.parking }}<div><dt>Parking</dt><dd>{{ . }}</dd></div>{{ end }}
+          {{ with $venue.Params.entrance }}<div><dt>Entrance</dt><dd>{{ . }}</dd></div>{{ end }}
+          {{ with $venue.Params.accessibility }}<div><dt>Accessibility</dt><dd>{{ . }}</dd></div>{{ end }}
+        </dl>
+      </div>
+      {{ with $venue.Params.map_embed_url }}
+        <div class="venue-map-embed">
+          <iframe
+            src="{{ . }}"
+            title="Map to {{ $venue.Title }}"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}

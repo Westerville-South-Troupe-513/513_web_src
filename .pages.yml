@@ -1,0 +1,776 @@
+media:
+  - name: images
+    label: Site images
+    input: static/images
+    output: /images
+    categories: [image]
+    rename: safe
+  - name: documents
+    label: Documents
+    input: static/documents
+    output: /documents
+    categories: [document]
+    rename: safe
+
+settings:
+  content:
+    merge: true
+  commit:
+    identity: user
+    templates:
+      create: "content: add {name}"
+      update: "content: update {name}"
+      delete: "content: retire {name}"
+      rename: "content: rename {oldFilename} to {newFilename}"
+
+components:
+  performance:
+    label: Performance
+    type: object
+    fields:
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: time
+        label: Time
+        type: string
+        required: true
+        description: "Use a reader-friendly time such as 7:00 PM."
+      - name: ticket_url
+        label: Ticket URL
+        type: string
+  student_work:
+    label: One-act work
+    type: object
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: directors
+        label: Student directors
+        type: string
+        list: true
+
+content:
+  - name: productions
+    label: Productions
+    type: group
+    items:
+      - name: shows
+        label: Shows
+        type: collection
+        path: content/en/shows
+        format: yaml-frontmatter
+        exclude: [_index.md]
+        filename:
+          template: "{slug}.md"
+          field: create
+        operations:
+          create: true
+          rename: false
+          delete: false
+        view:
+          primary: title
+          fields: [title, season, program, show_type, opening_date, featured, draft]
+          sort: [opening_date, title, season]
+          search: [title, season, program, show_type, student_directors]
+          default:
+            sort: opening_date
+            order: desc
+        fields:
+          - name: title
+            label: Show title
+            type: string
+            required: true
+          - name: slug
+            label: URL slug
+            type: string
+            required: true
+            pattern:
+              regex: "^[a-z0-9-]+$"
+              message: "Use lowercase letters, numbers, and hyphens only."
+          - name: description
+            label: Short description
+            type: text
+            required: true
+          - name: short_summary
+            label: Promotional synopsis
+            type: text
+            description: "Two informative, enticing sentences for the homepage hero and show-page introduction."
+          - name: long_summary
+            label: Full synopsis
+            type: rich-text
+            description: "Two promotional paragraphs for the show detail page."
+          - name: season
+            label: Season
+            type: reference
+            required: true
+            options:
+              collection: seasons
+              value: "{slug}"
+              label: "{title}"
+              search: "title,slug"
+          - name: show_type
+            label: Production type
+            type: string
+            required: true
+          - name: program
+            label: Program
+            type: select
+            required: true
+            default: main-stage
+            options:
+              values:
+                - value: main-stage
+                  label: Main Stage
+                - value: student-directed
+                  label: Student-Directed Full Length
+                - value: one-act-festival
+                  label: Student One-Act Plays
+                - value: special-event
+                  label: Special Event
+          - name: production_format
+            label: Format
+            type: select
+            options:
+              values:
+                - value: play
+                  label: Play
+                - value: musical
+                  label: Musical
+                - value: one-acts
+                  label: One-Act Collection
+                - value: variety-show
+                  label: Variety Show
+          - name: student_directors
+            label: Student directors
+            type: string
+            list: true
+            description: "Names only; do not add student contact details."
+          - name: works
+            label: One-act titles
+            component: student_work
+            list: true
+            description: "Add individual one-act titles and directors when the program is announced."
+          - name: poster
+            label: Poster — medium
+            type: image
+            description: "Smaller portrait artwork used in season grids."
+          - name: poster_large
+            label: Poster — large
+            type: image
+            description: "Larger portrait artwork used on the show detail page."
+          - name: profile_image
+            label: Profile graphic — medium
+            type: image
+            description: "Square promotional artwork for compact uses."
+          - name: profile_image_large
+            label: Profile graphic — large
+            type: image
+            description: "Large square promotional artwork for social and promotional uses."
+          - name: hero_image
+            label: Hero image
+            type: image
+          - name: art_color
+            label: Artwork fallback color
+            type: string
+            description: "Hex color used until poster artwork is available."
+            pattern: "^#[0-9a-fA-F]{6}$"
+          - name: opening_date
+            label: Opening date
+            type: date
+          - name: closing_date
+            label: Closing date
+            type: date
+          - name: date_display
+            label: Display dates
+            type: string
+            description: "Example: October 2–4, 2026"
+          - name: performances
+            label: Performances
+            component: performance
+            list: true
+          - name: ticket_url
+            label: General ticket URL
+            type: string
+          - name: ticket_prices
+            label: Ticket prices
+            type: text
+          - name: venue
+            label: Venue
+            type: reference
+            options:
+              collection: venues
+              value: "{slug}"
+              label: "{title}"
+              search: "title,address"
+          - name: runtime
+            label: Runtime
+            type: string
+          - name: intermission
+            label: Intermission
+            type: string
+          - name: age_guidance
+            label: Age guidance
+            type: text
+          - name: audition_url
+            label: Audition URL
+            type: string
+          - name: volunteer_url
+            label: Volunteer URL
+            type: string
+          - name: one_stop_shop_url
+            label: One Stop Shop URL
+            type: string
+          - name: playbill
+            label: Playbill
+            type: file
+          - name: creative_team
+            label: Creative team
+            type: reference
+            options:
+              collection: people
+              multiple: true
+              value: "{slug}"
+              label: "{title} — {role}"
+              search: "title,role"
+          - name: cast
+            label: Cast
+            type: rich-text
+          - name: crew
+            label: Crew
+            type: rich-text
+          - name: gallery
+            label: Production photos
+            type: image
+            list: true
+          - name: show_faq
+            label: Related FAQ entries
+            type: reference
+            options:
+              collection: faqs
+              multiple: true
+              value: "{path}"
+              label: "{title}"
+              search: "title,category"
+          - name: featured
+            label: Feature on homepage
+            type: boolean
+            default: false
+          - name: noindex
+            label: Hide from search engines
+            type: boolean
+            default: false
+            description: "Use for archive records that do not yet have a synopsis, production imagery, or a playbill."
+          - name: draft
+            label: Draft
+            type: boolean
+            default: true
+            description: "Draft shows are saved but not published."
+          - name: body
+            label: About the show
+            type: rich-text
+
+      - name: seasons
+        label: Seasons
+        type: collection
+        path: content/en/seasons
+        format: yaml-frontmatter
+        filename:
+          template: "{slug}.md"
+          field: create
+        operations:
+          create: true
+          rename: false
+          delete: false
+        view:
+          primary: title
+          fields: [title, start_date, end_date, active]
+          sort: [start_date, title]
+          default:
+            sort: start_date
+            order: desc
+        fields:
+          - name: title
+            label: Season title
+            type: string
+            required: true
+          - name: slug
+            label: Season slug
+            type: string
+            required: true
+            pattern: "^[0-9]{4}-[0-9]{2}$"
+          - name: description
+            label: Description
+            type: text
+          - name: start_date
+            label: Start date
+            type: date
+            required: true
+          - name: end_date
+            label: End date
+            type: date
+            required: true
+          - name: active
+            label: Current season
+            type: boolean
+            default: false
+          - name: url
+            label: Public URL
+            type: string
+            readonly: true
+          - name: body
+            label: Season introduction
+            type: rich-text
+
+  - name: organization
+    label: People & Partners
+    type: group
+    items:
+      - name: people
+        label: Creative Team
+        type: collection
+        path: content/en/people
+        format: yaml-frontmatter
+        filename:
+          template: "{title}.md"
+          field: create
+        operations:
+          create: true
+          rename: false
+          delete: false
+        view:
+          primary: title
+          fields: [title, role, active, sort_order]
+          sort: [sort_order, title]
+          search: [title, role]
+        fields:
+          - name: title
+            label: Name
+            type: string
+            required: true
+          - name: role
+            label: Role
+            type: string
+            required: true
+          - name: group
+            label: Group
+            type: select
+            required: true
+            options:
+              values: [Creative Team, Staff]
+          - name: photo
+            label: Photo
+            type: image
+          - name: sort_order
+            label: Sort order
+            type: number
+            required: true
+          - name: active
+            label: Active
+            type: boolean
+            default: true
+          - name: body
+            label: Biography
+            type: rich-text
+
+      - name: board
+        label: Booster Board
+        type: collection
+        path: content/en/board
+        format: yaml-frontmatter
+        filename:
+          template: "{title}.md"
+          field: create
+        operations:
+          create: true
+          rename: false
+          delete: false
+        view:
+          primary: title
+          fields: [title, position, school_year, active, sort_order]
+          sort: [sort_order, title]
+        fields:
+          - name: title
+            label: Name
+            type: string
+            required: true
+          - name: position
+            label: Position
+            type: string
+            required: true
+          - name: school_year
+            label: School year
+            type: string
+            required: true
+          - name: sort_order
+            label: Sort order
+            type: number
+            required: true
+          - name: active
+            label: Active
+            type: boolean
+            default: true
+
+      - name: sponsors
+        label: Sponsors
+        type: collection
+        path: content/en/sponsors
+        format: yaml-frontmatter
+        filename:
+          template: "{title}.md"
+          field: create
+        operations:
+          create: true
+          rename: false
+          delete: false
+        view:
+          primary: title
+          fields: [title, level, season, active, sort_order]
+          sort: [sort_order, title]
+          search: [title, level]
+        fields:
+          - name: title
+            label: Sponsor name
+            type: string
+            required: true
+          - name: logo
+            label: Logo
+            type: image
+          - name: website_url
+            label: Website
+            type: string
+          - name: level
+            label: Sponsor level
+            type: select
+            options:
+              values: [Platinum, Gold, Silver, Community]
+          - name: season
+            label: Season
+            type: string
+          - name: active
+            label: Active
+            type: boolean
+            default: true
+          - name: sort_order
+            label: Sort order
+            type: number
+
+  - name: information
+    label: Visitor Information
+    type: group
+    items:
+      - name: faqs
+        label: FAQ
+        type: collection
+        path: content/en/faqs
+        format: yaml-frontmatter
+        filename:
+          template: "{title}.md"
+          field: create
+        operations:
+          create: true
+          rename: false
+          delete: false
+        view:
+          primary: title
+          fields: [title, category, featured, active, order]
+          sort: [category, order, title]
+          search: [title, category]
+        fields:
+          - name: title
+            label: Question
+            type: string
+            required: true
+          - name: category
+            label: Category
+            type: select
+            required: true
+            options:
+              values: [Students, Parents, Shows, Volunteering]
+          - name: order
+            label: Sort order
+            type: number
+            required: true
+          - name: featured
+            label: Featured
+            type: boolean
+            default: false
+          - name: active
+            label: Active
+            type: boolean
+            default: true
+          - name: body
+            label: Answer
+            type: rich-text
+            required: true
+
+      - name: venues
+        label: Venues
+        type: collection
+        path: content/en/venues
+        format: yaml-frontmatter
+        filename:
+          template: "{slug}.md"
+          field: create
+        operations:
+          create: true
+          rename: false
+          delete: false
+        view:
+          primary: title
+          fields: [title, address, active]
+        fields:
+          - name: title
+            label: Venue name
+            type: string
+            required: true
+          - name: slug
+            label: Venue slug
+            type: string
+            required: true
+            pattern: "^[a-z0-9-]+$"
+          - name: address
+            label: Address
+            type: string
+            required: true
+          - name: parking
+            label: Parking information
+            type: text
+          - name: entrance
+            label: Entrance information
+            type: text
+          - name: accessibility
+            label: Accessibility information
+            type: text
+          - name: map_url
+            label: Map URL
+            type: string
+          - name: map_embed_url
+            label: Embedded map URL
+            type: string
+            description: "Google Maps embed URL used in the Plan Your Visit section."
+          - name: active
+            label: Active
+            type: boolean
+            default: true
+
+  - name: site_settings
+    label: Site Settings
+    type: file
+    path: data/site.yml
+    format: yaml
+    operations:
+      delete: false
+    fields:
+      - name: description
+        label: Site description
+        type: text
+        required: true
+      - name: ticket_url
+        label: General ticket URL
+        type: string
+      - name: donate_url
+        label: Donation URL
+        type: string
+      - name: instagram_url
+        label: Instagram URL
+        type: string
+      - name: facebook_url
+        label: Facebook URL
+        type: string
+      - name: booster_email
+        label: Booster email
+        type: string
+      - name: legal_name
+        label: Legal organization name
+        type: string
+        required: true
+      - name: nonprofit_status
+        label: Nonprofit status
+        type: string
+        required: true
+      - name: ein
+        label: EIN
+        type: string
+        required: true
+      - name: mission
+        label: Mission statement
+        type: text
+        required: true
+      - name: mailing_address
+        label: Booster mailing address
+        type: string
+        required: true
+      - name: address
+        label: School address
+        type: string
+        required: true
+
+  - name: core_pages
+    label: Core Pages
+    type: group
+    items:
+      - name: about_page
+        label: Theatre Boosters
+        type: file
+        path: content/en/about/_index.md
+        format: yaml-frontmatter
+        operations:
+          delete: false
+        fields:
+          - name: title
+            label: Page title
+            type: string
+            required: true
+          - name: description
+            label: Page description
+            type: text
+            required: true
+          - name: hero_image
+            label: Hero image
+            type: image
+            required: true
+          - name: hero_image_alt
+            label: Hero image description
+            type: string
+            required: true
+          - name: legal_name
+            label: Legal organization name
+            type: string
+            required: true
+          - name: ein
+            label: EIN
+            type: string
+            required: true
+          - name: mission
+            label: Mission statement
+            type: text
+            required: true
+          - name: grant_acknowledgement
+            label: Ohio Arts Council acknowledgement
+            type: text
+            required: true
+          - name: body
+            label: Introduction
+            type: rich-text
+            required: true
+      - name: tickets_page
+        label: Tickets
+        type: file
+        path: content/en/tickets.md
+        format: yaml-frontmatter
+        operations:
+          delete: false
+        fields:
+          - name: title
+            type: string
+            required: true
+          - name: description
+            type: text
+            required: true
+          - name: hero_image
+            label: Hero image
+            type: image
+            required: true
+          - name: hero_image_alt
+            label: Hero image description
+            type: string
+            required: true
+          - name: body
+            type: rich-text
+      - name: privacy_page
+        label: Privacy Policy
+        type: file
+        path: content/en/privacy.md
+        format: yaml-frontmatter
+        operations:
+          delete: false
+        fields:
+          - name: title
+            type: string
+            required: true
+          - name: description
+            type: text
+            required: true
+          - name: body
+            type: rich-text
+      - name: contact_page
+        label: Contact
+        type: file
+        path: content/en/contact.md
+        format: yaml-frontmatter
+        operations:
+          delete: false
+        fields:
+          - name: title
+            type: string
+            required: true
+          - name: description
+            type: text
+            required: true
+          - name: body
+            type: rich-text
+      - name: volunteer_page
+        label: Volunteer
+        type: file
+        path: content/en/get-involved/volunteer.md
+        format: yaml-frontmatter
+        operations:
+          delete: false
+        fields:
+          - name: title
+            type: string
+            required: true
+          - name: description
+            type: text
+          - name: hero_image
+            label: Hero image
+            type: image
+            required: true
+          - name: hero_image_alt
+            label: Hero image description
+            type: string
+            required: true
+          - name: body
+            type: rich-text
+      - name: support_page
+        label: Support Us
+        type: file
+        path: content/en/support/_index.md
+        format: yaml-frontmatter
+        operations:
+          delete: false
+        fields:
+          - name: title
+            type: string
+            required: true
+          - name: description
+            type: text
+          - name: body
+            type: rich-text
+      - name: sponsor_page
+        label: Become a Sponsor
+        type: file
+        path: content/en/support/become-a-sponsor.md
+        format: yaml-frontmatter
+        operations:
+          delete: false
+        fields:
+          - name: title
+            type: string
+            required: true
+          - name: description
+            type: text
+          - name: hero_image
+            label: Hero image
+            type: image
+            required: true
+          - name: hero_image_alt
+            label: Hero image description
+            type: string
+            required: true
+          - name: body
+            type: rich-text

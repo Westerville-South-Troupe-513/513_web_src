@@ -1,0 +1,20 @@
+{{ $board := where (where site.RegularPages "Section" "board") ".Params.active" true }}
+{{ $board = sort $board ".Params.sort_order" }}
+{{ with $board }}
+  {{ $schoolYear := (index . 0).Params.school_year }}
+  <h2 class="section-title board-heading" id="booster-board-heading">{{ replace $schoolYear "-" "–" }} Booster Board</h2>
+  <div class="board-list">
+    {{ range . }}
+      <article>
+        <span>{{ .Params.position }}</span>
+        <h3>{{ .Title }}</h3>
+      </article>
+    {{ end }}
+  </div>
+  {{ if eq $schoolYear "2025-26" }}
+    <p class="board-note">The 2026–27 board will be posted here when the new appointments are confirmed.</p>
+  {{ end }}
+{{ else }}
+  <h2 class="section-title board-heading" id="booster-board-heading">Booster Board</h2>
+  <p class="board-note">Board information is being updated for the new school year. Please check back soon.</p>
+{{ end }}

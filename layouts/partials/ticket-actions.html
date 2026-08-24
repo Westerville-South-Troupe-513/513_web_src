@@ -1,0 +1,16 @@
+{{- $show := index . "show" -}}
+{{- $showDetails := index . "showDetails" -}}
+{{- $showTicketNote := false -}}
+{{- with $show.Params.opening_date -}}
+  {{- $opening := time.AsTime . -}}
+  {{- $showTicketNote = $opening.After (now.AddDate 0 0 14) -}}
+{{- end -}}
+<div class="hero-actions">
+  <div class="hero-ticket-action">
+    <a class="button-primary" href="{{ hugo.Data.site.ticket_url }}" target="_blank" rel="noopener">Purchase Tickets</a>
+    {{ if $showTicketNote }}
+      <small class="ticket-availability-note">Ticket listings may not include this production until closer to the show date.</small>
+    {{ end }}
+  </div>
+  {{ if $showDetails }}<a class="button-secondary" href="{{ $show.RelPermalink }}">Show Details</a>{{ end }}
+</div>

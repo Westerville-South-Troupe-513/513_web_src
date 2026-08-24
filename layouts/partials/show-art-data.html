@@ -1,0 +1,27 @@
+{{- $show := . -}}
+{{- $src := "" -}}
+{{- $srcLarge := "" -}}
+{{- $kind := "" -}}
+{{- $smallWidth := 0 -}}
+{{- $largeWidth := 0 -}}
+{{- with $show.Params.poster -}}
+  {{- $src = . -}}
+  {{- $srcLarge = $show.Params.poster_large | default "" -}}
+  {{- $kind = "poster" -}}
+  {{- $smallWidth = 400 -}}
+  {{- $largeWidth = 800 -}}
+{{- else -}}
+  {{- with $show.Params.profile_image -}}
+    {{- $src = . -}}
+    {{- $srcLarge = $show.Params.profile_image_large | default "" -}}
+    {{- $kind = "profile" -}}
+    {{- $smallWidth = 640 -}}
+    {{- $largeWidth = 1280 -}}
+  {{- else -}}
+    {{- with $show.Params.hero_image -}}
+      {{- $src = . -}}
+      {{- $kind = "hero" -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return (dict "src" $src "srcLarge" $srcLarge "kind" $kind "smallWidth" $smallWidth "largeWidth" $largeWidth) -}}

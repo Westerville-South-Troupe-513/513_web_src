@@ -1,0 +1,20 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17171a">
+<title>{{ if .IsHome }}{{ site.Title }} | Theatre Troupe 513 Boosters{{ else }}{{ .Title }} | {{ site.Title }} Boosters{{ end }}</title>
+<meta name="description" content="{{ .Description | default hugo.Data.site.description }}">
+<link rel="canonical" href="{{ .Permalink }}">
+{{ if .Params.noindex }}<meta name="robots" content="noindex,follow">{{ end }}
+<link rel="icon" href="/images/favicon.ico" sizes="any">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+{{ with (templates.Defer (dict "key" "global")) }}
+  {{ partial "css.html" . }}
+{{ end }}
+{{ with .OutputFormats.Get "rss" }}
+  <link rel="alternate" type="application/rss+xml" href="{{ .RelPermalink }}" title="{{ site.Title }}">
+{{ end }}
+{{ $organizationAddress := dict "@type" "PostalAddress" "postOfficeBoxNumber" "313" "addressLocality" "Westerville" "addressRegion" "OH" "postalCode" "43086" "addressCountry" "US" }}
+{{ $organization := dict "@context" "https://schema.org" "@type" "Organization" "name" hugo.Data.site.legal_name "url" site.BaseURL "logo" ("/images/troupe513-mark-white.png" | absURL) "description" hugo.Data.site.mission "email" hugo.Data.site.booster_email "taxID" hugo.Data.site.ein "address" $organizationAddress "sameAs" (slice hugo.Data.site.instagram_url hugo.Data.site.facebook_url) }}
+<script type="application/ld+json">{{ $organization | jsonify | safeJS }}</script>

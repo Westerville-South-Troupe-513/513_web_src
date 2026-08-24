@@ -1,0 +1,26 @@
+{{ $show := . }}
+{{ $status := partial "show-status.html" $show }}
+{{ $art := partial "show-art-data.html" $show }}
+<article class="show-card">
+  {{ if $show.Params.noindex }}<div class="show-card-poster" style="--show-color: {{ $show.Params.art_color | default "#33333a" }}">{{ else }}<a class="show-card-poster" href="{{ $show.RelPermalink }}" style="--show-color: {{ $show.Params.art_color | default "#33333a" }}">{{ end }}
+    {{ if $art.src }}
+      <img
+        class="show-art show-art-{{ $art.kind }}"
+        src="{{ $art.src }}"
+        {{ if $art.srcLarge }}srcset="{{ $art.src }} {{ $art.smallWidth }}w, {{ $art.srcLarge }} {{ $art.largeWidth }}w" sizes="(max-width: 34rem) calc(100vw - 2rem), (max-width: 48rem) 50vw, (max-width: 68rem) 33vw, 18vw"{{ end }}
+        alt="{{ $show.Title }} poster"
+        loading="lazy">
+    {{ else }}
+      <span class="poster-fallback">
+        {{ partial "poster-brand.html" . }}
+        <span class="poster-fallback-title">{{ $show.Title }}</span>
+        <span class="poster-fallback-type">{{ $show.Params.show_type }}</span>
+      </span>
+    {{ end }}
+  {{ if $show.Params.noindex }}</div>{{ else }}</a>{{ end }}
+  <div class="show-card-body">
+    <span class="show-status">{{ if eq $status.key "closed" }}Past Production{{ else }}{{ $status.label }}{{ end }}</span>
+    <h3 class="show-card-title">{{ if $show.Params.noindex }}{{ $show.Title }}{{ else }}<a href="{{ $show.RelPermalink }}">{{ $show.Title }}</a>{{ end }}</h3>
+    {{ with $show.Params.date_display }}<p class="show-card-date">{{ . }}</p>{{ end }}
+  </div>
+</article>

@@ -1,0 +1,6 @@
+{{- $venue := . -}}
+{{- with $venue.Params.map_url -}}
+  <a class="venue-map-link" href="{{ . }}" target="_blank" rel="noopener">{{ $venue.Params.address }}</a>
+{{- else -}}
+  {{- $venue.Params.address -}}
+{{- end -}}

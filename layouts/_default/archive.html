@@ -1,0 +1,46 @@
+{{ define "main" }}
+  <header class="page-hero shows-page-hero">
+    <div class="container-wide image-hero-layout">
+      <div class="image-hero-media">
+        <img src="/images/mamma_mia_ensemble.webp" alt="The Mamma Mia company performs together beneath falling confetti" width="1280" height="960" loading="eager" fetchpriority="high" decoding="async">
+      </div>
+      <div class="page-hero-copy image-hero-copy">
+        <p class="eyebrow">Troupe 513 History</p>
+        <h1 class="display-title">{{ .Title }}</h1>
+        <p class="page-description">{{ .Description }}</p>
+      </div>
+    </div>
+  </header>
+  <div class="archive-seasons">
+    {{ $seasons := where (where site.RegularPages "Section" "seasons") ".Params.active" false }}
+    {{ range sort $seasons ".Params.start_date" "desc" }}
+      {{ $season := .Params.slug }}
+      {{ $shows := where (where site.RegularPages "Section" "shows") ".Params.season" $season }}
+      <section class="archive-season" aria-labelledby="season-{{ $season }}">
+        <div class="container-wide archive-season-grid">
+          <header>
+            <p class="eyebrow">Season Archive</p>
+            <h2 class="section-title" id="season-{{ $season }}">{{ .Title }}</h2>
+          </header>
+          <ol class="archive-show-list">
+            {{ range sort $shows "Title" }}
+              {{ $show := . }}
+              <li>
+                <div class="archive-show-entry">
+                  <div class="archive-show-copy">
+                    <span class="archive-show-title">{{ .Title }}</span>
+                    <small>{{ .Params.show_type }}</small>
+                  </div>
+                  {{ with .Params.playbill }}
+                    {{ $playbillURL := partial "playbill-download-url.html" . }}
+                    <a class="playbill-download-link" href="{{ $playbillURL }}" target="_blank" rel="noopener" aria-label="Download the {{ $show.Title }} playbill"><span aria-hidden="true">↓</span> Download Playbill</a>
+                  {{ end }}
+                </div>
+              </li>
+            {{ end }}
+          </ol>
+        </div>
+      </section>
+    {{ end }}
+  </div>
+{{ end }}

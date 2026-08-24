@@ -1,0 +1,43 @@
+{{ $seasons := where (where site.RegularPages "Section" "seasons") ".Params.active" false }}
+<section class="section section-dark past-productions-section" aria-labelledby="past-productions-heading">
+  <div class="container-wide">
+    <header class="section-header">
+      <div>
+        <p class="eyebrow">Troupe 513 History</p>
+        <h2 class="section-title" id="past-productions-heading">Past Productions</h2>
+      </div>
+      <a class="text-link" href="/shows/archive/">Explore the Full Archive</a>
+    </header>
+    <div class="past-production-seasons">
+      {{ range first 1 (sort $seasons ".Params.start_date" "desc") }}
+        {{ $season := .Params.slug }}
+        {{ $shows := where (where site.RegularPages "Section" "shows") ".Params.season" $season }}
+        <section class="past-production-season" aria-labelledby="past-season-{{ $season }}">
+          <header>
+            <p class="eyebrow">Season</p>
+            <h3 id="past-season-{{ $season }}">{{ .Title }}</h3>
+          </header>
+          <ol>
+            {{ range sort $shows "Title" }}
+              {{ $show := . }}
+              <li>
+                <div>
+                  {{ if .Params.noindex }}
+                    <span class="past-production-title">{{ .Title }}</span>
+                  {{ else }}
+                    <a class="past-production-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                  {{ end }}
+                  <span>{{ .Params.show_type }}</span>
+                </div>
+                {{ with .Params.playbill }}
+                  {{ $playbillURL := partial "playbill-download-url.html" . }}
+                  <a class="playbill-download-link" href="{{ $playbillURL }}" target="_blank" rel="noopener" aria-label="Download the {{ $show.Title }} playbill"><span aria-hidden="true">↓</span> Download Playbill</a>
+                {{ end }}
+              </li>
+            {{ end }}
+          </ol>
+        </section>
+      {{ end }}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale | default "en-us" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content="0; url={{ .Params.redirect_to }}">
+    <link rel="canonical" href="{{ .Params.redirect_to | absURL }}">
+    <title>{{ .Title }} | {{ site.Title }}</title>
+  </head>
+  <body>
+    <p>This page has moved to <a href="{{ .Params.redirect_to }}">Theatre Boosters</a>.</p>
+  </body>
+</html>

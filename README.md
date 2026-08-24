@@ -1,13 +1,13 @@
 # Troupe 513 Website
 
-Source code and content for the [Westerville South Troupe 513](https://wshstheatre.org) website. The site is built with [Hugo](https://gohugo.io/) and the Ananke theme, then published to GitHub Pages.
+Source code and content for the [Westerville South Theatre](https://wshstheatre.org) website. The site uses Hugo, Tailwind CSS v4, Pages CMS, and GitHub Pages.
 
 ## Prerequisites
 
 Install the following before working locally:
 
-- Hugo Extended
-- Go 1.24 or later (used to resolve the theme module)
+- Hugo Extended 0.164.0
+- Node.js 22 or later
 - Git
 
 On macOS, Hugo can be installed with Homebrew:
@@ -22,7 +22,7 @@ Verify that your shell is using the Extended edition:
 hugo version
 ```
 
-The output must include `+extended`. If it does not, check for another installation with `which -a hugo`, then reinstall the Homebrew build with `brew reinstall hugo` and restart the shell (or run `hash -r`). The Ananke theme uses LibSass and cannot build with Hugo's standard edition.
+The output must include `+extended`. Tailwind is compiled through Hugo's CSS pipeline using the npm CLI dependency.
 
 ## Local Development
 
@@ -31,6 +31,7 @@ Clone the repository and start Hugo's development server:
 ```sh
 git clone https://github.com/Westerville-South-Troupe-513/513_web_src.git
 cd 513_web_src
+npm install
 hugo server -D
 ```
 
@@ -39,7 +40,7 @@ Open the local URL shown in the terminal, typically `http://localhost:1313`. Hug
 Create a production build with:
 
 ```sh
-hugo --minify -d public
+npm run build
 ```
 
 The generated `public/` directory is ignored by Git and should not be committed.
@@ -47,37 +48,48 @@ The generated `public/` directory is ignored by Git and should not be committed.
 ## Repository Structure
 
 ```text
-content/en/           Page content and front matter
-layouts/              Hugo templates and theme overrides
-layouts/partials/     Shared header, footer, and navigation markup
-assets/ananke/css/    Custom site styles
-static/images/        Images, icons, and sponsor artwork
-config.toml           Hugo and site-wide configuration
-.github/workflows/    GitHub Pages deployment workflow
+content/en/shows/     Current and archived show records
+content/en/faqs/      Structured FAQ entries
+content/en/           Other page and collection content
+layouts/              Custom Hugo templates
+layouts/partials/     Shared components
+assets/css/           Tailwind entry point and design system
+assets/js/            Minimal progressive enhancement scripts
+static/images/        Images, posters, and sponsor artwork
+data/site.yml         Editable site-wide links and contact settings
+.pages.yml            Pages CMS collections and fields
+.github/workflows/    Scheduled GitHub Pages deployment
 ```
 
 ## Updating Content
 
-Each page is stored as an `index.md` file in `content/en/`. For example, upcoming productions are maintained in `content/en/upcoming_shows/index.md`. Preserve the YAML front matter at the top of each file:
+Nontechnical editors can update shows, seasons, people, board members, sponsors, FAQs, venues, and core pages through Pages CMS. GitHub remains the canonical content store, and CMS saves trigger the normal deployment workflow.
+
+Show records live in `content/en/shows/`. A current show begins with structured front matter such as:
 
 ```yaml
 ---
-title: "Upcoming Shows"
-description: "Check out our upcoming productions!"
-featured_image: "/images/upcoming_banner_1.png"
-menu:
-  main:
-    weight: 5
+title: "Lost Girl"
+slug: "lost-girl"
+season: "2026-27"
+show_type: "Fall Play"
+program: "main-stage"
+production_format: "play"
+opening_date: 2026-10-02
+closing_date: 2026-10-04
+date_display: "October 2–4, 2026"
 ---
 ```
 
-Add images to `static/images/` and reference them from content as `/images/filename.png`. Use lowercase snake_case filenames to match the existing convention.
+Use `program` to place a production in the Main Stage, student-directed, one-act, or special-event presentation. Student productions can also include `student_directors`; one-act titles can be added later through the repeatable `works` field in Pages CMS.
+
+Add images to `static/images/` and reference them as `/images/filename.png`. Pages CMS safely renames uploaded media.
 
 ## Validation
 
 There is no automated test suite. Before submitting a change:
 
-1. Run `hugo --minify -d public` and resolve all errors or warnings.
+1. Run `npm run build` and resolve all errors or warnings. The build cleans stale generated output before rendering.
 2. Preview affected pages with `hugo server -D`.
 3. Check navigation, images, external links, and mobile layout.
 
@@ -85,12 +97,14 @@ There is no automated test suite. Before submitting a change:
 
 Pushes to `main` trigger `.github/workflows/deploy.yml`. The workflow:
 
-1. Checks out the full Git history and submodules.
-2. Installs the latest Hugo Extended release.
-3. Runs `hugo --minify -d public`.
-4. Uses the repository `GITHUB_TOKEN` to publish `public/` to `gh-pages`.
+1. Checks out the repository.
+2. Installs Node.js, Tailwind dependencies, and Hugo Extended 0.164.0.
+3. Runs a warning-free production build.
+4. Uses the repository `GITHUB_TOKEN` to publish `public/` to `gh-pages` and preserve the custom domain.
 
-GitHub Pages serves the generated `gh-pages` branch at the custom domain configured by its `CNAME` file: `wshstheatre.org`. That file currently exists only on `gh-pages`; it is not generated from `main` or explicitly configured in the workflow. After a deployment, confirm that the custom domain remains configured. If it is removed, restore it in the repository's Pages settings and update the deployment workflow to preserve the CNAME.
+The workflow also runs daily so date-derived show statuses move from Coming Soon to Now Playing and Closed without requiring a content edit.
+
+GitHub Pages serves the generated `gh-pages` branch at `wshstheatre.org`. The deployment action writes the required `CNAME` on each release.
 
 Do not edit ordinary generated files on `gh-pages`; content and layout changes belong on `main`. To troubleshoot a failed release, open the repository's **Actions** tab, select **Build and Deploy Hugo to GH Pages**, and inspect the failed checkout, build, or deploy step. The workflow requires repository Actions to have permission to write contents so it can update `gh-pages`.
 

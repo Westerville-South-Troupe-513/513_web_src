@@ -1,0 +1,18 @@
+{{ define "main" }}
+  <header class="page-hero"><div class="container page-hero-copy"><p class="eyebrow">Parents &amp; Boosters</p><h1 class="display-title">{{ .Title }}</h1><p class="page-description">{{ .Description }}</p></div></header>
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Current Listing</p>
+      {{ $board := where (where site.RegularPages "Section" "board") ".Params.active" true }}
+      {{ $board = sort $board ".Params.sort_order" }}
+      {{ $schoolYear := strings.Replace (index $board 0).Params.school_year "-" "–" }}
+      <h2 class="section-title board-heading">{{ $schoolYear }} Board</h2>
+      <div class="board-list">
+        {{ range sort $board ".Params.sort_order" }}
+          <article><span>{{ .Params.position }}</span><h3>{{ .Title }}</h3>{{ with .Params.email }}<a href="mailto:{{ . }}">{{ . }}</a>{{ end }}</article>
+        {{ end }}
+      </div>
+      <p class="board-note">Board membership is being updated for the new school year.</p>
+    </div>
+  </section>
+{{ end }}

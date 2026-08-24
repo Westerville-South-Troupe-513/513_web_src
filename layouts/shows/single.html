@@ -1,0 +1,133 @@
+{{ define "main" }}
+  {{ $status := partial "show-status.html" . }}
+  {{ $programLabel := partial "program-label.html" .Params.program }}
+  {{ $venue := site.GetPage (printf "/venues/%s" .Params.venue) }}
+  {{ $art := partial "show-art-data.html" . }}
+  <header class="show-detail-hero" style="--show-color: {{ .Params.art_color | default "#33333a" }}">
+    <div class="container-wide show-detail-grid">
+      <div class="show-detail-poster">
+        {{ if $art.src }}
+          <img
+            class="show-art show-art-{{ $art.kind }}"
+            src="{{ $art.src }}"
+            {{ if $art.srcLarge }}srcset="{{ $art.src }} {{ $art.smallWidth }}w, {{ $art.srcLarge }} {{ $art.largeWidth }}w" sizes="(max-width: 48rem) 78vw, 27rem"{{ end }}
+            alt="{{ $.Title }} poster">
+        {{ else }}
+          <div class="poster-fallback">
+            {{ partial "poster-brand.html" . }}
+            <span class="poster-fallback-title">{{ $.Title }}</span>
+            <span class="poster-fallback-type">{{ $.Params.show_type }}</span>
+          </div>
+        {{ end }}
+      </div>
+      <div class="show-detail-copy">
+        <p class="eyebrow">{{ $status.label }} · {{ $programLabel }}</p>
+        <h1 class="display-title">{{ .Title }}</h1>
+        <p class="hero-meta">{{ .Params.date_display }}</p>
+        {{ with .Params.short_summary }}<p class="show-summary">{{ . }}</p>{{ end }}
+        {{ with $venue }}<p class="show-venue">{{ .Title }} · {{ partial "venue-address.html" . }}</p>{{ end }}
+        {{ if eq $status.key "closed" }}
+          <div class="hero-actions">
+            <a class="button-primary" href="/shows/archive/">Browse Past Productions</a>
+          </div>
+        {{ else }}
+          {{ partial "ticket-actions.html" (dict "show" . "showDetails" false) }}
+        {{ end }}
+      </div>
+    </div>
+  </header>
+  <section class="section">
+    <div class="container show-detail-body">
+      <div>
+        {{ if .Params.long_summary }}
+          <p class="eyebrow">About the Show</p>
+          <h2 class="section-title">{{ .Title }}</h2>
+          <div class="prose show-synopsis">{{ .Params.long_summary | markdownify }}</div>
+        {{ else if ne (strings.TrimSpace .RawContent) "" }}
+          <p class="eyebrow">About the Show</p>
+          <h2 class="section-title">{{ .Title }}</h2>
+          <div class="prose">{{ .Content }}</div>
+        {{ else }}
+          <p class="eyebrow">Production Archive</p>
+          <h2 class="section-title">{{ strings.Replace .Params.season "-" "–" }} Season</h2>
+          <p class="page-description archive-description">Troupe 513 presented <em>{{ .Title }}</em> as part of its {{ strings.Replace .Params.season "-" "–" }} season.</p>
+          {{ with .Params.playbill }}
+            {{ $playbillURL := partial "playbill-download-url.html" . }}
+            <p><a class="button-dark" href="{{ $playbillURL }}" target="_blank" rel="noopener">Download Playbill</a></p>
+          {{ end }}
+        {{ end }}
+      </div>
+      <aside class="show-facts" aria-label="Show details">
+        <h2 class="footer-heading">Show Details</h2>
+        <dl>
+          <div><dt>Production</dt><dd>{{ .Params.show_type }}</dd></div>
+          <div><dt>{{ if .Params.opening_date }}Dates{{ else }}Season{{ end }}</dt><dd>{{ .Params.date_display }}</dd></div>
+          {{ with .Params.student_directors }}<div><dt>Student {{ if gt (len .) 1 }}directors{{ else }}director{{ end }}</dt><dd>{{ delimit . ", " " &amp; " | safeHTML }}</dd></div>{{ end }}
+          {{ with $venue }}<div><dt>Venue</dt><dd>{{ .Title }}</dd></div>{{ end }}
+          {{ with .Params.runtime }}<div><dt>Runtime</dt><dd>{{ . }}</dd></div>{{ end }}
+          {{ with .Params.intermission }}<div><dt>Intermission</dt><dd>{{ . }}</dd></div>{{ end }}
+          {{ with .Params.age_guidance }}<div><dt>Age guidance</dt><dd>{{ . }}</dd></div>{{ end }}
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  {{ with .Params.works }}
+    <section class="section section-dark" aria-labelledby="one-act-heading">
+      <div class="container">
+        <p class="eyebrow">The Program</p>
+        <h2 class="section-title" id="one-act-heading">One-Act Plays</h2>
+        <div class="performance-list">
+          {{ range . }}
+            <div class="performance-row">
+              <div><strong>{{ .title }}</strong>{{ with .directors }}<span>Directed by {{ delimit . ", " " &amp; " | safeHTML }}</span>{{ end }}</div>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+
+  {{ with .Params.performances }}
+    <section class="section section-dark" aria-labelledby="performances-heading">
+      <div class="container">
+        <p class="eyebrow">Choose a Performance</p>
+        <h2 class="section-title" id="performances-heading">Performances</h2>
+        <div class="performance-list">
+          {{ range . }}
+            <div class="performance-row">
+              <div><strong>{{ time.Format "Monday, January 2" (time.AsTime .date) }}</strong><span>{{ .time }}</span></div>
+              {{ with .ticket_url }}<a class="button-primary" href="{{ . }}">Buy Tickets</a>{{ end }}
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+
+  {{ if or .Params.cast .Params.crew }}
+    <section class="section" aria-labelledby="company-heading">
+      <div class="container">
+        <p class="eyebrow">The Company</p>
+        <h2 class="section-title" id="company-heading">Cast &amp; Crew</h2>
+        <div class="company-grid">
+          {{ with .Params.cast }}<div class="prose"><h3>Cast</h3>{{ . | markdownify }}</div>{{ end }}
+          {{ with .Params.crew }}<div class="prose"><h3>Crew</h3>{{ . | markdownify }}</div>{{ end }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+
+  {{ with .Params.gallery }}
+    <section class="section section-dark" aria-labelledby="gallery-heading">
+      <div class="container-wide">
+        <p class="eyebrow">From the Stage</p>
+        <h2 class="section-title" id="gallery-heading">Production Photos</h2>
+        <div class="gallery-grid">{{ range . }}<img src="{{ . }}" alt="Production photo from {{ $.Title }}" loading="lazy">{{ end }}</div>
+      </div>
+    </section>
+  {{ end }}
+
+  {{ partial "plan-your-visit.html" $venue }}
+
+{{ end }}

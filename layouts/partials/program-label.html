@@ -1,0 +1,7 @@
+{{- $program := . -}}
+{{- if eq $program "main-stage" -}}Main Stage
+{{- else if eq $program "student-directed" -}}Student-Directed Full Length
+{{- else if eq $program "one-act-festival" -}}Student One-Act Plays
+{{- else if eq $program "special-event" -}}Special Event
+{{- else -}}Production
+{{- end -}}

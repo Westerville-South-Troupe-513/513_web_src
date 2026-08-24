@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+  schedule:
+    - cron: '0 10 * * *'
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -13,15 +16,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          submodules: true  # Fetches your ananke theme submodule
-          fetch-depth: 0    # Fetches all history
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install CSS dependencies
+        run: npm ci
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: 'latest'
-          extended: true    # Important for themes like Ananke that process SCSS
+          hugo-version: '0.164.0'
+          extended: true
       - name: Build Hugo Site
-        run: hugo --minify -d public   # Forces the output directory into 'public'
+        run: hugo --cleanDestinationDir --minify --panicOnWarning -d public
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
@@ -29,4 +38,3 @@ jobs:
           publish_dir: ./public
           publish_branch: gh-pages
           cname: wshstheatre.org
-

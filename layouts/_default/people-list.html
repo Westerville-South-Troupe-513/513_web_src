@@ -1,0 +1,19 @@
+{{ define "main" }}
+  <header class="page-hero creative-team-page-hero"><div class="container page-hero-copy"><p class="eyebrow">About Troupe 513</p><h1 class="display-title">{{ .Title }}</h1><p class="page-description">{{ .Description }}</p></div></header>
+  <section class="section">
+    <div class="container-wide people-grid">
+      {{ $people := where (where site.RegularPages "Section" "people") ".Params.active" true }}
+      {{ range sort $people ".Params.sort_order" }}
+        {{ $person := . }}
+        <article class="person-card">
+          {{ with .Params.photo }}<img class="person-photo" src="{{ . }}" alt="Portrait of {{ $person.Title }}" loading="lazy">{{ end }}
+          <div class="person-copy">
+            <p class="eyebrow">{{ .Params.role }}</p>
+            <h2>{{ .Title }}</h2>
+            <div class="prose">{{ .Content }}</div>
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}

@@ -1,0 +1,36 @@
+{{ define "main" }}
+  {{ $season := .Params.slug }}
+  {{ $shows := where (where site.RegularPages "Section" "shows") ".Params.season" $season }}
+  {{ if .Params.active }}
+    {{ $shows = $shows.ByParam "opening_date" }}
+  {{ else }}
+    {{ $shows = sort $shows "Title" }}
+  {{ end }}
+  {{ $mainStageShows := where $shows ".Params.program" "main-stage" }}
+  {{ $studentShows := where $shows ".Params.program" "ne" "main-stage" }}
+  <header class="page-hero shows-page-hero">
+    <div class="container page-hero-copy">
+      <p class="eyebrow">Westerville South Theatre</p>
+      <h1 class="display-title">{{ .Title }}</h1>
+      <p class="page-description">{{ .Description }}</p>
+    </div>
+  </header>
+  <section class="section section-dark">
+    <div class="container-wide">
+      {{ if .Params.active }}
+        <header class="section-header"><div><p class="eyebrow">On Our Stage</p><h2 class="section-title">Main Stage</h2></div></header>
+        <div class="show-grid">{{ range $mainStageShows }}{{ partial "show-card.html" . }}{{ end }}</div>
+      {{ else }}
+        <div class="show-grid">{{ range $shows }}{{ partial "show-card.html" . }}{{ end }}</div>
+      {{ end }}
+    </div>
+  </section>
+  {{ if and .Params.active $studentShows }}
+    <section class="section section-student-work" id="student-work">
+      <div class="container-wide">
+        <header class="section-header student-work-header"><div><p class="eyebrow">Student Leadership</p><h2 class="section-title">Student-Directed &amp; Original Work</h2><p class="section-intro">Full-length projects, one-act evenings, and the annual Scho Show complete the season.</p></div></header>
+        {{ partial "student-production-list.html" $studentShows }}
+      </div>
+    </section>
+  {{ end }}
+{{ end }}

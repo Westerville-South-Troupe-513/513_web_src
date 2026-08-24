@@ -1,0 +1,15 @@
+<div class="sponsor-grid">
+  {{ $sponsors := where (where site.RegularPages "Section" "sponsors") ".Params.active" true }}
+  {{ range sort $sponsors ".Params.sort_order" }}
+    {{ $sponsor := . }}
+    {{ if .Params.website_url }}<a class="sponsor-card" href="{{ .Params.website_url }}" aria-label="Visit {{ .Title }}" target="_blank" rel="noopener">{{ else }}<div class="sponsor-card">{{ end }}
+      {{ with .Params.logo }}
+        {{ $logo := . }}
+        {{ $optimizedLogo := replaceRE `(?i)\.(png|jpe?g)$` ".webp" $logo }}
+        {{ if not (fileExists (printf "static%s" $optimizedLogo)) }}{{ $optimizedLogo = $logo }}{{ end }}
+        <img src="{{ $optimizedLogo }}" alt="{{ $sponsor.Title }}" loading="lazy" decoding="async">
+      {{ else }}<span>{{ $sponsor.Title }}</span>{{ end }}
+    {{ if .Params.website_url }}</a>{{ else }}</div>{{ end }}
+  {{ end }}
+  <a class="sponsor-card sponsor-card-cta" href="/support/become-a-sponsor/">Your Business Here</a>
+</div>

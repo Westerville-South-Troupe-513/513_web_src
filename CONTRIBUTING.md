@@ -4,7 +4,7 @@ Thank you for helping maintain the Westerville South Troupe 513 website. Contrib
 
 ## Before You Begin
 
-Install Git, Go 1.24 or later, and Hugo Extended. Confirm that `hugo version` includes `+extended`; the Ananke theme's styles cannot be built with Hugo's standard edition.
+Install Git, Node.js 22 or later, and Hugo Extended 0.164.0. Confirm that `hugo version` includes `+extended`, then run `npm install`.
 
 Create a focused branch from the latest `main`:
 
@@ -19,7 +19,8 @@ git switch -c update/upcoming-shows
 - Edit page content under `content/en/`.
 - Put images in `static/images/` and use lowercase snake_case filenames.
 - Keep shared templates in `layouts/partials/`.
-- Maintain custom styles in `assets/ananke/css/main.css`.
+- Maintain the reference-derived design system in `assets/css/main.css`.
+- Reuse shared markup through `layouts/partials/`.
 - Do not commit generated `public/`, `resources/`, or `.hugo_build.lock` files.
 - Do not edit `gh-pages`; GitHub Actions generates that branch from `main`.
 
@@ -36,10 +37,10 @@ hugo server -D
 Check affected pages at the local URL printed by Hugo. Verify navigation, images, links, and responsive layout. Then run the production command used by GitHub Actions:
 
 ```sh
-hugo --minify -d public
+npm run build
 ```
 
-The current Ananke dependency may emit Hugo language API deprecation warnings. These warnings are known; build errors must be resolved before submitting a change.
+The production build treats Hugo warnings as failures.
 
 ## Commits and Pull Requests
 

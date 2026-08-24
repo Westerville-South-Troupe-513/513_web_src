@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale | default "en-us" }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body class="site-body">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    {{ partial "site-header.html" . }}
+    <main id="main-content">
+      {{ block "main" . }}{{ end }}
+      {{ if not .Params.hide_sponsors }}{{ partial "sponsor-section.html" . }}{{ end }}
+    </main>
+    {{ partial "site-footer.html" . }}
+    {{ partial "scripts.html" . }}
+  </body>
+</html>

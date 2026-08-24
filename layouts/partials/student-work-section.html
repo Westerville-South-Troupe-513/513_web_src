@@ -1,0 +1,16 @@
+{{- $shows := index . "shows" -}}
+<section class="section section-student-work" id="student-work" aria-labelledby="student-work-heading">
+  <div class="container-wide">
+    <header class="section-header production-section-header">
+      <div class="production-section-image">
+        <img src="/images/student_led.webp" alt="Student performers in a student-led stage production" width="1440" height="1076" loading="lazy" decoding="async">
+      </div>
+      <div class="production-section-copy">
+        <p class="eyebrow">More Ways to Take the Stage</p>
+        <h2 class="section-title" id="student-work-heading">Student-Directed &amp; Original Work</h2>
+        <p class="section-intro">Full-length projects, one-act evenings, and the annual Scho Show give students room to lead, direct, and create.</p>
+      </div>
+    </header>
+    {{ partial "student-production-list.html" $shows }}
+  </div>
+</section>

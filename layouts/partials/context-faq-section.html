@@ -1,0 +1,17 @@
+{{ $categories := .categories }}
+{{ $entries := where (where (where site.RegularPages "Section" "faqs") ".Params.category" "in" $categories) ".Params.active" true }}
+{{ with $entries }}
+  <section class="section context-faq-section" id="frequently-asked-questions" aria-labelledby="context-faq-heading">
+    <div class="container">
+      <header class="context-faq-header">
+        <p class="eyebrow">What to Know</p>
+        <h2 class="section-title" id="context-faq-heading">Frequently Asked Questions</h2>
+      </header>
+      <div class="faq-list">
+        {{ range sort . ".Params.order" }}
+          {{ partial "faq-item.html" . }}
+        {{ end }}
+      </div>
+    </div>
+  </section>
+{{ end }}

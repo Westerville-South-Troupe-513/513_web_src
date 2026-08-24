@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <header class="page-hero">
+    <div class="container page-hero-copy">
+      <p class="eyebrow">Westerville South Theatre</p>
+      <h1 class="display-title">{{ .Title }}</h1>
+      {{ with .Description }}<p class="page-description">{{ . }}</p>{{ end }}
+    </div>
+  </header>
+  <div class="section"><div class="container prose">{{ .Content }}</div></div>
+{{ end }}

@@ -1,0 +1,35 @@
+{{ $now := now }}
+{{ $label := "Coming Soon" }}
+{{ $key := "coming-soon" }}
+{{ with .Params.opening_date }}
+  {{ $opening := time.AsTime . }}
+  {{ $closing := time.AsTime ($.Params.closing_date | default .) }}
+  {{ $afterClosing := $closing.AddDate 0 0 1 }}
+  {{ if $now.Before $opening }}
+    {{ $hasTickets := ne ($.Params.ticket_url | default "") "" }}
+    {{ range $.Params.performances }}
+      {{ if ne (.ticket_url | default "") "" }}{{ $hasTickets = true }}{{ end }}
+    {{ end }}
+    {{ if $hasTickets }}
+      {{ $label = "Tickets On Sale" }}
+      {{ $key = "tickets-on-sale" }}
+    {{ end }}
+  {{ else if $now.Before $afterClosing }}
+    {{ $label = "Now Playing" }}
+    {{ $key = "now-playing" }}
+  {{ else }}
+    {{ $label = "Closed" }}
+    {{ $key = "closed" }}
+  {{ end }}
+{{ else }}
+  {{ with site.GetPage (printf "/seasons/%s" $.Params.season) }}
+    {{ with .Params.end_date }}
+      {{ $seasonEnd := (time.AsTime .).AddDate 0 0 1 }}
+      {{ if $now.After $seasonEnd }}
+        {{ $label = "Closed" }}
+        {{ $key = "closed" }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ return (dict "label" $label "key" $key) }}

@@ -1,0 +1,6 @@
+{{- $url := . -}}
+{{- if strings.Contains $url "drive.google.com/file/d/" -}}
+  {{- $fileID := replaceRE `^.*?/file/d/([^/]+).*$` "$1" $url -}}
+  {{- $url = printf "https://drive.google.com/uc?export=download&id=%s" $fileID -}}
+{{- end -}}
+{{- return $url -}}

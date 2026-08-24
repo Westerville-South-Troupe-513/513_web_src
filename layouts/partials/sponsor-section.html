@@ -1,0 +1,12 @@
+<section class="section" aria-labelledby="site-sponsors-heading">
+  <div class="container-wide">
+    <header class="section-header">
+      <div>
+        <p class="eyebrow">Community Partners</p>
+        <h2 class="section-title" id="site-sponsors-heading">Our Sponsors</h2>
+      </div>
+      {{ if ne .RelPermalink "/support/become-a-sponsor/" }}<a class="text-link" href="/support/become-a-sponsor/">Become a Sponsor</a>{{ end }}
+    </header>
+    {{ partial "sponsor-grid.html" . }}
+  </div>
+</section>
