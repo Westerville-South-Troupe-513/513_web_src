@@ -17,7 +17,9 @@
         <h1 class="display-title" id="featured-show-title">{{ $featured.Title }}</h1>
         <p class="hero-meta">{{ $featured.Params.show_type }} · {{ $featured.Params.date_display }}</p>
         {{ with $featured.Params.short_summary }}<p class="hero-summary">{{ . }}</p>{{ end }}
-        {{ partial "ticket-actions.html" (dict "show" $featured "showDetails" true) }}
+        <div class="hero-actions">
+          <a class="button-primary" href="{{ $featured.RelPermalink }}">More Info</a>
+        </div>
       </div>
       <div class="hero-poster-column">
         <a class="hero-poster" href="{{ $featured.RelPermalink }}" aria-label="View details for {{ $featured.Title }}" style="--show-color: {{ $featured.Params.art_color }}">
