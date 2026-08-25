@@ -11,9 +11,11 @@ season: "2026-27"
 show_type: "Spring Play"
 program: "main-stage"
 production_format: "play"
+poster: "/images/no_exit_playbill_medium.webp"
+poster_large: "/images/no_exit_playbill_large.webp"
 opening_date: 2027-03-19
-closing_date: 2027-03-20
-date_display: "March 19–20, 2027"
+closing_date: 2027-03-21
+date_display: "March 19–21, 2027"
 venue: "south-auditorium"
 featured: false
 draft: false

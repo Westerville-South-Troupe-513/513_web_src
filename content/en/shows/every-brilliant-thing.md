@@ -11,6 +11,8 @@ season: "2026-27"
 show_type: "Winter Play"
 program: "main-stage"
 production_format: "play"
+poster: "/images/every_brilliant_thing_playbill_medium.webp"
+poster_large: "/images/every_brilliant_thing_playbill_large.webp"
 opening_date: 2026-11-20
 closing_date: 2026-11-21
 date_display: "November 20–21, 2026"
