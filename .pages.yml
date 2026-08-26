@@ -210,6 +210,11 @@ content:
               value: "{slug}"
               label: "{title}"
               search: "title,address"
+          - name: venue_tbd
+            label: Venue to be determined
+            type: boolean
+            default: false
+            description: "Show the venue as To Be Determined and hide Plan Your Visit until a location is selected."
           - name: runtime
             label: Runtime
             type: string

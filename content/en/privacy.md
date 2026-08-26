@@ -3,7 +3,7 @@ title: "Privacy Policy"
 description: "How Westerville South High School Theatre Boosters Inc. handles information associated with this website."
 hide_sponsors: true
 ---
-*Effective August 24, 2026*
+*Effective August 25, 2026*
 
 Westerville South High School Theatre Boosters Inc. (the “Boosters,” “we,” “us,” or “our”) operates **wshstheatre.org** to share information about Westerville South Theatre productions, volunteer opportunities, fundraising, sponsorships, and troupe activities. This policy explains how information may be handled when you use this website.
 
@@ -24,7 +24,7 @@ We do not intentionally set first-party cookies. Some pages load services provid
 - Google Fonts supplies the site’s typefaces.
 - Google Maps provides embedded venue maps.
 - Hometown Ticketing handles ticket purchases.
-- Zeffy handles donations and business sponsorships.
+- BoosterHub handles donations, Booster membership registration, sponsorships, volunteer communications, and other operational activities.
 - Google Sites, Google Drive, social networks, and the theatre merchandise store host resources linked from this website.
 
 Embedded services may receive technical information from your browser and may use cookies according to their own privacy policies. When you follow a link to another website, the privacy practices of that service apply.

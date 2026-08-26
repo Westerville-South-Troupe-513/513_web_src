@@ -16,7 +16,7 @@ poster_large: "/images/every_brilliant_thing_playbill_large.webp"
 opening_date: 2026-11-20
 closing_date: 2026-11-21
 date_display: "November 20–21, 2026"
-venue: "south-auditorium"
+venue_tbd: true
 featured: false
 draft: false
 art_color: "#d58b24"

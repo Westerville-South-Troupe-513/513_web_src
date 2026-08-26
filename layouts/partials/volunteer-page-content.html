@@ -40,10 +40,13 @@
 <section class="section volunteer-signup" aria-labelledby="volunteer-signup-heading">
   <div class="container volunteer-signup-card">
     <div>
-      <p class="eyebrow">Ready to Pitch In?</p>
-      <h2 class="section-title" id="volunteer-signup-heading">Join the Volunteer List.</h2>
-      <p>Show-specific SignUpGenius links are shared before each production. Introduce yourself now and we’ll help you find a role that fits.</p>
+      <p class="eyebrow">Stay in the Loop</p>
+      <h2 class="section-title" id="volunteer-signup-heading">Connect Through BoosterHub.</h2>
+      <p>Show-specific volunteer links are shared through BoosterHub close to each production. Join the Boosters to receive announcements, or log in to check current messages and opportunities.</p>
     </div>
-    <a class="button-primary" href="mailto:{{ hugo.Data.site.booster_email }}?subject=Volunteer%20with%20Westerville%20South%20Theatre">Ask About Volunteering</a>
+    <div class="volunteer-signup-actions">
+      <a class="button-primary" href="{{ hugo.Data.site.membership_url }}" target="_blank" rel="noopener">Join the Boosters</a>
+      <a class="button-secondary" href="{{ hugo.Data.site.boosterhub_login_url }}" target="_blank" rel="noopener">Log In to BoosterHub</a>
+    </div>
   </div>
 </section>

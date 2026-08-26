@@ -29,7 +29,11 @@
         <h1 class="display-title">{{ .Title }}</h1>
         <p class="hero-meta">{{ .Params.date_display }}</p>
         {{ with .Params.short_summary }}<p class="show-summary">{{ . }}</p>{{ end }}
-        {{ with $venue }}<p class="show-venue">{{ .Title }} · {{ partial "venue-address.html" . }}</p>{{ end }}
+        {{ if .Params.venue_tbd }}
+          <p class="show-venue">Venue: To Be Determined</p>
+        {{ else }}
+          {{ with $venue }}<p class="show-venue">{{ .Title }} · {{ partial "venue-address.html" . }}</p>{{ end }}
+        {{ end }}
         {{ if eq $status.key "closed" }}
           <div class="hero-actions">
             <a class="button-primary" href="/shows/archive/">Browse Past Productions</a>
@@ -67,7 +71,11 @@
           <div><dt>Production</dt><dd>{{ .Params.show_type }}</dd></div>
           <div><dt>{{ if .Params.opening_date }}Dates{{ else }}Season{{ end }}</dt><dd>{{ .Params.date_display }}</dd></div>
           {{ with .Params.student_directors }}<div><dt>Student {{ if gt (len .) 1 }}directors{{ else }}director{{ end }}</dt><dd>{{ delimit . ", " " &amp; " | safeHTML }}</dd></div>{{ end }}
-          {{ with $venue }}<div><dt>Venue</dt><dd>{{ .Title }}</dd></div>{{ end }}
+          {{ if .Params.venue_tbd }}
+            <div><dt>Venue</dt><dd>To Be Determined</dd></div>
+          {{ else }}
+            {{ with $venue }}<div><dt>Venue</dt><dd>{{ .Title }}</dd></div>{{ end }}
+          {{ end }}
           {{ with .Params.runtime }}<div><dt>Runtime</dt><dd>{{ . }}</dd></div>{{ end }}
           {{ with .Params.intermission }}<div><dt>Intermission</dt><dd>{{ . }}</dd></div>{{ end }}
           {{ with .Params.age_guidance }}<div><dt>Age guidance</dt><dd>{{ . }}</dd></div>{{ end }}
@@ -137,6 +145,8 @@
     </section>
   {{ end }}
 
-  {{ partial "plan-your-visit.html" $venue }}
+  {{ if not .Params.venue_tbd }}
+    {{ partial "plan-your-visit.html" $venue }}
+  {{ end }}
 
 {{ end }}

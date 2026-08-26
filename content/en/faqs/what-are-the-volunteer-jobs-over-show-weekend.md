@@ -7,7 +7,7 @@ active: true
 ---
 We're going to break down the different ways to help for each of our mainstage shows. 
 
-A few weeks before show weekend, we will post and share via Remind the Signup Genius. There are many jobs listed, and each has a different time and energy commitment. The jobs are all really low stakes. We make it fun to help, and we don't expect anyone to be stressed about volunteering. Many hands make light work, and we'll set you up for success!
+A few weeks before show weekend, we will share the volunteer signup through BoosterHub. There are many jobs listed, and each has a different time and energy commitment. The jobs are all really low stakes. We make it fun to help, and we don't expect anyone to be stressed about volunteering. Many hands make light work, and we'll set you up for success!
 
 ** Before we get into the nitty-gritty, please note that it is really helpful and really appreciated when family members sign up for shows that their thespian isn't involved in! It spreads out the work and helps those with kids in the show focus on the show and their child's participation in it.
 

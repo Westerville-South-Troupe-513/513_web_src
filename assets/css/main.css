@@ -1082,6 +1082,13 @@ button:focus-visible {
   white-space: nowrap;
 }
 
+.volunteer-signup-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: .75rem;
+}
+
 .sponsor-intro-layout {
   display: grid;
   align-items: start;
@@ -1136,6 +1143,14 @@ button:focus-visible {
   overflow-wrap: anywhere;
 }
 
+.sponsor-benefits {
+  padding-block: clamp(3rem, 5vw, 4.5rem);
+}
+
+.sponsor-benefits .section-header {
+  margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
+}
+
 .sponsor-benefit-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1143,9 +1158,9 @@ button:focus-visible {
 }
 
 .sponsor-benefit-grid article {
-  min-height: 22rem;
+  min-height: 15rem;
   border-right: 1px solid #414148;
-  padding: clamp(1.5rem, 3vw, 2.25rem);
+  padding: clamp(1.25rem, 2vw, 1.75rem);
 }
 
 .sponsor-benefit-grid article:last-child {
@@ -1155,14 +1170,14 @@ button:focus-visible {
 .sponsor-benefit-grid article > span {
   color: var(--color-stage-red);
   font-family: var(--font-display);
-  font-size: 1.75rem;
+  font-size: 1.4rem;
   font-weight: 800;
 }
 
 .sponsor-benefit-grid h3 {
-  margin: 3rem 0 1rem;
+  margin: 1.5rem 0 .75rem;
   font-family: var(--font-display);
-  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-size: clamp(1.8rem, 2.5vw, 2.5rem);
   line-height: .92;
   text-transform: uppercase;
 }
@@ -1196,7 +1211,7 @@ button:focus-visible {
 .sponsor-tier-card {
   --tier-color: var(--color-ink-soft);
   display: flex;
-  min-height: 30rem;
+  min-height: 25rem;
   flex-direction: column;
   border-top: .4rem solid var(--tier-color);
   background: white;
@@ -1226,7 +1241,7 @@ button:focus-visible {
   display: flex;
   align-items: baseline;
   gap: .5rem;
-  margin: 1rem 0 2.5rem;
+  margin: 1rem 0 1.25rem;
 }
 
 .sponsor-tier-price strong {
@@ -1244,7 +1259,7 @@ button:focus-visible {
 }
 
 .sponsor-tier-card ul {
-  margin: auto 0 0;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -1256,6 +1271,25 @@ button:focus-visible {
   font-size: .8rem;
 }
 
+.sponsor-tier-action {
+  align-self: flex-start;
+  margin-top: .75rem;
+  border: 1px solid currentColor;
+  padding: .6rem .75rem;
+  color: var(--tier-color);
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.sponsor-tier-action:hover {
+  background: var(--tier-color);
+  color: white;
+}
+
 .sponsor-tier-premium .sponsor-tier-name {
   color: var(--color-stage-red);
 }
@@ -1263,6 +1297,15 @@ button:focus-visible {
 .sponsor-tier-premium .sponsor-tier-price span,
 .sponsor-tier-premium li {
   color: #c9c8cb;
+}
+
+.sponsor-tier-premium .sponsor-tier-action {
+  color: white;
+}
+
+.sponsor-tier-premium .sponsor-tier-action:hover {
+  background: white;
+  color: var(--color-ink-soft);
 }
 
 .sponsor-tier-premium li {
@@ -1770,6 +1813,10 @@ button:focus-visible {
   margin-top: 1.5rem;
   color: #6d6c70;
   font-size: .85rem;
+}
+
+.section-sponsors-separated {
+  border-top: 1px solid #c9c4bb;
 }
 
 .sponsor-grid {
@@ -2513,6 +2560,7 @@ button:focus-visible {
   .volunteer-role-grid article { min-height: auto; }
   .volunteer-signup-card { align-items: start; grid-template-columns: 1fr; }
   .volunteer-signup-card .button-primary { justify-self: start; white-space: normal; }
+  .volunteer-signup-actions { justify-content: flex-start; }
   .sponsor-benefit-grid { grid-template-columns: 1fr; }
   .sponsor-benefit-grid article {
     min-height: auto;
@@ -2522,7 +2570,7 @@ button:focus-visible {
   .sponsor-benefit-grid article:last-child { border-bottom: 0; }
   .sponsor-tier-grid,
   .sponsor-option-notes { grid-template-columns: 1fr; }
-  .sponsor-tier-card { min-height: 26rem; }
+  .sponsor-tier-card { min-height: auto; }
   .grant-logo { min-height: 7rem; }
   .grant-logo img { max-height: 7rem; }
   .booster-involved-contact { align-items: start; grid-template-columns: 1fr; }
