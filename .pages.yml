@@ -585,7 +585,10 @@ content:
         label: Donation URL
         type: string
       - name: instagram_url
-        label: Instagram URL
+        label: Booster Instagram URL
+        type: string
+      - name: student_instagram_url
+        label: Student Instagram URL
         type: string
       - name: facebook_url
         label: Facebook URL
