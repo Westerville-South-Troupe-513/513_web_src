@@ -2103,7 +2103,12 @@ button:focus-visible {
   font-size: .9rem;
 }
 
-.support-donation-card .button-primary {
+.support-donation-actions {
+  display: grid;
+  gap: .75rem;
+}
+
+.support-donation-actions a {
   width: 100%;
   text-align: center;
 }
