@@ -886,6 +886,73 @@ button:focus-visible {
   background-size: cover;
 }
 
+.error-page {
+  position: relative;
+  display: grid;
+  min-height: clamp(36rem, calc(100vh - 5rem), 52rem);
+  overflow: hidden;
+  align-items: center;
+  background-color: var(--color-ink);
+  background-image:
+    linear-gradient(90deg, rgba(8, 8, 10, .9) 0%, rgba(8, 8, 10, .6) 55%, rgba(8, 8, 10, .86) 100%),
+    linear-gradient(180deg, rgba(8, 8, 10, .22) 0%, rgba(8, 8, 10, .88) 100%),
+    url("/images/theatre-curtain.webp");
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+.error-page::before,
+.error-page::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+}
+
+.error-page::before {
+  background: radial-gradient(ellipse 44% 76% at 54% -12%, rgba(255, 249, 224, .32) 0%, rgba(255, 249, 224, .12) 34%, transparent 70%);
+}
+
+.error-page::after {
+  background: radial-gradient(ellipse 72% 80% at 54% 16%, transparent 30%, rgba(0, 0, 0, .58) 100%);
+}
+
+.error-stage {
+  position: relative;
+  z-index: 1;
+  padding-block: clamp(5rem, 12vw, 9rem);
+}
+
+.error-stage-copy {
+  max-width: 55rem;
+}
+
+.error-code {
+  margin: 0 0 .35rem;
+  color: rgba(255, 255, 255, .13);
+  font-family: var(--font-display);
+  font-size: clamp(7rem, 24vw, 16rem);
+  font-weight: 800;
+  letter-spacing: -.07em;
+  line-height: .7;
+}
+
+.error-description {
+  max-width: 43rem;
+  margin: 1.75rem 0 0;
+  color: #cfced2;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.65;
+}
+
+.error-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-top: 2rem;
+}
+
 .ticket-box-office-layout {
   display: grid;
   align-items: start;
