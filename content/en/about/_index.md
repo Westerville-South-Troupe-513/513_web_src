@@ -1,6 +1,9 @@
 ---
 title: "Theatre Boosters"
 description: "Meet the families and community members working behind the scenes to help Westerville South Theatre students thrive."
+url: "/boosters/"
+aliases:
+  - "/about/"
 faq_categories: ["Parents"]
 hero_image: "/images/production_ensemble_color_medium.webp"
 hero_image_large: "/images/production_ensemble_color.webp"

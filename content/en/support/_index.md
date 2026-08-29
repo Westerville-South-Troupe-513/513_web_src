@@ -1,6 +1,9 @@
 ---
 title: "Donate"
 description: "Help Troupe 513 students create ambitious productions, build lasting skills, and share unforgettable live theatre with our community."
+url: "/donate/"
+aliases:
+  - "/support/"
 ---
 Every production begins with an idea, but bringing it to the stage takes materials, equipment, professional guidance, and a community willing to invest in student artists. Donations to the Westerville South High School Theatre Boosters help turn those ideas into memorable experiences for students and audiences alike.
 

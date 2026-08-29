@@ -1,6 +1,9 @@
 ---
 title: "Become a Sponsor"
 description: "Connect your organization with Westerville South Theatre and support student artists."
+url: "/sponsors/"
+aliases:
+  - "/support/become-a-sponsor/"
 hero_image: "/images/les_miserables_company_photo_medium.webp"
 hero_image_large: "/images/les_miserables_company_photo.webp"
 hero_image_alt: "Westerville South Theatre students gather onstage in front of the Les Misérables set."

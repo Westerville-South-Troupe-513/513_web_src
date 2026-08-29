@@ -8,7 +8,7 @@
     {{ partial "site-header.html" . }}
     <main id="main-content">
       {{ block "main" . }}{{ end }}
-      {{ if not .Params.hide_sponsors }}{{ partial "sponsor-section.html" . }}{{ end }}
+      {{ if and (ne .Kind "404") (not .Params.hide_sponsors) }}{{ partial "sponsor-section.html" . }}{{ end }}
     </main>
     {{ partial "site-footer.html" . }}
     {{ partial "scripts.html" . }}

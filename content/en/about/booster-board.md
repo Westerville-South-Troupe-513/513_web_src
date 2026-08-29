@@ -2,7 +2,9 @@
 title: "Booster Board"
 description: "Meet the volunteer board supporting Westerville South Theatre on our About page."
 layout: "redirect"
-redirect_to: "/about/#booster-board"
+url: "/boosters/booster-board/"
+redirect_to: "/boosters/#booster-board"
 aliases:
+  - /about/booster-board/
   - /booster_board/
 ---

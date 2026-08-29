@@ -1,10 +1,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#17171a">
-<title>{{ if .IsHome }}{{ site.Title }} | Theatre Troupe 513 Boosters{{ else }}{{ .Title }} | {{ site.Title }} Boosters{{ end }}</title>
-<meta name="description" content="{{ .Description | default hugo.Data.site.description }}">
+<title>{{ if eq .Kind "404" }}Page Not Found | {{ site.Title }} Boosters{{ else if .IsHome }}{{ site.Title }} | Theatre Troupe 513 Boosters{{ else }}{{ .Title }} | {{ site.Title }} Boosters{{ end }}</title>
+<meta name="description" content="{{ if eq .Kind "404" }}The requested page could not be found. Return home or explore current Westerville South Theatre productions.{{ else }}{{ .Description | default hugo.Data.site.description }}{{ end }}">
 <link rel="canonical" href="{{ .Permalink }}">
-{{ if .Params.noindex }}<meta name="robots" content="noindex,follow">{{ end }}
+{{ if or .Params.noindex (eq .Kind "404") }}<meta name="robots" content="noindex,follow">{{ end }}
 <link rel="icon" href="/images/favicon.ico" sizes="any">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

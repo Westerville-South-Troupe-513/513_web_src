@@ -1,6 +1,9 @@
 ---
 title: "Volunteer"
 description: "Support performances and students by volunteering with Troupe 513."
+url: "/volunteer/"
+aliases:
+  - "/get-involved/volunteer/"
 faq_categories: ["Volunteering"]
 hero_image: "/images/production_comedy_scene_medium.webp"
 hero_image_large: "/images/production_comedy_scene.webp"

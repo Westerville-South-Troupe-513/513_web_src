@@ -1,7 +1,7 @@
 {{ define "main" }}
   {{ $isVolunteer := and (eq .Section "get-involved") (eq .File.ContentBaseName "volunteer") }}
   {{ $isTickets := eq .RelPermalink "/tickets/" }}
-  {{ $isSponsor := eq .RelPermalink "/support/become-a-sponsor/" }}
+  {{ $isSponsor := eq .RelPermalink "/sponsors/" }}
   <header class="page-hero{{ if $isVolunteer }} volunteer-page-hero{{ end }}{{ if $isTickets }} tickets-page-hero{{ end }}">
     <div class="{{ if .Params.hero_image }}container-wide image-hero-layout{{ else }}container page-hero-copy{{ end }}">
       {{ with .Params.hero_image }}
