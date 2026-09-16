@@ -11,15 +11,12 @@
   --color-warm-white: #fffdf8;
   --color-muted: #aaa9ad;
   --color-line: #414148;
-  --color-stage-red: #df1308;
-  --color-stage-red-dark: #b20f06;
-  --color-stage-red-light: #ff6259;
-  --color-stage-red-image-accent: #b94139;
+  --color-stage-red: #d83a20;
+  --color-stage-red-dark: #a92512;
   --color-wildcat-purple: #5f2a84;
 }
 
 :root {
-  --accent-text: var(--color-stage-red);
   color-scheme: dark;
   --page-gutter: clamp(1rem, 4vw, 4rem);
   --content-width: 76rem;
@@ -87,7 +84,7 @@ img {
 
 .eyebrow {
   margin: 0 0 .5rem;
-  color: var(--accent-text);
+  color: var(--color-stage-red);
   font-family: var(--font-sans);
   font-size: .75rem;
   font-weight: 800;
@@ -154,6 +151,26 @@ img {
 .button-primary:hover {
   background: var(--color-stage-red-dark);
 }
+
+.hero-more-info {
+  gap: .65rem;
+  padding-right: .7rem;
+}
+
+.hero-more-info-arrow {
+  display: inline-grid;
+  width: 1.45rem;
+  height: 1.45rem;
+  place-items: center;
+  border-radius: 50%;
+  background: white;
+  color: var(--color-stage-red);
+  font-size: .95rem;
+  line-height: 1;
+  transition: transform 150ms ease;
+}
+
+.hero-more-info:hover .hero-more-info-arrow { transform: translateX(.15rem); }
 
 .button-secondary {
   border-color: #65656c;
@@ -421,7 +438,7 @@ button:focus-visible {
   aspect-ratio: var(--show-art-ratio);
   border: 1px solid #525259;
   background: var(--show-color, #1e3152);
-  box-shadow: 1.25rem 1.25rem 0 var(--color-stage-red-image-accent);
+  box-shadow: 1.25rem 1.25rem 0 rgba(216, 58, 32, .8);
   color: inherit;
   text-decoration: none;
 }
@@ -524,7 +541,7 @@ button:focus-visible {
 
 .show-card-poster:hover {
   transform: translateY(-.35rem);
-  box-shadow: 0 .75rem 0 var(--color-stage-red-image-accent);
+  box-shadow: 0 .75rem 0 var(--color-stage-red);
 }
 
 .show-card-poster img {
@@ -565,7 +582,7 @@ button:focus-visible {
 }
 
 .show-status {
-  color: var(--accent-text);
+  color: var(--color-stage-red);
   font-size: .67rem;
   font-weight: 800;
   letter-spacing: .12em;
@@ -629,7 +646,7 @@ button:focus-visible {
   align-self: stretch;
   justify-self: start;
   border: 1px solid #bbb6ad;
-  box-shadow: .9rem .9rem 0 var(--color-stage-red-image-accent);
+  box-shadow: .9rem .9rem 0 rgba(216, 58, 32, .8);
 }
 
 .production-section-image img {
@@ -683,7 +700,7 @@ button:focus-visible {
 
 .student-production-kicker {
   margin: 0 0 .3rem;
-  color: var(--accent-text);
+  color: var(--color-stage-red);
   font-size: .66rem;
   font-weight: 800;
   letter-spacing: .1em;
@@ -733,7 +750,7 @@ button:focus-visible {
 }
 
 .student-production-link span {
-  color: var(--accent-text);
+  color: var(--color-stage-red);
   margin-left: .25rem;
 }
 
@@ -767,7 +784,7 @@ button:focus-visible {
 
 .feature-number {
   display: block;
-  color: var(--accent-text);
+  color: var(--color-stage-red);
   font-size: .72rem;
   font-weight: 800;
   letter-spacing: .12em;
@@ -823,7 +840,7 @@ button:focus-visible {
   max-height: 13rem;
   align-self: center;
   border: 1px solid #55555c;
-  box-shadow: .9rem .9rem 0 var(--color-stage-red-image-accent);
+  box-shadow: .9rem .9rem 0 rgba(216, 58, 32, .8);
 }
 
 .image-hero-media img {
@@ -987,7 +1004,7 @@ button:focus-visible {
 }
 
 .ticket-quick-facts dt {
-  color: var(--accent-text);
+  color: var(--color-stage-red-dark);
   font-size: .68rem;
   font-weight: 800;
   letter-spacing: .1em;
@@ -1005,7 +1022,7 @@ button:focus-visible {
   background: var(--color-ink-soft);
   color: white;
   padding: clamp(1.75rem, 4vw, 3rem);
-  box-shadow: 1rem 1rem 0 var(--color-stage-red);
+  box-shadow: 1rem 1rem 0 rgba(216, 58, 32, .8);
 }
 
 .ticket-portal-card h2 {
@@ -1053,7 +1070,7 @@ button:focus-visible {
   background: var(--color-ink-soft);
   color: white;
   padding: clamp(1.75rem, 4vw, 3rem);
-  box-shadow: 1rem 1rem 0 var(--color-stage-red);
+  box-shadow: 1rem 1rem 0 rgba(216, 58, 32, .8);
 }
 
 .volunteer-welcome-card h2 {
@@ -1080,7 +1097,7 @@ button:focus-visible {
 .volunteer-welcome-card li::before {
   content: "✓";
   margin-right: .75rem;
-  color: var(--accent-text);
+  color: var(--color-stage-red);
   font-weight: 800;
 }
 
@@ -1104,7 +1121,7 @@ button:focus-visible {
 }
 
 .volunteer-role-grid article > span {
-  color: var(--accent-text);
+  color: var(--color-stage-red);
   font-family: var(--font-display);
   font-size: 1.6rem;
   font-weight: 800;
@@ -1180,7 +1197,7 @@ button:focus-visible {
   background: var(--color-ink-soft);
   color: white;
   padding: clamp(1.75rem, 4vw, 3rem);
-  box-shadow: 1rem 1rem 0 var(--color-stage-red);
+  box-shadow: 1rem 1rem 0 rgba(216, 58, 32, .8);
 }
 
 .sponsor-contact-card h2 {
@@ -1238,7 +1255,7 @@ button:focus-visible {
 }
 
 .sponsor-benefit-grid article > span {
-  color: var(--accent-text);
+  color: var(--color-stage-red);
   font-family: var(--font-display);
   font-size: 1.4rem;
   font-weight: 800;
@@ -1361,7 +1378,7 @@ button:focus-visible {
 }
 
 .sponsor-tier-premium .sponsor-tier-name {
-  color: var(--accent-text);
+  color: var(--color-stage-red);
 }
 
 .sponsor-tier-premium .sponsor-tier-price span,
@@ -1500,7 +1517,7 @@ button:focus-visible {
   aspect-ratio: var(--show-art-ratio);
   border: 1px solid #55555c;
   background: var(--show-color);
-  box-shadow: 1rem 1rem 0 var(--color-stage-red-image-accent);
+  box-shadow: 1rem 1rem 0 var(--color-stage-red);
 }
 
 .show-detail-poster > img {
@@ -1529,7 +1546,7 @@ button:focus-visible {
 }
 
 .section:not(.section-dark) .venue-map-link {
-  color: var(--accent-text);
+  color: var(--color-stage-red-dark);
 }
 
 .performance-picker {
@@ -1661,7 +1678,7 @@ button:focus-visible {
 }
 
 .visit-details dt {
-  color: var(--accent-text);
+  color: var(--color-stage-red);
   font-size: .68rem;
   font-weight: 800;
   letter-spacing: .1em;
@@ -1675,7 +1692,7 @@ button:focus-visible {
   aspect-ratio: 4 / 3;
   border: 2px solid #67666d;
   background: var(--color-ink);
-  box-shadow: .9rem .9rem 0 var(--color-stage-red-image-accent);
+  box-shadow: .9rem .9rem 0 rgba(216, 58, 32, .8);
 }
 
 .venue-map-embed iframe {
@@ -1753,7 +1770,7 @@ button:focus-visible {
 .archive-show-copy small { text-align: left; }
 
 .archive-show-entry .playbill-download-link {
-  color: var(--accent-text);
+  color: var(--color-stage-red-dark);
 }
 
 .past-production-seasons {
@@ -1845,7 +1862,7 @@ button:focus-visible {
 }
 
 .playbill-download-link span {
-  color: var(--accent-text);
+  color: var(--color-stage-red);
   margin-right: .2rem;
 }
 
@@ -1867,7 +1884,7 @@ button:focus-visible {
   aspect-ratio: 1 / 1;
   border: 1px solid #bbb6ad;
   background: #dedad2;
-  box-shadow: .75rem .75rem 0 var(--color-stage-red-image-accent);
+  box-shadow: .75rem .75rem 0 rgba(216, 58, 32, .8);
   object-fit: cover;
 }
 
@@ -1915,7 +1932,7 @@ button:focus-visible {
 }
 
 .board-list a {
-  color: var(--accent-text);
+  color: var(--color-stage-red-dark);
   font-size: .8rem;
   font-weight: 700;
 }
@@ -2002,7 +2019,7 @@ button:focus-visible {
   text-decoration: none;
 }
 
-.faq-nav a:hover { color: var(--accent-text); }
+.faq-nav a:hover { color: var(--color-stage-red-dark); }
 
 .faq-group {
   scroll-margin-top: 2rem;
@@ -2035,7 +2052,7 @@ button:focus-visible {
 }
 
 .faq-item summary::-webkit-details-marker { display: none; }
-.faq-item summary:hover { color: var(--accent-text); }
+.faq-item summary:hover { color: var(--color-stage-red-dark); }
 .faq-item[open] summary > span:last-child { transform: rotate(45deg); }
 
 .faq-answer {
@@ -2106,7 +2123,7 @@ button:focus-visible {
 }
 
 .prose li::marker {
-  color: var(--accent-text);
+  color: var(--color-stage-red-dark);
   font-weight: 800;
 }
 
@@ -2138,13 +2155,13 @@ button:focus-visible {
 
 .prose h2 { font-size: 2.4rem; }
 .prose h3 { font-size: 1.7rem; }
-.prose a { color: var(--accent-text); font-weight: 700; }
+.prose a { color: var(--color-stage-red-dark); font-weight: 700; }
 
 .content-photo {
   width: 100%;
   margin-block: clamp(1.75rem, 5vw, 3.25rem);
   border: 1px solid #cbc7c0;
-  box-shadow: .75rem .75rem 0 var(--color-stage-red-image-accent);
+  box-shadow: .75rem .75rem 0 rgba(216, 58, 32, .8);
 }
 
 .prose p:has(> .content-photo:only-child) {
@@ -2352,7 +2369,7 @@ button:focus-visible {
   border: 1px solid #c7c1b7;
   background: white;
   padding: clamp(1.75rem, 5vw, 4rem);
-  box-shadow: .85rem .85rem 0 var(--color-stage-red);
+  box-shadow: .85rem .85rem 0 rgba(216, 58, 32, .8);
 }
 
 .grant-logo {
@@ -2707,7 +2724,7 @@ button:focus-visible {
   .hero + .section .show-card-poster,
   .hero + .section .show-card-poster:hover {
     transform: none;
-    box-shadow: .85rem .85rem 0 var(--color-stage-red-image-accent);
+    box-shadow: .85rem .85rem 0 rgba(216, 58, 32, .8);
   }
   .feature-grid,
   .footer-grid { grid-template-columns: 1fr; }
@@ -2738,27 +2755,4 @@ button:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; }
-}
-
-/* Brighter red is reserved for text on dark surfaces. */
-.hero,
-.page-hero,
-.show-detail-hero,
-.error-page,
-.section-dark,
-.ticket-portal-card,
-.volunteer-welcome-card,
-.sponsor-contact-card,
-.sponsor-tier-premium,
-.support-donation-card,
-.booster-identity,
-.contact-identity,
-.feature-link:hover {
-  --accent-text: var(--color-stage-red-light);
-}
-
-.section:not(.section-dark),
-.feature-link:not(:hover),
-.show-facts {
-  --accent-text: var(--color-stage-red);
 }
