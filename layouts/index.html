@@ -18,7 +18,7 @@
         <p class="hero-meta">{{ $featured.Params.show_type }} · {{ $featured.Params.date_display }}</p>
         {{ with $featured.Params.short_summary }}<p class="hero-summary">{{ . }}</p>{{ end }}
         <div class="hero-actions">
-          <a class="button-primary" href="{{ $featured.RelPermalink }}">More Info</a>
+          <a class="button-primary hero-more-info" href="{{ $featured.RelPermalink }}">More Info <span class="hero-more-info-arrow" aria-hidden="true">&rarr;</span></a>
         </div>
       </div>
       <div class="hero-poster-column">
