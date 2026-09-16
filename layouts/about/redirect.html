@@ -6,6 +6,7 @@
     <meta http-equiv="refresh" content="0; url={{ .Params.redirect_to }}">
     <link rel="canonical" href="{{ .Params.redirect_to | absURL }}">
     <title>{{ .Title }} | {{ site.Title }}</title>
+    {{ partial "google-analytics.html" . }}
   </head>
   <body>
     <p>This page has moved to <a href="{{ .Params.redirect_to }}">Theatre Boosters</a>.</p>
