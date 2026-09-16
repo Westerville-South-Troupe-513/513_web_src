@@ -1,0 +1,22 @@
+{{ $status := partial "show-status.html" . }}
+<section class="performance-picker" id="performances" aria-labelledby="performances-heading">
+  <h2 class="footer-heading" id="performances-heading">{{ if eq $status.key "closed" }}Performances{{ else }}Choose a Performance{{ end }}</h2>
+  {{ if ne $status.key "closed" }}<p class="performance-picker-note">Select a time to buy tickets on HomeTown. All times Eastern.</p>{{ end }}
+  <ul class="performance-options">
+    {{ range .Params.performances }}
+      {{ $date := time.AsTime .date }}
+      <li class="performance-option">
+        <span class="performance-day">{{ time.Format "Monday" $date }}</span>
+        <time datetime="{{ time.Format "2006-01-02" $date }}">{{ time.Format "Jan 2" $date }}</time>
+        {{ if and .ticket_url (ne $status.key "closed") }}
+          <a class="button-primary performance-time-button" href="{{ .ticket_url }}" aria-label="Buy tickets for {{ $.Title }}, {{ time.Format "Monday, January 2, 2006" $date }} at {{ .time }} Eastern">{{ .time }}</a>
+        {{ else }}
+          <div class="performance-option-unavailable">
+            <span class="performance-time">{{ .time }}</span>
+            <span class="performance-link-label">{{ if eq $status.key "closed" }}Closed{{ else }}Tickets coming soon{{ end }}</span>
+          </div>
+        {{ end }}
+      </li>
+    {{ end }}
+  </ul>
+</section>

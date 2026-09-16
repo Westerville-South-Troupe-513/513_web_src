@@ -18,9 +18,18 @@ profile_image_large: "/images/lost_girl_profile_large.jpeg"
 opening_date: 2026-10-02
 closing_date: 2026-10-04
 date_display: "October 2–4, 2026"
+performances:
+  - date: 2026-10-02
+    time: "7:00 PM"
+    ticket_url: "https://westerville.hometownticketing.com/embed/event/3580"
+  - date: 2026-10-03
+    time: "7:00 PM"
+    ticket_url: "https://westerville.hometownticketing.com/embed/event/3581"
+  - date: 2026-10-04
+    time: "2:00 PM"
+    ticket_url: "https://westerville.hometownticketing.com/embed/event/3582"
 venue: "south-auditorium"
 featured: true
 draft: false
 art_color: "#17385f"
 ---
-Performance times and ticket information will be added when they become available.

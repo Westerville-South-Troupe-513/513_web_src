@@ -38,9 +38,10 @@
           <div class="hero-actions">
             <a class="button-primary" href="/shows/archive/">Browse Past Productions</a>
           </div>
-        {{ else }}
+        {{ else if not .Params.performances }}
           {{ partial "ticket-actions.html" (dict "show" . "showDetails" false) }}
         {{ end }}
+        {{ if .Params.performances }}{{ partial "performance-picker.html" . }}{{ end }}
       </div>
     </div>
   </header>
@@ -93,23 +94,6 @@
           {{ range . }}
             <div class="performance-row">
               <div><strong>{{ .title }}</strong>{{ with .directors }}<span>Directed by {{ delimit . ", " " &amp; " | safeHTML }}</span>{{ end }}</div>
-            </div>
-          {{ end }}
-        </div>
-      </div>
-    </section>
-  {{ end }}
-
-  {{ with .Params.performances }}
-    <section class="section section-dark" aria-labelledby="performances-heading">
-      <div class="container">
-        <p class="eyebrow">Choose a Performance</p>
-        <h2 class="section-title" id="performances-heading">Performances</h2>
-        <div class="performance-list">
-          {{ range . }}
-            <div class="performance-row">
-              <div><strong>{{ time.Format "Monday, January 2" (time.AsTime .date) }}</strong><span>{{ .time }}</span></div>
-              {{ with .ticket_url }}<a class="button-primary" href="{{ . }}">Buy Tickets</a>{{ end }}
             </div>
           {{ end }}
         </div>

@@ -1,13 +1,21 @@
 {{- $show := index . "show" -}}
 {{- $showDetails := index . "showDetails" -}}
+{{- $ticketURL := $show.Params.ticket_url | default hugo.Data.site.ticket_url -}}
+{{- $hasPerformanceTickets := false -}}
+{{- range $show.Params.performances -}}
+  {{- if .ticket_url -}}{{- $hasPerformanceTickets = true -}}{{- end -}}
+{{- end -}}
+{{- if $hasPerformanceTickets -}}
+  {{- $ticketURL = printf "%s#performances" $show.RelPermalink -}}
+{{- end -}}
 {{- $showTicketNote := false -}}
 {{- with $show.Params.opening_date -}}
   {{- $opening := time.AsTime . -}}
-  {{- $showTicketNote = $opening.After (now.AddDate 0 0 14) -}}
+  {{- $showTicketNote = and (not $hasPerformanceTickets) (not $show.Params.ticket_url) ($opening.After (now.AddDate 0 0 14)) -}}
 {{- end -}}
 <div class="hero-actions">
   <div class="hero-ticket-action">
-    <a class="button-primary" href="{{ hugo.Data.site.ticket_url }}" target="_blank" rel="noopener">Purchase Tickets</a>
+    <a class="button-primary" href="{{ $ticketURL }}"{{ if not $hasPerformanceTickets }} target="_blank" rel="noopener"{{ end }}>{{ if $hasPerformanceTickets }}Choose a Performance{{ else }}Purchase Tickets{{ end }}</a>
     {{ if $showTicketNote }}
       <small class="ticket-availability-note">Ticket listings may not include this production until closer to the show date.</small>
     {{ end }}
