@@ -16,9 +16,14 @@ student_directors:
 opening_date: 2026-12-02
 closing_date: 2026-12-03
 date_display: "December 2–3, 2026"
+performances:
+  - date: 2026-12-02
+    time: "7:00 PM"
+  - date: 2026-12-03
+    time: "7:00 PM"
 venue: "south-auditorium"
 featured: false
 draft: false
 art_color: "#366878"
 ---
-Performance details and ticket information will be added when they become available.
+Ticket information will be added when it becomes available.

@@ -1,7 +1,11 @@
 {{ $status := partial "show-status.html" . }}
+{{ $hasTickets := false }}
+{{ range .Params.performances }}
+  {{ if .ticket_url }}{{ $hasTickets = true }}{{ end }}
+{{ end }}
 <section class="performance-picker" id="performances" aria-labelledby="performances-heading">
-  <h2 class="footer-heading" id="performances-heading">{{ if eq $status.key "closed" }}Performances{{ else }}Choose a Performance{{ end }}</h2>
-  {{ if ne $status.key "closed" }}<p class="performance-picker-note">Select a time to buy tickets on HomeTown. All times Eastern.</p>{{ end }}
+  <h2 class="footer-heading" id="performances-heading">{{ if eq $status.key "closed" }}Performances{{ else if $hasTickets }}Choose a Performance{{ else }}Performance Times{{ end }}</h2>
+  {{ if ne $status.key "closed" }}<p class="performance-picker-note">{{ if $hasTickets }}Select a time to buy tickets on HomeTown. {{ end }}All times Eastern.</p>{{ end }}
   <ul class="performance-options">
     {{ range .Params.performances }}
       {{ $date := time.AsTime .date }}

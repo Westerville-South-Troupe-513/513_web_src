@@ -223,6 +223,31 @@ button:focus-visible {
   color: white;
 }
 
+.nonprofit-introduction {
+  background: #f2a900;
+  color: var(--color-ink);
+}
+
+.nonprofit-introduction-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem 2rem;
+  padding-block: .75rem;
+  font-size: .86rem;
+  line-height: 1.45;
+}
+
+.nonprofit-introduction p { margin: 0; }
+
+.nonprofit-introduction a {
+  color: inherit;
+  flex: 0 0 auto;
+  font-weight: 800;
+  text-decoration-thickness: 2px;
+  text-underline-offset: .2rem;
+}
+
 .nav-inner {
   display: flex;
   min-height: 5rem;
@@ -2666,6 +2691,7 @@ button:focus-visible {
     margin-bottom: 3rem;
   }
   .page-description { margin-top: 1.75rem; }
+  .nonprofit-introduction-inner { align-items: flex-start; flex-direction: column; gap: .4rem; }
   .hero-actions { margin-top: 2.5rem; }
   .student-production {
     grid-template-columns: 4.5rem minmax(0, 1fr) auto;

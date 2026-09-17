@@ -18,9 +18,12 @@ student_directors:
 opening_date: 2027-01-26
 closing_date: 2027-01-26
 date_display: "January 26, 2027"
+performances:
+  - date: 2027-01-26
+    time: "6:00 PM"
 venue: "south-auditorium"
 featured: false
 draft: false
 art_color: "#384e88"
 ---
-Individual titles and performance details will be added when the one-act program is announced.
+Individual titles will be added when the one-act program is announced.

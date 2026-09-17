@@ -19,9 +19,12 @@ student_directors:
 opening_date: 2026-10-12
 closing_date: 2026-10-12
 date_display: "October 12, 2026"
+performances:
+  - date: 2026-10-12
+    time: "6:00 PM"
 venue: "south-auditorium"
 featured: false
 draft: false
 art_color: "#8d2c36"
 ---
-Individual titles and performance details will be added when the one-act program is announced.
+Individual titles will be added when the one-act program is announced.

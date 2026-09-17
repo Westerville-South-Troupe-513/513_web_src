@@ -11,14 +11,17 @@ season: "2026-27"
 show_type: "Winter Play"
 program: "main-stage"
 production_format: "play"
-poster: "/images/every_brilliant_thing_playbill_medium.webp"
-poster_large: "/images/every_brilliant_thing_playbill_large.webp"
-opening_date: 2026-11-20
-closing_date: 2026-11-21
-date_display: "November 20–21, 2026"
+opening_date: 2026-11-07
+closing_date: 2026-11-08
+date_display: "November 7–8, 2026"
+performances:
+  - date: 2026-11-07
+    time: "7:00 PM"
+  - date: 2026-11-08
+    time: "7:00 PM"
 venue_tbd: true
 featured: false
 draft: false
 art_color: "#d58b24"
 ---
-Performance times and ticket information will be added when they become available.
+Ticket information will be added when it becomes available.

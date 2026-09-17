@@ -18,9 +18,18 @@ profile_image_large: "/images/kiss_me_kate_profile_large.jpeg"
 opening_date: 2027-04-22
 closing_date: 2027-04-25
 date_display: "April 22–25, 2027"
+performances:
+  - date: 2027-04-22
+    time: "7:00 PM"
+  - date: 2027-04-23
+    time: "7:00 PM"
+  - date: 2027-04-24
+    time: "7:00 PM"
+  - date: 2027-04-25
+    time: "2:00 PM"
 venue: "south-auditorium"
 featured: false
 draft: false
 art_color: "#c66b17"
 ---
-Performance times and ticket information will be added when they become available.
+Ticket information will be added when it becomes available.

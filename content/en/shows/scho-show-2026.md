@@ -14,9 +14,12 @@ production_format: "variety-show"
 opening_date: 2026-11-14
 closing_date: 2026-11-14
 date_display: "November 14, 2026"
+performances:
+  - date: 2026-11-14
+    time: "7:00 PM"
 venue: "south-auditorium"
 featured: false
 draft: false
 art_color: "#5f2b87"
 ---
-Performance details and ticket information will be added when they become available.
+Ticket information will be added when it becomes available.

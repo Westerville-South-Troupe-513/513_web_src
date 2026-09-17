@@ -13,12 +13,17 @@ program: "student-directed"
 production_format: "musical"
 student_directors:
   - "Easton Kelly"
-opening_date: 2026-10-22
-closing_date: 2026-10-23
-date_display: "October 22–23, 2026"
+opening_date: 2026-10-21
+closing_date: 2026-10-22
+date_display: "October 21–22, 2026"
+performances:
+  - date: 2026-10-21
+    time: "7:00 PM"
+  - date: 2026-10-22
+    time: "7:00 PM"
 venue: "south-auditorium"
 featured: false
 draft: false
 art_color: "#b53a2f"
 ---
-Performance details and ticket information will be added when they become available.
+Ticket information will be added when it becomes available.

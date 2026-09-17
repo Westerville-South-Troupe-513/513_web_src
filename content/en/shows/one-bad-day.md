@@ -16,9 +16,14 @@ student_directors:
 opening_date: 2027-02-03
 closing_date: 2027-02-04
 date_display: "February 3–4, 2027"
+performances:
+  - date: 2027-02-03
+    time: "7:00 PM"
+  - date: 2027-02-04
+    time: "7:00 PM"
 venue: "south-auditorium"
 featured: false
 draft: false
 art_color: "#6f3f32"
 ---
-Performance details and ticket information will be added when they become available.
+Ticket information will be added when it becomes available.

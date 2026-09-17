@@ -40,7 +40,7 @@ disableKinds = ["taxonomy", "term"]
   shows = "/shows/:slug/"
 
 [[menus.main]]
-  name = "Boosters"
+  name = "About the Boosters"
   pageRef = "/about"
   weight = 10
 [[menus.main]]

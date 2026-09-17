@@ -10,6 +10,12 @@
   {{ with $featuredPages }}{{ $featured = index . 0 }}{{ end }}
   {{ $featuredArt := partial "show-art-data.html" $featured }}
   {{ $status := partial "show-status.html" $featured }}
+  <section class="nonprofit-introduction" aria-label="About Westerville South High School Theatre Boosters">
+    <div class="container-wide nonprofit-introduction-inner">
+      <p><strong>{{ hugo.Data.site.legal_name }}</strong> is an independent {{ hugo.Data.site.nonprofit_status }} supporting student theatre in Westerville, Ohio. EIN {{ hugo.Data.site.ein }}.</p>
+      <a href="/boosters/">Learn about our mission <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </section>
   <section class="hero" aria-labelledby="featured-show-title">
     <div class="container-wide hero-inner">
       <div class="hero-copy">
@@ -53,6 +59,8 @@
         <div class="prose">{{ .Content }}</div>
         <div class="hero-actions">
           <a class="button-primary" href="/donate/">Support Student Theatre</a>
+          <a class="button-outline-dark" href="/volunteer/">Volunteer With Us</a>
+          <a class="button-outline-dark" href="{{ hugo.Data.site.membership_url }}" target="_blank" rel="noopener">Join the Boosters</a>
           <a class="button-outline-dark" href="/boosters/">Meet the Boosters</a>
         </div>
       </div>

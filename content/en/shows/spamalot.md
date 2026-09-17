@@ -18,9 +18,18 @@ profile_image_large: "/images/spamalot_profile_large.jpeg"
 opening_date: 2027-01-21
 closing_date: 2027-01-24
 date_display: "January 21–24, 2027"
+performances:
+  - date: 2027-01-21
+    time: "7:00 PM"
+  - date: 2027-01-22
+    time: "7:00 PM"
+  - date: 2027-01-23
+    time: "7:00 PM"
+  - date: 2027-01-24
+    time: "2:00 PM"
 venue: "south-auditorium"
 featured: false
 draft: false
 art_color: "#3167bd"
 ---
-Performance times and ticket information will be added when they become available.
+Ticket information will be added when it becomes available.
