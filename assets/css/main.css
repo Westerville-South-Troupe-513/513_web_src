@@ -1603,13 +1603,15 @@ button:focus-visible {
   border-radius: .375rem;
 }
 .performance-time-button {
+  gap: .65rem;
   margin-top: .5rem;
-  padding: .625rem .5rem;
+  padding: .625rem .7rem .625rem .5rem;
   min-height: 2.75rem;
   border-radius: .25rem;
   font-size: 1rem;
   letter-spacing: normal;
 }
+.performance-time-button:hover .hero-more-info-arrow { transform: translateX(.15rem); }
 .performance-day { font-size: .8rem; color: #d2d1d5; }
 .performance-option time { font-size: 1.25rem; font-weight: 800; line-height: 1.3; }
 .performance-time { font-size: 1.1rem; font-weight: 700; }
