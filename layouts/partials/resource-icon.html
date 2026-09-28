@@ -1,0 +1,19 @@
+{{- $icon := . -}}
+{{- if eq $icon "student" -}}
+  <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+    <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v16H6.5A2.5 2.5 0 0 0 4 21.5v-16Z"/>
+    <path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H13v16h4.5a2.5 2.5 0 0 1 2.5 2.5v-16Z"/>
+  </svg>
+{{- else if eq $icon "parents" -}}
+  <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+    <circle cx="9" cy="8" r="3"/>
+    <path d="M3.5 20v-2.5A4.5 4.5 0 0 1 8 13h2a4.5 4.5 0 0 1 4.5 4.5V20"/>
+    <path d="M15.5 5.5a3 3 0 0 1 0 5.5M17 13a4.5 4.5 0 0 1 3.5 4.5V20"/>
+  </svg>
+{{- else if eq $icon "instagram" -}}
+  {{- with resources.Get "ananke/socials/instagram.svg" }}{{ .Content | safeHTML }}{{ end -}}
+{{- else if eq $icon "tiktok" -}}
+  {{- with resources.Get "ananke/socials/tiktok.svg" }}{{ .Content | safeHTML }}{{ end -}}
+{{- else if eq $icon "facebook" -}}
+  {{- with resources.Get "ananke/socials/facebook.svg" }}{{ .Content | safeHTML }}{{ end -}}
+{{- end -}}

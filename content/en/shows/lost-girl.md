@@ -7,6 +7,9 @@ long_summary: |
   Years after her adventures with Peter Pan, Wendy Darling remains caught between the magic of what happened and the ache of what came after. Convinced that finding Peter and reclaiming her lost kiss will finally let her move forward, she begins a search that draws the familiar figures of Neverland into a very different kind of coming-of-age story.
 
   Kimberly Belflower's imaginative play brings wit, wonder, and emotional honesty to the world of Peter Pan while asking what it takes to outgrow the stories that once defined us. Experience a tender and boldly theatrical exploration of memory, first love, and one young woman's determination to take back her own story.
+description_image: "/images/lost_girl_production_photo.webp"
+description_image_alt: "Five Lost Girl cast members onstage beneath star-patterned lighting."
+description_image_caption: "Production photo by @evelynoclockphotos."
 season: "2026-27"
 show_type: "Fall Play"
 program: "main-stage"

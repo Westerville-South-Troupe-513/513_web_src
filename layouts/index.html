@@ -85,13 +85,77 @@
 
   {{ with $studentShows }}{{ partial "student-work-section.html" (dict "shows" .) }}{{ end }}
 
-  <section class="section section-dark" aria-labelledby="involved-heading">
+  <section class="section section-dark home-resources" aria-labelledby="resources-heading">
     <div class="container-wide">
-      <header class="section-header"><div><p class="eyebrow">Find Your Place</p><h2 class="section-title" id="involved-heading">Get Involved</h2></div></header>
-      <div class="feature-grid">
-        <a class="feature-link" href="{{ hugo.Data.site.school_theatre_url }}" target="_blank" rel="noopener"><span class="feature-number">01</span><span class="feature-title">Students</span><span class="feature-copy">Find the official calendar, troupe dues, communication channels, theatre gear, and current department resources.</span></a>
-        <a class="feature-link" href="/volunteer/"><span class="feature-number">02</span><span class="feature-title">Volunteers</span><span class="feature-copy">Learn how families help, then use BoosterHub to receive show-specific volunteer opportunities.</span></a>
-        <a class="feature-link" href="/sponsors/"><span class="feature-number">03</span><span class="feature-title">Local Businesses</span><span class="feature-copy">Partner with Troupe 513 through sponsorships that support student theatre and connect your business with our community.</span></a>
+      <header class="section-header resources-header">
+        <div>
+          <p class="eyebrow">Stay Connected</p>
+          <h2 class="section-title" id="resources-heading">Theatre Resources</h2>
+          <p class="resources-intro">Find the right information for students, connect with the Boosters, and follow what’s happening around Troupe 513.</p>
+        </div>
+      </header>
+      <div class="resource-grid">
+        <article class="resource-card">
+          <div class="resource-card-icon">{{ partial "resource-icon.html" "student" }}</div>
+          <p class="resource-audience">For Students</p>
+          <h3>Official Student Info</h3>
+          <p>Director Matt Wolfe’s student hub has the official calendar, troupe dues, communication channels, theatre gear, and current department resources.</p>
+          <a class="resource-card-link" href="{{ hugo.Data.site.school_theatre_url }}" target="_blank" rel="noopener">Open Student Info <span aria-hidden="true">&nearr;</span></a>
+        </article>
+        <article class="resource-card">
+          <div class="resource-card-icon">{{ partial "resource-icon.html" "parents" }}</div>
+          <p class="resource-audience">For Parents &amp; Guardians</p>
+          <h3>BoosterHub</h3>
+          <p>Use BoosterHub for parent communications, membership, volunteer opportunities, dues, and other ways to support student theatre.</p>
+          <a class="resource-community-link" href="{{ hugo.Data.site.parent_facebook_group_url }}" target="_blank" rel="noopener">
+            <span class="resource-social-icon">{{ partial "resource-icon.html" "facebook" }}</span>
+            <span><strong>Private Parent Facebook Group</strong><small>Request access to connect with other theatre families</small></span>
+            <span class="resource-social-arrow" aria-hidden="true">&nearr;</span>
+          </a>
+          <div class="resource-card-actions">
+            <a class="resource-card-link" href="{{ hugo.Data.site.boosterhub_portal_url }}" target="_blank" rel="noopener">Open BoosterHub <span aria-hidden="true">&nearr;</span></a>
+            <a class="resource-secondary-link" href="{{ hugo.Data.site.membership_url }}" target="_blank" rel="noopener">Join the Boosters</a>
+          </div>
+        </article>
+        <article class="resource-card resource-social-card">
+          <div class="resource-card-heading">
+            <div>
+              <p class="resource-audience">For Everyone</p>
+              <h3>Follow the Theatre</h3>
+            </div>
+          </div>
+          <p>See show news, student updates, Booster activities, and posts worth sharing with family and friends.</p>
+          <ul class="resource-social-links">
+            <li>
+              <a href="{{ hugo.Data.site.instagram_url }}" target="_blank" rel="me noopener">
+                <span class="resource-social-icon">{{ partial "resource-icon.html" "instagram" }}</span>
+                <span><strong>Booster Instagram</strong><small>@wshstb · For families and supporters</small></span>
+                <span class="resource-social-arrow" aria-hidden="true">&nearr;</span>
+              </a>
+            </li>
+            <li>
+              <a href="{{ hugo.Data.site.student_instagram_url }}" target="_blank" rel="noopener">
+                <span class="resource-social-icon">{{ partial "resource-icon.html" "instagram" }}</span>
+                <span><strong>Student Instagram</strong><small>@wshstheatre.513 · From the student program</small></span>
+                <span class="resource-social-arrow" aria-hidden="true">&nearr;</span>
+              </a>
+            </li>
+            <li>
+              <a href="{{ hugo.Data.site.student_tiktok_url }}" target="_blank" rel="noopener">
+                <span class="resource-social-icon">{{ partial "resource-icon.html" "tiktok" }}</span>
+                <span><strong>Student TikTok</strong><small>@wshstheatre513 · Short-form student theatre updates</small></span>
+                <span class="resource-social-arrow" aria-hidden="true">&nearr;</span>
+              </a>
+            </li>
+            <li>
+              <a href="{{ hugo.Data.site.facebook_url }}" target="_blank" rel="noopener">
+                <span class="resource-social-icon">{{ partial "resource-icon.html" "facebook" }}</span>
+                <span><strong>Booster Facebook</strong><small>News and show sharing for the community</small></span>
+                <span class="resource-social-arrow" aria-hidden="true">&nearr;</span>
+              </a>
+            </li>
+          </ul>
+        </article>
       </div>
     </div>
   </section>

@@ -103,6 +103,17 @@ content:
             label: Full synopsis
             type: rich-text
             description: "Two promotional paragraphs for the show detail page."
+          - name: description_image
+            label: Synopsis image
+            type: image
+            description: "Optional production image displayed beneath the full synopsis."
+          - name: description_image_alt
+            label: Synopsis image description
+            type: string
+            description: "Describe the image for visitors who cannot see it."
+          - name: description_image_caption
+            label: Synopsis image caption
+            type: string
           - name: season
             label: Season
             type: reference
@@ -590,8 +601,14 @@ content:
       - name: student_instagram_url
         label: Student Instagram URL
         type: string
+      - name: student_tiktok_url
+        label: Student TikTok URL
+        type: string
       - name: facebook_url
-        label: Facebook URL
+        label: Booster Facebook URL
+        type: string
+      - name: parent_facebook_group_url
+        label: Private parent Facebook group URL
         type: string
       - name: booster_email
         label: Booster email

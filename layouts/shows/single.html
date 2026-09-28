@@ -52,6 +52,13 @@
           <p class="eyebrow">About the Show</p>
           <h2 class="section-title">{{ .Title }}</h2>
           <div class="prose show-synopsis">{{ .Params.long_summary | markdownify }}</div>
+          {{ with .Params.description_image }}
+            {{ $dimensions := partial "image-dimensions.html" . }}
+            <figure class="show-description-image">
+              <img src="{{ . }}" alt="{{ $.Params.description_image_alt | default (printf "Production photo from %s" $.Title) }}"{{ if and $dimensions.width $dimensions.height }} width="{{ $dimensions.width }}" height="{{ $dimensions.height }}"{{ end }} loading="lazy" decoding="async">
+              {{ with $.Params.description_image_caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+            </figure>
+          {{ end }}
         {{ else if ne (strings.TrimSpace .RawContent) "" }}
           <p class="eyebrow">About the Show</p>
           <h2 class="section-title">{{ .Title }}</h2>
