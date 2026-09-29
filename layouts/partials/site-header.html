@@ -17,7 +17,10 @@
         {{ range site.Menus.main }}
           {{ $isTickets := eq .Name "Tickets" }}
           <li>
-            <a class="nav-link{{ if $isTickets }} nav-link-tickets{{ end }}" href="{{ .URL }}"{{ if $.IsMenuCurrent .Menu . }} aria-current="page"{{ end }}>{{ .Name }}</a>
+            <a class="nav-link{{ if $isTickets }} nav-link-tickets{{ end }}" href="{{ .URL }}"{{ if $.IsMenuCurrent .Menu . }} aria-current="page"{{ end }}>
+              {{ if $isTickets }}{{ partial "ticket-icon.html" "nav-ticket-icon" }}{{ end }}
+              {{ .Name }}
+            </a>
           </li>
         {{ end }}
       </ul>

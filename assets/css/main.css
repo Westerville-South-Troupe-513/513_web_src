@@ -223,31 +223,6 @@ button:focus-visible {
   color: white;
 }
 
-.nonprofit-introduction {
-  background: #f2a900;
-  color: var(--color-ink);
-}
-
-.nonprofit-introduction-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.25rem 2rem;
-  padding-block: .75rem;
-  font-size: .86rem;
-  line-height: 1.45;
-}
-
-.nonprofit-introduction p { margin: 0; }
-
-.nonprofit-introduction a {
-  color: inherit;
-  flex: 0 0 auto;
-  font-weight: 800;
-  text-decoration-thickness: 2px;
-  text-underline-offset: .2rem;
-}
-
 .nav-inner {
   display: flex;
   min-height: 5rem;
@@ -316,6 +291,9 @@ button:focus-visible {
 }
 
 .nav-link-tickets {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
   margin-left: .5rem;
   border: 0;
   border-radius: .25rem;
@@ -323,8 +301,26 @@ button:focus-visible {
   color: white;
 }
 
-.nav-link-tickets:hover,
+.nav-ticket-icon {
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.nav-ticket-icon {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
 .nav-link-tickets[aria-current="page"] {
+  border: 0;
+  background: var(--color-stage-red);
+}
+
+.nav-link-tickets:hover {
   border: 0;
   background: var(--color-stage-red-dark);
 }
@@ -420,7 +416,7 @@ button:focus-visible {
 }
 
 .hero-summary {
-  margin: 0;
+  margin: .75rem 0 0;
   color: #999;
 }
 
@@ -911,38 +907,6 @@ button:focus-visible {
   line-height: 1.6;
 }
 
-.resource-card-actions {
-  display: flex;
-  margin-top: auto;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: .75rem;
-  padding-top: 2rem;
-}
-
-.resource-card-link,
-.resource-secondary-link {
-  color: var(--color-ink);
-  font-size: .8rem;
-  font-weight: 800;
-  letter-spacing: .05em;
-  text-decoration-color: var(--color-stage-red);
-  text-decoration-thickness: 2px;
-  text-underline-offset: .3rem;
-  text-transform: uppercase;
-}
-
-.resource-card > .resource-card-link {
-  margin-top: auto;
-  padding-top: 2rem;
-}
-
-.resource-secondary-link {
-  color: #65646a;
-  font-size: .72rem;
-}
-
-.resource-card-link span,
 .resource-social-arrow {
   color: var(--color-stage-red);
 }
@@ -960,7 +924,7 @@ button:focus-visible {
 }
 
 .resource-social-links a,
-.resource-community-link {
+.resource-primary-link {
   display: grid;
   min-height: 4rem;
   align-items: center;
@@ -975,16 +939,17 @@ button:focus-visible {
 }
 
 .resource-social-links a:hover,
-.resource-community-link:hover {
+.resource-primary-link:hover {
   border-color: var(--color-stage-red);
   background: white;
 }
 
-.resource-community-link {
-  margin-top: 1.5rem;
+.resource-primary-link {
+  margin-top: auto;
 }
 
-.resource-social-icon {
+.resource-social-icon,
+.resource-cta-icon {
   display: grid;
   width: 2rem;
   height: 2rem;
@@ -998,20 +963,30 @@ button:focus-visible {
   fill: currentColor;
 }
 
+.resource-cta-icon svg {
+  width: 1.35rem;
+  height: 1.35rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
 .resource-social-links strong,
 .resource-social-links small,
-.resource-community-link strong,
-.resource-community-link small {
+.resource-primary-link strong,
+.resource-primary-link small {
   display: block;
 }
 
 .resource-social-links strong,
-.resource-community-link strong {
+.resource-primary-link strong {
   font-size: .82rem;
 }
 
 .resource-social-links small,
-.resource-community-link small {
+.resource-primary-link small {
   margin-top: .15rem;
   color: #69686d;
   font-size: .7rem;
@@ -2842,7 +2817,7 @@ button:focus-visible {
   }
   .nav-menu[data-open] { display: grid; }
   .nav-link { padding: .9rem 0; }
-  .nav-link-tickets { margin: .5rem 0 0; padding-inline: 1rem; text-align: center; }
+  .nav-link-tickets { display: flex; justify-content: center; margin: .5rem 0 0; padding-inline: 1rem; text-align: center; }
 }
 
 @media (max-width: 48rem) {
@@ -2897,8 +2872,7 @@ button:focus-visible {
   .resource-grid { grid-template-columns: 1fr; }
   .resource-social-card { grid-column: auto; }
   .resource-card { min-height: auto; }
-  .resource-card > .resource-card-link,
-  .resource-card-actions,
+  .resource-primary-link { margin-top: 2rem; }
   .resource-social-links { margin-top: 2rem; padding-top: 0; }
   .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .section-header {
@@ -2908,7 +2882,6 @@ button:focus-visible {
     margin-bottom: 3rem;
   }
   .page-description { margin-top: 1.75rem; }
-  .nonprofit-introduction-inner { align-items: flex-start; flex-direction: column; gap: .4rem; }
   .hero-actions { margin-top: 2.5rem; }
   .student-production {
     grid-template-columns: 4.5rem minmax(0, 1fr) auto;

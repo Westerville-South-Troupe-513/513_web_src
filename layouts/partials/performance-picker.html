@@ -13,7 +13,10 @@
         <span class="performance-day">{{ time.Format "Monday" $date }}</span>
         <time datetime="{{ time.Format "2006-01-02" $date }}">{{ time.Format "Jan 2" $date }}</time>
         {{ if and .ticket_url (ne $status.key "closed") }}
-          <a class="button-primary performance-time-button" href="{{ .ticket_url }}" aria-label="Buy tickets for {{ $.Title }}, {{ time.Format "Monday, January 2, 2006" $date }} at {{ .time }} Eastern">{{ .time }} <span class="hero-more-info-arrow" aria-hidden="true">&rarr;</span></a>
+          <a class="button-primary performance-time-button" href="{{ .ticket_url }}" aria-label="Buy tickets for {{ $.Title }}, {{ time.Format "Monday, January 2, 2006" $date }} at {{ .time }} Eastern">
+            {{ .time }}
+            <span class="hero-more-info-arrow" aria-hidden="true">&rarr;</span>
+          </a>
         {{ else }}
           <div class="performance-option-unavailable">
             <span class="performance-time">{{ .time }}</span>
