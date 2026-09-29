@@ -1,7 +1,8 @@
 ---
-title: "Almost Main"
+title: "Almost, Maine"
 slug: "2024-25-almost-main"
-description: "Almost Main, presented during Westerville South Theatre's 2024–25 Season."
+description: "Almost, Maine, presented during Westerville South Theatre's 2024–25 Season."
+short_summary: "Beneath the northern lights in the remote town of Almost, Maine, residents stumble through unexpected moments of love, loss, and connection. Told through a collection of warm and whimsical vignettes, John Cariani's play finds magic in the awkward, hopeful ways people reach for one another."
 season: "2024-25"
 show_type: "Extra Director Project"
 date_display: "2024–25 Season"

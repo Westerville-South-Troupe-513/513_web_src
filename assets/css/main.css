@@ -1941,6 +1941,17 @@ button:focus-visible {
   text-transform: uppercase;
 }
 
+.archive-show-copy a.archive-show-title {
+  color: inherit;
+  text-decoration: none;
+}
+
+.archive-show-copy a.archive-show-title:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--color-stage-red);
+  text-underline-offset: .2rem;
+}
+
 .archive-show-list small {
   color: #747378;
   font-size: .67rem;
@@ -2282,6 +2293,14 @@ button:focus-visible {
   font-weight: 700;
   line-height: 1.1;
   text-transform: uppercase;
+}
+
+.show-facts-playbill {
+  margin-top: 1.5rem;
+}
+
+.show-facts-playbill .button-dark {
+  gap: .5rem;
 }
 
 .prose {

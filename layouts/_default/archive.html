@@ -28,7 +28,11 @@
               <li>
                 <div class="archive-show-entry">
                   <div class="archive-show-copy">
-                    <span class="archive-show-title">{{ .Title }}</span>
+                    {{ if .Params.noindex }}
+                      <span class="archive-show-title">{{ .Title }}</span>
+                    {{ else }}
+                      <a class="archive-show-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    {{ end }}
                     <small>{{ .Params.show_type }}</small>
                   </div>
                   {{ with .Params.playbill }}

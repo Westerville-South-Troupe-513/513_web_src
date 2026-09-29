@@ -16,6 +16,7 @@ program: "main-stage"
 production_format: "play"
 poster: "/images/lost_girl_playbill_medium.webp"
 poster_large: "/images/lost_girl_playbill_large.webp"
+playbill: "/playbills/lost-girl-2026-27-playbill.pdf"
 profile_image: "/images/lost_girl_profile_medium.jpeg"
 profile_image_large: "/images/lost_girl_profile_large.jpeg"
 opening_date: 2026-10-02

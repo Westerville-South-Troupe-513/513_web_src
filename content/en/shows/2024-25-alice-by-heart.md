@@ -2,6 +2,7 @@
 title: "Alice by Heart"
 slug: "2024-25-alice-by-heart"
 description: "Alice by Heart, presented during Westerville South Theatre's 2024–25 Season."
+short_summary: "During the London Blitz, Alice Spencer and her ailing friend Alfred escape their underground shelter through the pages of Alice's Adventures in Wonderland. Their journey through Wonderland becomes a moving exploration of first love, grief, and the courage to move forward."
 season: "2024-25"
 show_type: "Fall Musical"
 date_display: "2024–25 Season"

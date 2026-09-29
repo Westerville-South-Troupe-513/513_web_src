@@ -2,6 +2,7 @@
 title: "Charlie and the Chocolate Factory"
 slug: "2024-25-charlie-and-the-chocolate-factory"
 description: "Charlie and the Chocolate Factory, presented during Westerville South Theatre's 2024–25 Season."
+short_summary: "Kindhearted Charlie Bucket wins a golden ticket into the mysterious chocolate factory of the legendary Willy Wonka. As five young winners encounter its astonishing inventions and unexpected consequences, their tour becomes a test of imagination, humility, and character."
 season: "2024-25"
 show_type: "Spring Musical"
 date_display: "2024–25 Season"

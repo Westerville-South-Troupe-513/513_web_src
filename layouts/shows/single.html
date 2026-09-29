@@ -67,10 +67,6 @@
           <p class="eyebrow">Production Archive</p>
           <h2 class="section-title">{{ strings.Replace .Params.season "-" "–" }} Season</h2>
           <p class="page-description archive-description">Troupe 513 presented <em>{{ .Title }}</em> as part of its {{ strings.Replace .Params.season "-" "–" }} season.</p>
-          {{ with .Params.playbill }}
-            {{ $playbillURL := partial "playbill-download-url.html" . }}
-            <p><a class="button-dark" href="{{ $playbillURL }}" target="_blank" rel="noopener">Download Playbill</a></p>
-          {{ end }}
         {{ end }}
       </div>
       <aside class="show-facts" aria-label="Show details">
@@ -88,6 +84,10 @@
           {{ with .Params.intermission }}<div><dt>Intermission</dt><dd>{{ . }}</dd></div>{{ end }}
           {{ with .Params.age_guidance }}<div><dt>Age guidance</dt><dd>{{ . }}</dd></div>{{ end }}
         </dl>
+        {{ with .Params.playbill }}
+          {{ $playbillURL := partial "playbill-download-url.html" . }}
+          <p class="show-facts-playbill"><a class="button-dark" href="{{ $playbillURL }}" target="_blank" rel="noopener"><span aria-hidden="true">↓</span> Download Playbill</a></p>
+        {{ end }}
       </aside>
     </div>
   </section>
