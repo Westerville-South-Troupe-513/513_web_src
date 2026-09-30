@@ -307,7 +307,7 @@ button:focus-visible {
   stroke: currentColor;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke-width: 1.8;
+  stroke-width: 2;
 }
 
 .nav-ticket-icon {
@@ -1695,16 +1695,19 @@ button:focus-visible {
   overflow: hidden;
   width: min(100%, 27rem);
   justify-self: center;
-  aspect-ratio: var(--show-art-ratio);
   border: 1px solid rgba(255,255,255,.6);
   background: var(--show-color);
   box-shadow: 1rem 1rem 0 var(--color-stage-red);
 }
 
+.show-detail-poster-fallback {
+  aspect-ratio: var(--show-art-ratio);
+}
+
 .show-detail-poster > img {
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
 }
 
 .show-venue {
@@ -1967,76 +1970,43 @@ button:focus-visible {
   color: var(--color-stage-red-dark);
 }
 
-.past-production-seasons {
+.past-production-gallery {
   display: grid;
   align-items: start;
   gap: clamp(1.5rem, 3vw, 2.5rem);
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.past-production-season {
-  display: grid;
-  align-items: start;
-  gap: clamp(2rem, 7vw, 7rem);
-  grid-template-columns: minmax(14rem, .65fr) minmax(0, 1.35fr);
-  border-top: .3rem solid var(--color-stage-red);
-  background: #1d1d21;
-  padding: clamp(1.5rem, 3vw, 2.25rem);
-}
-
-.past-production-season > header {
-  margin-bottom: 0;
-}
-
-.past-production-season h3 {
-  margin: 0;
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 3rem);
-  line-height: .95;
-  text-transform: uppercase;
-}
-
-.past-production-season ol {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.past-production-season li {
-  display: grid;
-  align-items: center;
-  gap: 1rem;
-  grid-template-columns: minmax(0, 1fr) auto;
-  border-top: 1px solid #3d3c40;
-  padding-block: 1rem;
-}
-
-.past-production-season li:last-child {
-  padding-bottom: 0;
-}
-
-.past-production-season li > div {
-  display: grid;
-  gap: .3rem;
-}
-
-.past-production-title {
+.past-production-photo {
   color: white;
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 700;
-  line-height: 1;
   text-decoration: none;
-  text-transform: uppercase;
 }
 
-.past-production-title:hover {
-  text-decoration: underline;
-  text-decoration-color: var(--color-stage-red);
-  text-underline-offset: .2rem;
+.past-production-photo figure {
+  margin: 0;
 }
 
-.past-production-season li span {
+.past-production-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(255,255,255,.25);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.past-production-photo:hover img {
+  border-color: rgba(255,255,255,.8);
+  box-shadow: .65rem .65rem 0 var(--color-stage-red);
+  transform: translateY(-.25rem);
+}
+
+.past-production-photo figcaption {
+  display: grid;
+  gap: .35rem;
+  margin-top: 1rem;
+}
+
+.past-production-photo figcaption span {
   color: #aaa9ad;
   font-size: .65rem;
   font-weight: 700;
@@ -2044,7 +2014,21 @@ button:focus-visible {
   text-transform: uppercase;
 }
 
+.past-production-photo figcaption strong {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.5vw, 1.8rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.past-production-gallery-actions {
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
 .playbill-download-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
   color: white;
   font-size: .7rem;
   font-weight: 800;
@@ -2055,9 +2039,19 @@ button:focus-visible {
   text-transform: uppercase;
 }
 
-.playbill-download-link span {
+.playbill-download-link .playbill-icon {
   color: var(--color-stage-red);
-  margin-right: .2rem;
+}
+
+.playbill-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
 }
 
 .people-grid {
@@ -2545,6 +2539,11 @@ button:focus-visible {
   font-size: clamp(2.25rem, 4vw, 4rem);
 }
 
+.booster-mission-aside {
+  display: grid;
+  gap: 1.5rem;
+}
+
 .booster-identity {
   border-top: .35rem solid var(--color-stage-red);
   background: var(--color-ink-soft);
@@ -2570,6 +2569,31 @@ button:focus-visible {
   margin: .4rem 0 0;
   color: #aaa9ad;
   font-size: .78rem;
+}
+
+.booster-mission-photo {
+  margin: 0;
+}
+
+.booster-mission-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #c7c1b7;
+}
+
+.booster-mission-photo figcaption {
+  margin-top: .75rem;
+  color: #67666a;
+  font-size: .75rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.booster-mission-photo figcaption a {
+  color: inherit;
+  text-decoration-color: var(--color-stage-red);
+  text-underline-offset: .2rem;
 }
 
 .booster-action-grid h3 {
@@ -2866,10 +2890,7 @@ button:focus-visible {
   }
   .show-detail-hero { padding-block: 5rem; }
   .archive-season-grid { grid-template-columns: 1fr; }
-  .past-production-season {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
+  .past-production-gallery { grid-template-columns: 1fr; }
   .people-grid { grid-template-columns: 1fr; }
   .sponsor-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .sponsor-card { min-height: 7rem; padding: 1rem; font-size: 1.1rem; }
@@ -2971,8 +2992,7 @@ button:focus-visible {
   .booster-board-section .board-list article { grid-template-columns: 1fr; gap: .35rem; }
   .sponsor-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .performance-row { align-items: flex-start; flex-direction: column; }
-  .archive-show-entry,
-  .past-production-season li {
+  .archive-show-entry {
     align-items: start;
     grid-template-columns: 1fr;
   }

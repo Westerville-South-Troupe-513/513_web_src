@@ -5,7 +5,7 @@
   {{ $art := partial "show-art-data.html" . }}
   <header class="show-detail-hero" style="--show-color: {{ .Params.art_color | default "#33333a" }}">
     <div class="container-wide show-detail-grid">
-      <div class="show-detail-poster">
+      <div class="show-detail-poster{{ if not $art.src }} show-detail-poster-fallback{{ end }}">
         {{ if $art.src }}
           <img
             class="show-art show-art-{{ $art.kind }}"
@@ -86,7 +86,7 @@
         </dl>
         {{ with .Params.playbill }}
           {{ $playbillURL := partial "playbill-download-url.html" . }}
-          <p class="show-facts-playbill"><a class="button-dark" href="{{ $playbillURL }}" target="_blank" rel="noopener"><span aria-hidden="true">↓</span> Download Playbill</a></p>
+          <p class="show-facts-playbill"><a class="button-dark" href="{{ $playbillURL }}" target="_blank" rel="noopener">{{ partial "playbill-icon.html" . }} Download Playbill</a></p>
         {{ end }}
       </aside>
     </div>

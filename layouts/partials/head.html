@@ -1,8 +1,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#17171a">
-<title>{{ if eq .Kind "404" }}Page Not Found | {{ site.Title }} Boosters{{ else if .IsHome }}{{ site.Title }} | Theatre Troupe 513 Boosters{{ else }}{{ .Title }} | {{ site.Title }} Boosters{{ end }}</title>
-<meta name="description" content="{{ if eq .Kind "404" }}The requested page could not be found. Return home or explore current Westerville South Theatre productions.{{ else }}{{ .Description | default hugo.Data.site.description }}{{ end }}">
+<title>{{ if eq .Kind "404" }}Page Not Found | {{ site.Title }} Boosters{{ else if .IsHome }}{{ site.Title }} | Troupe 513 Boosters{{ else if and (eq .Section "shows") .Params.opening_date .Params.date_display }}{{ .Title }} | {{ .Params.date_display }} | {{ site.Title }} Boosters{{ else }}{{ .Title }} | {{ site.Title }} Boosters{{ end }}</title>
+{{ $metaDescription := .Description | default hugo.Data.site.description }}
+{{ if and (eq .Section "shows") .Params.opening_date .Params.date_display }}
+  {{ $metaDescription = printf "%s. Performances: %s." (strings.TrimSuffix "." $metaDescription) .Params.date_display }}
+{{ end }}
+<meta name="description" content="{{ if eq .Kind "404" }}The requested page could not be found. Return home or explore current Westerville South Theatre productions.{{ else }}{{ $metaDescription }}{{ end }}">
 <link rel="canonical" href="{{ .Permalink }}">
 {{ if or .Params.noindex (eq .Kind "404") }}<meta name="robots" content="noindex,follow">{{ end }}
 <link rel="icon" href="/images/favicon.ico" sizes="any">

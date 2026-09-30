@@ -28,8 +28,8 @@
     </div>
   </section>
   {{ with $studentShows }}{{ partial "student-work-section.html" (dict "shows" .) }}{{ end }}
+  {{ partial "past-productions-section.html" . }}
   {{ with .Params.faq_categories }}
     {{ partial "context-faq-section.html" (dict "categories" .) }}
   {{ end }}
-  {{ partial "past-productions-section.html" . }}
 {{ end }}

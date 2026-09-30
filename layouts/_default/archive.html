@@ -5,7 +5,7 @@
         <img src="/images/mamma_mia_ensemble.webp" alt="The Mamma Mia company performs together beneath falling confetti" width="1280" height="960" loading="eager" fetchpriority="high" decoding="async">
       </div>
       <div class="page-hero-copy image-hero-copy">
-        <p class="eyebrow">Troupe 513 History</p>
+        <p class="eyebrow">Troupe 513 Archive</p>
         <h1 class="display-title">{{ .Title }}</h1>
         <p class="page-description">{{ .Description }}</p>
       </div>
@@ -37,7 +37,7 @@
                   </div>
                   {{ with .Params.playbill }}
                     {{ $playbillURL := partial "playbill-download-url.html" . }}
-                    <a class="playbill-download-link" href="{{ $playbillURL }}" target="_blank" rel="noopener" aria-label="Download the {{ $show.Title }} playbill"><span aria-hidden="true">↓</span> Download Playbill</a>
+                    <a class="playbill-download-link" href="{{ $playbillURL }}" target="_blank" rel="noopener" aria-label="Download the {{ $show.Title }} playbill">{{ partial "playbill-icon.html" . }} Download Playbill</a>
                   {{ end }}
                 </div>
               </li>
