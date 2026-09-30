@@ -140,4 +140,21 @@
     {{ partial "plan-your-visit.html" $venue }}
   {{ end }}
 
+  {{ with .Params.supporter_thanks_image }}
+    {{ $dimensions := partial "image-dimensions.html" . }}
+    <section class="show-supporter-thanks" aria-labelledby="show-supporter-thanks-heading">
+      <div class="container show-supporter-thanks-inner">
+        <div class="show-supporter-thanks-copy">
+          <p class="eyebrow">Rehearsal Support</p>
+          <h2 class="section-title" id="show-supporter-thanks-heading">{{ $.Params.supporter_thanks_title | default "Special Thanks" }}</h2>
+          {{ with $.Params.supporter_thanks_copy }}<p>{{ . }}</p>{{ end }}
+          {{ with $.Params.supporter_thanks_url }}<a class="button-secondary" href="{{ . }}" target="_blank" rel="noopener">Visit Jersey Mike's</a>{{ end }}
+        </div>
+        <div class="show-supporter-thanks-image">
+          <img src="{{ . }}" alt="{{ $.Params.supporter_thanks_image_alt | default "Show supporter artwork" }}"{{ if and $dimensions.width $dimensions.height }} width="{{ $dimensions.width }}" height="{{ $dimensions.height }}"{{ end }} loading="lazy" decoding="async">
+        </div>
+      </div>
+    </section>
+  {{ end }}
+
 {{ end }}

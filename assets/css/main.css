@@ -2524,6 +2524,59 @@ button:focus-visible {
   border-color: rgba(255, 255, 255, .75);
 }
 
+.show-supporter-thanks {
+  background: var(--color-stage-red);
+  color: white;
+  padding-block: clamp(4rem, 8vw, 7rem);
+}
+
+.show-supporter-thanks-inner {
+  display: grid;
+  align-items: center;
+  gap: clamp(2.5rem, 7vw, 7rem);
+  grid-template-columns: minmax(0, 1fr) minmax(14rem, 21rem);
+}
+
+.show-supporter-thanks-copy {
+  max-width: 48rem;
+}
+
+.show-supporter-thanks .eyebrow {
+  color: white;
+}
+
+.show-supporter-thanks .section-title {
+  margin-top: .75rem;
+}
+
+.show-supporter-thanks-copy > p:not(.eyebrow) {
+  max-width: 42rem;
+  margin: 1.25rem 0 2rem;
+  color: #ffe4dd;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.show-supporter-thanks .button-secondary {
+  border-color: rgba(255, 255, 255, .8);
+}
+
+.show-supporter-thanks-image {
+  overflow: hidden;
+  width: 100%;
+  max-width: 21rem;
+  justify-self: end;
+  border: 1px solid rgba(255, 255, 255, .65);
+  background: white;
+  box-shadow: .9rem .9rem 0 rgba(23, 23, 26, .75);
+}
+
+.show-supporter-thanks-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .booster-mission-layout {
   display: grid;
   align-items: start;
@@ -2937,12 +2990,14 @@ button:focus-visible {
   .support-layout { gap: 4rem; }
   .support-closing { padding-block: 5rem; }
   .support-closing-inner,
-  .sponsor-closing-inner {
+  .sponsor-closing-inner,
+  .show-supporter-thanks-inner {
     grid-template-columns: 1fr;
     gap: 3.25rem;
   }
   .support-closing-image,
-  .sponsor-closing-image { max-width: 20rem; justify-self: start; }
+  .sponsor-closing-image,
+  .show-supporter-thanks-image { max-width: 20rem; justify-self: start; }
   .booster-action-grid { grid-template-columns: 1fr; }
   .booster-action-grid article { min-height: 22rem; border-right: 0; border-bottom: 1px solid #3d3c40; }
   .booster-action-grid article:last-child { border-bottom: 0; }

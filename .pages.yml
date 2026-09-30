@@ -114,6 +114,22 @@ content:
           - name: description_image_caption
             label: Synopsis image caption
             type: string
+          - name: supporter_thanks_image
+            label: Supporter thank-you image
+            type: image
+            description: "Optional artwork for a show-specific supporter thank-you section."
+          - name: supporter_thanks_image_alt
+            label: Supporter thank-you image description
+            type: string
+          - name: supporter_thanks_title
+            label: Supporter thank-you heading
+            type: string
+          - name: supporter_thanks_copy
+            label: Supporter thank-you message
+            type: text
+          - name: supporter_thanks_url
+            label: Supporter website
+            type: string
           - name: season
             label: Season
             type: reference
