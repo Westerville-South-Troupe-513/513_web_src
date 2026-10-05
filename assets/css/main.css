@@ -1970,6 +1970,17 @@ button:focus-visible {
   color: var(--color-stage-red-dark);
 }
 
+.archive-season-note {
+  margin: 1.25rem 0 0;
+  color: #5f5e62;
+  line-height: 1.5;
+}
+
+.archive-season-note a {
+  color: var(--color-stage-red-dark);
+  font-weight: 700;
+}
+
 .past-productions-section {
   padding-block: clamp(2.75rem, 5vw, 4.5rem);
 }

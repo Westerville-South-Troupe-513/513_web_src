@@ -38,7 +38,6 @@ performances:
     time: "2:00 PM"
     ticket_url: "https://westerville.hometownticketing.com/embed/event/3582"
 venue: "south-auditorium"
-featured: true
 draft: false
 art_color: "#17385f"
 ---

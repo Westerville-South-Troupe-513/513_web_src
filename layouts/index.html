@@ -5,11 +5,19 @@
   {{ $seasonShows = $seasonShows.ByParam "opening_date" }}
   {{ $mainStageShows := where $seasonShows ".Params.program" "main-stage" }}
   {{ $studentShows := where $seasonShows ".Params.program" "ne" "main-stage" }}
-  {{ $featuredPages := where $mainStageShows ".Params.featured" true }}
-  {{ $featured := index $mainStageShows 0 }}
-  {{ with $featuredPages }}{{ $featured = index . 0 }}{{ end }}
-  {{ $featuredArt := partial "show-art-data.html" $featured }}
-  {{ $status := partial "show-status.html" $featured }}
+  {{ $featured := false }}
+  {{ range $seasonShows }}
+    {{ if and (not $featured) (ne (partial "show-status.html" .).key "closed") }}
+      {{ $featured = . }}
+    {{ end }}
+  {{ end }}
+  {{ with $featured }}
+  {{ $featuredArt := partial "show-art-data.html" . }}
+  {{ $status := partial "show-status.html" . }}
+  {{ $hasTickets := ne (.Params.ticket_url | default "") "" }}
+  {{ range .Params.performances }}
+    {{ if .ticket_url }}{{ $hasTickets = true }}{{ end }}
+  {{ end }}
   <section class="hero" aria-labelledby="featured-show-title">
     <div class="container-wide hero-inner">
       <div class="hero-copy">
@@ -18,7 +26,7 @@
         <p class="hero-meta">{{ $featured.Params.show_type }} · {{ $featured.Params.date_display }}</p>
         {{ with $featured.Params.short_summary }}<p class="hero-summary">{{ . }}</p>{{ end }}
         <div class="hero-actions">
-          <a class="button-primary hero-more-info" href="{{ $featured.RelPermalink }}">Showtimes &amp; Tickets <span class="hero-more-info-arrow" aria-hidden="true">&rarr;</span></a>
+          <a class="button-primary hero-more-info" href="{{ $featured.RelPermalink }}">{{ if $hasTickets }}Showtimes &amp; Tickets{{ else if $featured.Params.performances }}View Showtimes{{ else }}Show Details{{ end }} <span class="hero-more-info-arrow" aria-hidden="true">&rarr;</span></a>
         </div>
       </div>
       <div class="hero-poster-column">
@@ -44,6 +52,7 @@
       </div>
     </div>
   </section>
+  {{ end }}
 
   <section class="section section-dark" aria-labelledby="season-heading">
     <div class="container-wide">

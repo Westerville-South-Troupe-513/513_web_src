@@ -12,39 +12,55 @@
     </div>
   </header>
   <div class="archive-seasons">
-    {{ $seasons := where (where site.RegularPages "Section" "seasons") ".Params.active" false }}
+    {{ $seasons := where site.RegularPages "Section" "seasons" }}
     {{ range sort $seasons ".Params.start_date" "desc" }}
-      {{ $season := .Params.slug }}
-      {{ $shows := where (where site.RegularPages "Section" "shows") ".Params.season" $season }}
-      <section class="archive-season" aria-labelledby="season-{{ $season }}">
+      {{ $season := . }}
+      {{ $shows := where (where site.RegularPages "Section" "shows") ".Params.season" $season.Params.slug }}
+      {{ $archivedShows := slice }}
+      {{ $hasUpcoming := false }}
+      {{ range $shows }}
+        {{ if or (not $season.Params.active) (eq (partial "show-status.html" .).key "closed") }}
+          {{ $archivedShows = $archivedShows | append . }}
+        {{ else }}
+          {{ $hasUpcoming = true }}
+        {{ end }}
+      {{ end }}
+      {{ with $archivedShows }}
+      <section class="archive-season" aria-labelledby="season-{{ $season.Params.slug }}">
         <div class="container-wide archive-season-grid">
           <header>
-            <p class="eyebrow">Season Archive</p>
-            <h2 class="section-title" id="season-{{ $season }}">{{ .Title }}</h2>
+            <p class="eyebrow">{{ if $season.Params.active }}Completed Productions{{ else }}Season Archive{{ end }}</p>
+            <h2 class="section-title" id="season-{{ $season.Params.slug }}">{{ $season.Title }}</h2>
           </header>
-          <ol class="archive-show-list">
-            {{ range sort $shows "Title" }}
-              {{ $show := . }}
-              <li>
-                <div class="archive-show-entry">
-                  <div class="archive-show-copy">
-                    {{ if .Params.noindex }}
-                      <span class="archive-show-title">{{ .Title }}</span>
-                    {{ else }}
-                      <a class="archive-show-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+          <div>
+            <ol class="archive-show-list">
+              {{ range sort . "Title" }}
+                {{ $show := . }}
+                <li>
+                  <div class="archive-show-entry">
+                    <div class="archive-show-copy">
+                      {{ if .Params.noindex }}
+                        <span class="archive-show-title">{{ .Title }}</span>
+                      {{ else }}
+                        <a class="archive-show-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                      {{ end }}
+                      <small>{{ .Params.show_type }}</small>
+                    </div>
+                    {{ with .Params.playbill }}
+                      {{ $playbillURL := partial "playbill-download-url.html" . }}
+                      <a class="playbill-download-link" href="{{ $playbillURL }}" target="_blank" rel="noopener" aria-label="Download the {{ $show.Title }} playbill">{{ partial "playbill-icon.html" . }} Download Playbill</a>
                     {{ end }}
-                    <small>{{ .Params.show_type }}</small>
                   </div>
-                  {{ with .Params.playbill }}
-                    {{ $playbillURL := partial "playbill-download-url.html" . }}
-                    <a class="playbill-download-link" href="{{ $playbillURL }}" target="_blank" rel="noopener" aria-label="Download the {{ $show.Title }} playbill">{{ partial "playbill-icon.html" . }} Download Playbill</a>
-                  {{ end }}
-                </div>
-              </li>
+                </li>
+              {{ end }}
+            </ol>
+            {{ if and $season.Params.active $hasUpcoming }}
+              <p class="archive-season-note">This season is still in production. <a href="/shows/">View upcoming shows <span aria-hidden="true">&rarr;</span></a></p>
             {{ end }}
-          </ol>
+          </div>
         </div>
       </section>
+      {{ end }}
     {{ end }}
   </div>
 {{ end }}

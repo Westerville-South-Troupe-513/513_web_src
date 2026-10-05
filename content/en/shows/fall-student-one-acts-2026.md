@@ -2,7 +2,7 @@
 title: "Fall Student One-Act Plays"
 slug: "fall-student-one-acts-2026"
 description: "An evening of student-directed one-act plays in Troupe 513's 2026–27 season."
-short_summary: "A collection of student-directed one-act plays brings several complete theatrical worlds to the stage in one fast-moving evening. Discover fresh voices, inventive choices, and the thrill of watching emerging directors tell stories in their own distinct ways."
+short_summary: "A collection of student-directed one-act plays brings several complete theatrical worlds to the stage in one fast-moving evening."
 long_summary: |
   The Fall Student One-Act Plays give directors Eli Benton, Lyla Swanson, Elizabeth Brooks, and Clover Rigsby the opportunity to lead compact productions from concept to performance. Individual titles will be announced as the program takes shape, but each one-act will offer its own characters, style, and complete theatrical journey.
 

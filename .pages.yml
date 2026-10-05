@@ -73,7 +73,7 @@ content:
           delete: false
         view:
           primary: title
-          fields: [title, season, program, show_type, opening_date, featured, draft]
+          fields: [title, season, program, show_type, opening_date, draft]
           sort: [opening_date, title, season]
           search: [title, season, program, show_type, student_directors]
           default:
@@ -291,10 +291,6 @@ content:
               value: "{path}"
               label: "{title}"
               search: "title,category"
-          - name: featured
-            label: Feature on homepage
-            type: boolean
-            default: false
           - name: noindex
             label: Hide from search engines
             type: boolean

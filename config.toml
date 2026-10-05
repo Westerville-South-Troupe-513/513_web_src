@@ -61,5 +61,5 @@ disableKinds = ["taxonomy", "term"]
   weight = 45
 [[menus.main]]
   name = "Tickets"
-  pageRef = "/shows/lost-girl"
+  pageRef = "/tickets"
   weight = 50
