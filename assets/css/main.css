@@ -732,7 +732,13 @@ button:focus-visible {
 
 .student-production-date strong {
   margin-block: .35rem;
-  font-size: 2.7rem;
+  font-size: 2.375rem;
+}
+
+.student-production-date .student-production-date-range {
+  font-size: 1.65rem;
+  line-height: 1;
+  overflow-wrap: normal;
 }
 
 .student-production-kicker {
@@ -3104,6 +3110,7 @@ button:focus-visible {
     grid-template-columns: 3.75rem minmax(0, 1fr);
   }
   .student-production-date strong { font-size: 2.2rem; }
+  .student-production-date .student-production-date-range { font-size: 1.2rem; }
   .student-production-link { grid-column: 2; }
 }
 

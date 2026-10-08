@@ -1,11 +1,15 @@
 <div class="student-production-list">
   {{ range . }}
     {{ $programLabel := partial "program-label.html" .Params.program }}
+    {{ $opening := time.AsTime .Params.opening_date }}
+    {{ $closing := time.AsTime (.Params.closing_date | default .Params.opening_date) }}
+    {{ $hasRun := ne (time.Format "2006-01-02" $opening) (time.Format "2006-01-02" $closing) }}
+    {{ $crossesMonth := ne (time.Format "2006-01" $opening) (time.Format "2006-01" $closing) }}
     <article class="student-production">
       <div class="student-production-date">
-        <span>{{ time.Format "Jan" (time.AsTime .Params.opening_date) }}</span>
-        <strong>{{ time.Format "2" (time.AsTime .Params.opening_date) }}</strong>
-        <small>{{ time.Format "2006" (time.AsTime .Params.opening_date) }}</small>
+        <span>{{ time.Format "Jan" $opening }}</span>
+        <strong{{ if $hasRun }} class="student-production-date-range"{{ end }}>{{ time.Format "2" $opening }}{{ if $hasRun }}–{{ if $crossesMonth }}<br>{{ time.Format "Jan 2" $closing }}{{ else }}{{ time.Format "2" $closing }}{{ end }}{{ end }}</strong>
+        <small>{{ time.Format "2006" $opening }}{{ if ne (time.Format "2006" $opening) (time.Format "2006" $closing) }}–{{ time.Format "2006" $closing }}{{ end }}</small>
       </div>
       <div class="student-production-copy">
         <p class="student-production-kicker">{{ $programLabel }}{{ if eq .Params.program "main-stage" }}{{ $status := partial "show-status.html" . }} · {{ if eq $status.key "closed" }}Past Production{{ else }}{{ $status.label }}{{ end }}{{ end }}</p>
