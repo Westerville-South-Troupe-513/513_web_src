@@ -14,7 +14,7 @@
         </div>
       {{ end }}
       <div{{ if .Params.hero_image }} class="page-hero-copy image-hero-copy"{{ end }}>
-        <p class="eyebrow">Westerville South Theatre</p>
+        <p class="eyebrow">{{ if $isVolunteer }}Find Your Light{{ else }}Westerville South Theatre{{ end }}</p>
         <h1 class="display-title">{{ .Title }}</h1>
         {{ with .Description }}<p class="page-description">{{ . }}</p>{{ end }}
       </div>

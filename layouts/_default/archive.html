@@ -5,7 +5,7 @@
         <img src="/images/mamma_mia_ensemble.webp" alt="The Mamma Mia company performs together beneath falling confetti" width="1280" height="960" loading="eager" fetchpriority="high" decoding="async">
       </div>
       <div class="page-hero-copy image-hero-copy">
-        <p class="eyebrow">Troupe 513 Archive</p>
+        <p class="eyebrow">Strike the Set</p>
         <h1 class="display-title">{{ .Title }}</h1>
         <p class="page-description">{{ .Description }}</p>
       </div>
@@ -55,7 +55,12 @@
               {{ end }}
             </ol>
             {{ if and $season.Params.active $hasUpcoming }}
-              <p class="archive-season-note">This season is still in production. <a href="/shows/">View upcoming shows <span aria-hidden="true">&rarr;</span></a></p>
+              <p class="archive-season-note">
+                <svg class="archive-season-note-icon" aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+                  <path d="M12 2.5 14.4 9.6 21.5 12l-7.1 2.4L12 21.5l-2.4-7.1L2.5 12l7.1-2.4L12 2.5Z" />
+                </svg>
+                <span>This season is still in production. <a href="/shows/">View upcoming shows <span aria-hidden="true">&rarr;</span></a></span>
+              </p>
             {{ end }}
           </div>
         </div>

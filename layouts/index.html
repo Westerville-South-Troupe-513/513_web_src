@@ -4,7 +4,19 @@
   {{ $seasonShows := where (where site.RegularPages "Section" "shows") ".Params.season" $activeSeason.Params.slug }}
   {{ $seasonShows = $seasonShows.ByParam "opening_date" }}
   {{ $mainStageShows := where $seasonShows ".Params.program" "main-stage" }}
+  {{ $upcomingMainStageShows := slice }}
+  {{ range $mainStageShows }}
+    {{ if ne (partial "show-status.html" .).key "closed" }}
+      {{ $upcomingMainStageShows = $upcomingMainStageShows | append . }}
+    {{ end }}
+  {{ end }}
   {{ $studentShows := where $seasonShows ".Params.program" "ne" "main-stage" }}
+  {{ $upcomingStudentShows := slice }}
+  {{ range $studentShows }}
+    {{ if ne (partial "show-status.html" .).key "closed" }}
+      {{ $upcomingStudentShows = $upcomingStudentShows | append . }}
+    {{ end }}
+  {{ end }}
   {{ $featured := false }}
   {{ range $seasonShows }}
     {{ if and (not $featured) (ne (partial "show-status.html" .).key "closed") }}
@@ -21,7 +33,7 @@
   <section class="hero" aria-labelledby="featured-show-title">
     <div class="container-wide hero-inner">
       <div class="hero-copy">
-        <p class="eyebrow">{{ $status.label }} · {{ $activeSeason.Title }}</p>
+        <p class="eyebrow">{{ if eq $status.key "coming-soon" }}In the Wings{{ else }}{{ $status.label }}{{ end }} · {{ $activeSeason.Title }}</p>
         <h1 class="display-title" id="featured-show-title">{{ $featured.Title }}</h1>
         <p class="hero-meta">{{ $featured.Params.show_type }} · {{ $featured.Params.date_display }}</p>
         {{ with $featured.Params.short_summary }}<p class="hero-summary">{{ . }}</p>{{ end }}
@@ -57,19 +69,26 @@
   <section class="section section-dark home-main-stage" aria-labelledby="season-heading">
     <div class="container-wide">
       <header class="section-header">
-        <div><p class="eyebrow">On Our Stage</p><h2 class="section-title" id="season-heading">{{ $activeSeason.Title }} Main Stage</h2></div>
+        <div>
+          {{ if $upcomingMainStageShows }}
+            <p class="eyebrow">The Season Ahead</p><h2 class="section-title" id="season-heading">Upcoming Main Stage Productions</h2>
+          {{ else }}
+            <p class="eyebrow">From Our Stage</p><h2 class="section-title" id="season-heading">Past Productions</h2>
+          {{ end }}
+        </div>
+        <a class="text-link" href="/shows/archive/">Browse Past Shows &rarr;</a>
       </header>
-      <div class="show-grid">{{ range $mainStageShows }}{{ partial "show-card.html" . }}{{ end }}</div>
+      {{ with $upcomingMainStageShows }}<div class="show-grid">{{ range . }}{{ partial "show-card.html" . }}{{ end }}</div>{{ end }}
     </div>
   </section>
 
-  {{ with $studentShows }}{{ partial "student-work-section.html" (dict "shows" .) }}{{ end }}
+  {{ with $upcomingStudentShows }}{{ partial "student-work-section.html" (dict "shows" . "eyebrow" "Their Ideas, Their Stage" "title" "Upcoming Student-Directed & Original Work" "show_archive_link" true) }}{{ end }}
 
   <section class="section section-dark home-resources" aria-labelledby="resources-heading">
     <div class="container-wide">
       <header class="section-header resources-header">
         <div>
-          <p class="eyebrow">Stay Connected</p>
+          <p class="eyebrow">Beyond the Stage</p>
           <h2 class="section-title" id="resources-heading">Theatre Resources</h2>
           <p class="resources-intro">Find the right information for students, connect with the Boosters, and follow what’s happening around Troupe 513.</p>
         </div>

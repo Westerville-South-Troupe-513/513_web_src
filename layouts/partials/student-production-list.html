@@ -1,6 +1,5 @@
 <div class="student-production-list">
   {{ range . }}
-    {{ $status := partial "show-status.html" . }}
     {{ $programLabel := partial "program-label.html" .Params.program }}
     <article class="student-production">
       <div class="student-production-date">
@@ -9,7 +8,7 @@
         <small>{{ time.Format "2006" (time.AsTime .Params.opening_date) }}</small>
       </div>
       <div class="student-production-copy">
-        <p class="student-production-kicker">{{ $programLabel }} · {{ if eq $status.key "closed" }}Past Production{{ else }}{{ $status.label }}{{ end }}</p>
+        <p class="student-production-kicker">{{ $programLabel }}{{ if eq .Params.program "main-stage" }}{{ $status := partial "show-status.html" . }} · {{ if eq $status.key "closed" }}Past Production{{ else }}{{ $status.label }}{{ end }}{{ end }}</p>
         <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
         {{ with .Params.student_directors }}
           <p class="student-production-credit">Directed by {{ delimit . ", " " &amp; " | safeHTML }}</p>

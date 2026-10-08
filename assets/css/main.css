@@ -545,6 +545,16 @@ button:focus-visible {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
+.home-main-stage .show-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
+}
+
+.home-main-stage .show-card {
+  width: 100%;
+  max-width: 15rem;
+  justify-self: center;
+}
+
 .show-card {
   min-width: 0;
 }
@@ -641,6 +651,11 @@ button:focus-visible {
 .section-student-work {
   background: var(--color-paper);
   color: var(--color-ink);
+}
+
+.student-work-archive-link {
+  display: inline-block;
+  margin-top: 1.5rem;
 }
 
 .section-main-stage {
@@ -1971,9 +1986,23 @@ button:focus-visible {
 }
 
 .archive-season-note {
+  display: flex;
+  align-items: flex-start;
+  gap: .65rem;
   margin: 1.25rem 0 0;
+  border: 1px solid #d8d1c7;
+  background: #eeeae3;
+  padding: .85rem 1rem;
   color: #5f5e62;
   line-height: 1.5;
+}
+
+.archive-season-note-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex: none;
+  margin-top: .12rem;
+  fill: var(--color-stage-red-dark);
 }
 
 .archive-season-note a {
@@ -2975,6 +3004,7 @@ button:focus-visible {
     align-items: center;
     gap: 1.25rem;
     grid-template-columns: clamp(6rem, 18vw, 7.5rem) minmax(0, 1fr);
+    max-width: none;
   }
   .home-main-stage .show-card-body { padding-top: 0; }
   .home-main-stage .show-card-title { font-size: clamp(1.5rem, 4vw, 2rem); }
@@ -3046,7 +3076,6 @@ button:focus-visible {
   .hero-inner { min-height: auto; }
   .show-grid { grid-template-columns: 1fr; }
   .show-card { max-width: 25rem; }
-  .home-main-stage .show-card { max-width: none; }
   .home-main-stage .show-card-poster,
   .home-main-stage .show-card-poster:hover {
     border-color: rgba(255,255,255,.6);

@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <header class="page-hero creative-team-page-hero"><div class="container page-hero-copy"><p class="eyebrow">About Troupe 513</p><h1 class="display-title">{{ .Title }}</h1><p class="page-description">{{ .Description }}</p></div></header>
+  <header class="page-hero creative-team-page-hero"><div class="container page-hero-copy"><p class="eyebrow">Backstage Pass</p><h1 class="display-title">{{ .Title }}</h1><p class="page-description">{{ .Description }}</p></div></header>
   <section class="section">
     <div class="container-wide people-grid">
       {{ $people := where (where site.RegularPages "Section" "people") ".Params.active" true }}

@@ -111,7 +111,7 @@
   {{ if or .Params.cast .Params.crew }}
     <section class="section" aria-labelledby="company-heading">
       <div class="container">
-        <p class="eyebrow">The Company</p>
+        <p class="eyebrow">Meet the Company</p>
         <h2 class="section-title" id="company-heading">Cast &amp; Crew</h2>
         <div class="company-grid">
           {{ with .Params.cast }}<div class="prose"><h3>Cast</h3>{{ . | markdownify }}</div>{{ end }}
