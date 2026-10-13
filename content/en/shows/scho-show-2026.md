@@ -20,5 +20,7 @@ performances:
 venue: "south-auditorium"
 featured: false
 draft: false
+poster: "/images/scho_show_2026_poster_medium.jpeg"
+poster_large: "/images/scho_show_2026_poster_large.jpeg"
 art_color: "#5f2b87"
 ---
