@@ -8,6 +8,9 @@
 {{ end }}
 <meta name="description" content="{{ if eq .Kind "404" }}The requested page could not be found. Return home or explore current Westerville South Theatre productions.{{ else }}{{ $metaDescription }}{{ end }}">
 <link rel="canonical" href="{{ .Permalink }}">
+{{ if ne .Kind "404" }}
+  {{ partial "social-meta.html" (dict "page" . "description" $metaDescription) }}
+{{ end }}
 {{ if or .Params.noindex (eq .Kind "404") }}<meta name="robots" content="noindex,follow">{{ end }}
 <link rel="icon" href="/images/favicon.ico" sizes="any">
 <link rel="preconnect" href="https://fonts.googleapis.com">

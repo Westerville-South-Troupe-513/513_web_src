@@ -27,6 +27,9 @@ disableKinds = ["taxonomy", "term"]
     source = "assets"
     target = "assets"
   [[module.mounts]]
+    source = "static/images"
+    target = "assets/show-images"
+  [[module.mounts]]
     disableWatch = true
     source = "hugo_stats.json"
     target = "assets/notwatching/hugo_stats.json"

@@ -1,0 +1,27 @@
+{{ $page := .page }}
+{{ $image := resources.Get "images/og_default.jpg" }}
+{{ if not $image }}{{ errorf "Missing default social image" }}{{ end }}
+{{ $imageAlt := "Westerville South High School Theatre Troupe 513 logo on red stage curtains" }}
+{{ if and (eq $page.Section "shows") $page.IsPage }}
+  {{ with ($page.Params.poster_large | default $page.Params.poster) }}
+    {{ $background := resources.Get "images/og_curtain.jpg" }}
+    {{ if not $background }}{{ errorf "Missing show social image background" }}{{ end }}
+    {{ $path := strings.TrimPrefix "/images/" . }}
+    {{ $poster := resources.Get (printf "show-images/%s" $path) }}
+    {{ if not $poster }}{{ errorf "Missing show poster %q for %s" . $page.RelPermalink }}{{ end }}
+    {{ $poster = $poster.Fit "500x554" }}
+    {{ $x := div (sub $background.Width $poster.Width) 2 }}
+    {{ $y := div (sub $background.Height $poster.Height) 2 }}
+    {{ $image = $background.Filter (images.Overlay $poster $x $y) }}
+    {{ $imageAlt = printf "%s poster centered on a red theatre curtain" $page.Title }}
+  {{ end }}
+{{ end }}
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ if $page.IsHome }}{{ site.Title }} | Troupe 513 Boosters{{ else }}{{ $page.Title }} | {{ site.Title }}{{ end }}">
+<meta property="og:description" content="{{ .description }}">
+<meta property="og:url" content="{{ $page.Permalink }}">
+<meta property="og:image" content="{{ $image.Permalink }}">
+<meta property="og:image:width" content="{{ $image.Width }}">
+<meta property="og:image:height" content="{{ $image.Height }}">
+<meta property="og:image:alt" content="{{ $imageAlt }}">
+<meta name="twitter:card" content="summary_large_image">
