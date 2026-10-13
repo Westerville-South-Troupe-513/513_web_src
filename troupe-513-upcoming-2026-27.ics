@@ -1,0 +1,327 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Troupe 513//2026-27 Upcoming Shows//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Troupe 513 Upcoming Shows
+BEGIN:VEVENT
+UID:fall-student-one-acts-2026-20261012@wshstheatre.org
+DTSTAMP:20261009T150245Z
+SUMMARY:Westerville South Theatre: Fall Student One-Act Plays
+URL:https://wshstheatre.org/shows/fall-student-one-acts-2026/
+DTSTART:20261012T220000Z
+DURATION:PT2H
+LOCATION:Westerville South High School\, 303 S. Otterbein Ave.\, Westervill
+ e\, OH 43081
+DESCRIPTION:Student Works. Show details: https://wshstheatre.org/shows/fall
+ -student-one-acts-2026/ Calendar end time is an estimated 2-hour block\; a
+ ctual runtime has not been announced.
+END:VEVENT
+BEGIN:VEVENT
+UID:tick-tick-boom-20261021@wshstheatre.org
+DTSTAMP:20261009T150245Z
+SUMMARY:Westerville South Theatre: tick\, tick… BOOM!
+URL:https://wshstheatre.org/shows/tick-tick-boom/
+DTSTART:20261021T230000Z
+DURATION:PT2H
+LOCATION:Westerville South High School\, 303 S. Otterbein Ave.\, Westervill
+ e\, OH 43081
+DESCRIPTION:Student Works. Show details: https://wshstheatre.org/shows/tick
+ -tick-boom/ Calendar end time is an estimated 2-hour block\; actual runtim
+ e has not been announced.
+END:VEVENT
+BEGIN:VEVENT
+UID:tick-tick-boom-20261022@wshstheatre.org
+DTSTAMP:20261009T150245Z
+SUMMARY:Westerville South Theatre: tick\, tick… BOOM!
+URL:https://wshstheatre.org/shows/tick-tick-boom/
+DTSTART:20261022T230000Z
+DURATION:PT2H
+LOCATION:Westerville South High School\, 303 S. Otterbein Ave.\, Westervill
+ e\, OH 43081
+DESCRIPTION:Student Works. Show details: https://wshstheatre.org/shows/tick
+ -tick-boom/ Calendar end time is an estimated 2-hour block\; actual runtim
+ e has not been announced.
+END:VEVENT
+BEGIN:VEVENT
+UID:every-brilliant-thing-20261107@wshstheatre.org
+DTSTAMP:20261009T150245Z
+SUMMARY:Westerville South Theatre: Every Brilliant Thing
+URL:https://wshstheatre.org/shows/every-brilliant-thing/
+DTSTART:20261108T000000Z
+DURATION:PT2H
+DESCRIPTION:Main Stage. Show details: https://wshstheatre.org/shows/every-b
+ rilliant-thing/ Calendar end time is an estimated 2-hour block\; actual ru
+ ntime has not been announced. Venue to be announced.
+END:VEVENT
+BEGIN:VEVENT
+UID:every-brilliant-thing-20261108@wshstheatre.org
+DTSTAMP:20261009T150245Z
+SUMMARY:Westerville South Theatre: Every Brilliant Thing
+URL:https://wshstheatre.org/shows/every-brilliant-thing/
+DTSTART:20261109T000000Z
+DURATION:PT2H
+DESCRIPTION:Main Stage. Show details: https://wshstheatre.org/shows/every-b
+ rilliant-thing/ Calendar end time is an estimated 2-hour block\; actual ru
+ ntime has not been announced. Venue to be announced.
+END:VEVENT
+BEGIN:VEVENT
+UID:scho-show-2026-20261114@wshstheatre.org
+DTSTAMP:20261009T150245Z
+SUMMARY:Westerville South Theatre: 27th Annual Scho Show
+URL:https://wshstheatre.org/shows/scho-show-2026/
+DTSTART:20261115T000000Z
+DURATION:PT2H
+LOCATION:Westerville South High School\, 303 S. Otterbein Ave.\, Westervill
+ e\, OH 43081
+DESCRIPTION:Student Event. Show details: https://wshstheatre.org/shows/scho
+ -show-2026/ Calendar end time is an estimated 2-hour block\; actual runtim
+ e has not been announced.
+END:VEVENT
+BEGIN:VEVENT
+UID:admissions-20261202@wshstheatre.org
+DTSTAMP:20261009T150245Z
+SUMMARY:Westerville South Theatre: Admissions
+URL:https://wshstheatre.org/shows/admissions/
+DTSTART:20261203T000000Z
+DURATION:PT2H
+LOCATION:Westerville South High School\, 303 S. Otterbein Ave.\, Westervill
+ e\, OH 43081
+DESCRIPTION:Student Works. Show details: https://wshstheatre.org/shows/admi
+ ssions/ Calendar end time is an estimated 2-hour block\; actual runtime ha
+ s not been announced.
+END:VEVENT
+BEGIN:VEVENT
+UID:admissions-20261203@wshstheatre.org
+DTSTAMP:20261009T150245Z
+SUMMARY:Westerville South Theatre: Admissions
+URL:https://wshstheatre.org/shows/admissions/
+DTSTART:20261204T000000Z
+DURATION:PT2H
+LOCATION:Westerville South High School\, 303 S. Otterbein Ave.\, Westervill
+ e\, OH 43081
+DESCRIPTION:Student Works. Show details: https://wshstheatre.org/shows/admi
+ ssions/ Calendar end time is an estimated 2-hour block\; actual runtime ha
+ s not been announced.
+END:VEVENT
+BEGIN:VEVENT
+UID:winter-cabaret-2026-20261214@wshstheatre.org
+DTSTAMP:20261009T150245Z
+SUMMARY:Westerville South Theatre: Winter Cabaret
+URL:https://wshstheatre.org/shows/winter-cabaret-2026/
+DTSTART:20261214T230000Z
+DURATION:PT2H
+LOCATION:Westerville South High School\, 303 S. Otterbein Ave.\, Westervill
+ e\, OH 43081
+DESCRIPTION:Student Event. Show details: https://wshstheatre.org/shows/wint
+ er-cabaret-2026/ Calendar end time is an estimated 2-hour block\; actual r
+ untime has not been announced.
+END:VEVENT
+BEGIN:VEVENT
+UID:spamalot-20270121@wshstheatre.org
+DTSTAMP:20261009T150245Z
+SUMMARY:Westerville South Theatre: Monty Python's Spamalot
+URL:https://wshstheatre.org/shows/spamalot/
+DTSTART:20270122T000000Z
+DURATION:PT2H
+LOCATION:Westerville South High School\, 303 S. Otterbein Ave.\, Westervill
+ e\, OH 43081
+DESCRIPTION:Main Stage. Show details: https://wshstheatre.org/shows/spamalo
+ t/ Calendar end time is an estimated 2-hour block\; actual runtime has not
+  been announced.
+END:VEVENT
+BEGIN:VEVENT
+UID:spamalot-20270122@wshstheatre.org
+DTSTAMP:20261009T150245Z
+SUMMARY:Westerville South Theatre: Monty Python's Spamalot
+URL:https://wshstheatre.org/shows/spamalot/
+DTSTART:20270123T000000Z
+DURATION:PT2H
+LOCATION:Westerville South High School\, 303 S. Otterbein Ave.\, Westervill
+ e\, OH 43081
+DESCRIPTION:Main Stage. Show details: https://wshstheatre.org/shows/spamalo
+ t/ Calendar end time is an estimated 2-hour block\; actual runtime has not
+  been announced.
+END:VEVENT
+BEGIN:VEVENT
+UID:spamalot-20270123@wshstheatre.org
+DTSTAMP:20261009T150245Z
+SUMMARY:Westerville South Theatre: Monty Python's Spamalot
+URL:https://wshstheatre.org/shows/spamalot/
+DTSTART:20270124T000000Z
+DURATION:PT2H
+LOCATION:Westerville South High School\, 303 S. Otterbein Ave.\, Westervill
+ e\, OH 43081
+DESCRIPTION:Main Stage. Show details: https://wshstheatre.org/shows/spamalo
+ t/ Calendar end time is an estimated 2-hour block\; actual runtime has not
+  been announced.
+END:VEVENT
+BEGIN:VEVENT
+UID:spamalot-20270124@wshstheatre.org
+DTSTAMP:20261009T150245Z
+SUMMARY:Westerville South Theatre: Monty Python's Spamalot
+URL:https://wshstheatre.org/shows/spamalot/
+DTSTART:20270124T190000Z
+DURATION:PT2H
+LOCATION:Westerville South High School\, 303 S. Otterbein Ave.\, Westervill
+ e\, OH 43081
+DESCRIPTION:Main Stage. Show details: https://wshstheatre.org/shows/spamalo
+ t/ Calendar end time is an estimated 2-hour block\; actual runtime has not
+  been announced.
+END:VEVENT
+BEGIN:VEVENT
+UID:winter-student-one-acts-2027-20270126@wshstheatre.org
+DTSTAMP:20261009T150245Z
+SUMMARY:Westerville South Theatre: Winter Student One-Act Plays
+URL:https://wshstheatre.org/shows/winter-student-one-acts-2027/
+DTSTART:20270126T230000Z
+DURATION:PT2H
+LOCATION:Westerville South High School\, 303 S. Otterbein Ave.\, Westervill
+ e\, OH 43081
+DESCRIPTION:Student Works. Show details: https://wshstheatre.org/shows/wint
+ er-student-one-acts-2027/ Calendar end time is an estimated 2-hour block\;
+  actual runtime has not been announced.
+END:VEVENT
+BEGIN:VEVENT
+UID:one-bad-day-20270203@wshstheatre.org
+DTSTAMP:20261009T150245Z
+SUMMARY:Westerville South Theatre: One Bad Day
+URL:https://wshstheatre.org/shows/one-bad-day/
+DTSTART:20270204T000000Z
+DURATION:PT2H
+LOCATION:Westerville South High School\, 303 S. Otterbein Ave.\, Westervill
+ e\, OH 43081
+DESCRIPTION:Student Works. Show details: https://wshstheatre.org/shows/one-
+ bad-day/ Calendar end time is an estimated 2-hour block\; actual runtime h
+ as not been announced.
+END:VEVENT
+BEGIN:VEVENT
+UID:one-bad-day-20270204@wshstheatre.org
+DTSTAMP:20261009T150245Z
+SUMMARY:Westerville South Theatre: One Bad Day
+URL:https://wshstheatre.org/shows/one-bad-day/
+DTSTART:20270205T000000Z
+DURATION:PT2H
+LOCATION:Westerville South High School\, 303 S. Otterbein Ave.\, Westervill
+ e\, OH 43081
+DESCRIPTION:Student Works. Show details: https://wshstheatre.org/shows/one-
+ bad-day/ Calendar end time is an estimated 2-hour block\; actual runtime h
+ as not been announced.
+END:VEVENT
+BEGIN:VEVENT
+UID:black-history-month-celebration-2027-20270225@wshstheatre.org
+DTSTAMP:20261009T150245Z
+SUMMARY:Westerville South Theatre: Black History Month Celebration
+URL:https://wshstheatre.org/shows/black-history-month-celebration-2027/
+DTSTART:20270226T000000Z
+DURATION:PT2H
+LOCATION:Westerville South High School\, 303 S. Otterbein Ave.\, Westervill
+ e\, OH 43081
+DESCRIPTION:Student Event. Show details: https://wshstheatre.org/shows/blac
+ k-history-month-celebration-2027/ Calendar end time is an estimated 2-hour
+  block\; actual runtime has not been announced.
+END:VEVENT
+BEGIN:VEVENT
+UID:no-exit-20270319@wshstheatre.org
+DTSTAMP:20261009T150245Z
+SUMMARY:Westerville South Theatre: No Exit
+URL:https://wshstheatre.org/shows/no-exit/
+DTSTART:20270319T230000Z
+DURATION:PT2H
+LOCATION:Westerville South High School\, 303 S. Otterbein Ave.\, Westervill
+ e\, OH 43081
+DESCRIPTION:Main Stage. Show details: https://wshstheatre.org/shows/no-exit
+ / Calendar end time is an estimated 2-hour block\; actual runtime has not 
+ been announced.
+END:VEVENT
+BEGIN:VEVENT
+UID:no-exit-20270320@wshstheatre.org
+DTSTAMP:20261009T150245Z
+SUMMARY:Westerville South Theatre: No Exit
+URL:https://wshstheatre.org/shows/no-exit/
+DTSTART:20270320T230000Z
+DURATION:PT2H
+LOCATION:Westerville South High School\, 303 S. Otterbein Ave.\, Westervill
+ e\, OH 43081
+DESCRIPTION:Main Stage. Show details: https://wshstheatre.org/shows/no-exit
+ / Calendar end time is an estimated 2-hour block\; actual runtime has not 
+ been announced.
+END:VEVENT
+BEGIN:VEVENT
+UID:no-exit-20270321@wshstheatre.org
+DTSTAMP:20261009T150245Z
+SUMMARY:Westerville South Theatre: No Exit
+URL:https://wshstheatre.org/shows/no-exit/
+DTSTART;VALUE=DATE:20270321
+DTEND;VALUE=DATE:20270322
+LOCATION:Westerville South High School\, 303 S. Otterbein Ave.\, Westervill
+ e\, OH 43081
+DESCRIPTION:Main Stage. Show details: https://wshstheatre.org/shows/no-exit
+ / Performance time to be announced\; this is an all-day placeholder.
+END:VEVENT
+BEGIN:VEVENT
+UID:kiss-me-kate-20270422@wshstheatre.org
+DTSTAMP:20261009T150245Z
+SUMMARY:Westerville South Theatre: Kiss Me\, Kate!
+URL:https://wshstheatre.org/shows/kiss-me-kate/
+DTSTART:20270422T230000Z
+DURATION:PT2H
+LOCATION:Westerville South High School\, 303 S. Otterbein Ave.\, Westervill
+ e\, OH 43081
+DESCRIPTION:Main Stage. Show details: https://wshstheatre.org/shows/kiss-me
+ -kate/ Calendar end time is an estimated 2-hour block\; actual runtime has
+  not been announced.
+END:VEVENT
+BEGIN:VEVENT
+UID:kiss-me-kate-20270423@wshstheatre.org
+DTSTAMP:20261009T150245Z
+SUMMARY:Westerville South Theatre: Kiss Me\, Kate!
+URL:https://wshstheatre.org/shows/kiss-me-kate/
+DTSTART:20270423T230000Z
+DURATION:PT2H
+LOCATION:Westerville South High School\, 303 S. Otterbein Ave.\, Westervill
+ e\, OH 43081
+DESCRIPTION:Main Stage. Show details: https://wshstheatre.org/shows/kiss-me
+ -kate/ Calendar end time is an estimated 2-hour block\; actual runtime has
+  not been announced.
+END:VEVENT
+BEGIN:VEVENT
+UID:kiss-me-kate-20270424@wshstheatre.org
+DTSTAMP:20261009T150245Z
+SUMMARY:Westerville South Theatre: Kiss Me\, Kate!
+URL:https://wshstheatre.org/shows/kiss-me-kate/
+DTSTART:20270424T230000Z
+DURATION:PT2H
+LOCATION:Westerville South High School\, 303 S. Otterbein Ave.\, Westervill
+ e\, OH 43081
+DESCRIPTION:Main Stage. Show details: https://wshstheatre.org/shows/kiss-me
+ -kate/ Calendar end time is an estimated 2-hour block\; actual runtime has
+  not been announced.
+END:VEVENT
+BEGIN:VEVENT
+UID:kiss-me-kate-20270425@wshstheatre.org
+DTSTAMP:20261009T150245Z
+SUMMARY:Westerville South Theatre: Kiss Me\, Kate!
+URL:https://wshstheatre.org/shows/kiss-me-kate/
+DTSTART:20270425T180000Z
+DURATION:PT2H
+LOCATION:Westerville South High School\, 303 S. Otterbein Ave.\, Westervill
+ e\, OH 43081
+DESCRIPTION:Main Stage. Show details: https://wshstheatre.org/shows/kiss-me
+ -kate/ Calendar end time is an estimated 2-hour block\; actual runtime has
+  not been announced.
+END:VEVENT
+BEGIN:VEVENT
+UID:senior-cabaret-2027-20270517@wshstheatre.org
+DTSTAMP:20261009T150245Z
+SUMMARY:Westerville South Theatre: Senior Cabaret
+URL:https://wshstheatre.org/shows/senior-cabaret-2027/
+DTSTART:20270517T230000Z
+DURATION:PT2H
+LOCATION:Westerville South High School\, 303 S. Otterbein Ave.\, Westervill
+ e\, OH 43081
+DESCRIPTION:Student Event. Show details: https://wshstheatre.org/shows/seni
+ or-cabaret-2027/ Calendar end time is an estimated 2-hour block\; actual r
+ untime has not been announced.
+END:VEVENT
+END:VCALENDAR
