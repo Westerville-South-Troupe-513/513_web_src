@@ -7,6 +7,8 @@ season: "2026-27"
 show_type: "Special Event"
 program: "special-event"
 production_format: "variety-show"
+poster: "/images/black_history_month_celebration_poster_medium.webp"
+poster_large: "/images/black_history_month_celebration_poster_large.webp"
 opening_date: 2027-02-25
 closing_date: 2027-02-25
 date_display: "February 25, 2027"
