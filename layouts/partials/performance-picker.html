@@ -1,7 +1,8 @@
 {{ $status := partial "show-status.html" . }}
+{{ $isMainStage := eq .Params.program "main-stage" }}
 {{ $hasTickets := false }}
 {{ range .Params.performances }}
-  {{ if .ticket_url }}{{ $hasTickets = true }}{{ end }}
+  {{ if and $isMainStage .ticket_url }}{{ $hasTickets = true }}{{ end }}
 {{ end }}
 <section class="performance-picker" id="performances" aria-labelledby="performances-heading">
   <h2 class="footer-heading" id="performances-heading">{{ if eq $status.key "closed" }}Performances{{ else if $hasTickets }}Choose a Performance{{ else }}Performance Times{{ end }}</h2>
@@ -12,7 +13,7 @@
       <li class="performance-option">
         <span class="performance-day">{{ time.Format "Monday" $date }}</span>
         <time datetime="{{ time.Format "2006-01-02" $date }}">{{ time.Format "Jan 2" $date }}</time>
-        {{ if and .ticket_url (ne $status.key "closed") }}
+        {{ if and $isMainStage .ticket_url (ne $status.key "closed") }}
           <a class="button-primary performance-time-button" href="{{ .ticket_url }}" aria-label="Buy tickets for {{ $.Title }}, {{ time.Format "Monday, January 2, 2006" $date }} at {{ .time }} Eastern">
             {{ .time }}
             <span class="hero-more-info-arrow" aria-hidden="true">&rarr;</span>
@@ -20,7 +21,7 @@
         {{ else }}
           <div class="performance-option-unavailable">
             <span class="performance-time">{{ .time }}</span>
-            <span class="performance-link-label">{{ if eq $status.key "closed" }}Closed{{ else }}Tickets coming soon{{ end }}</span>
+            {{ if eq $status.key "closed" }}<span class="performance-link-label">Closed</span>{{ else if $isMainStage }}<span class="performance-link-label">Tickets coming soon</span>{{ end }}
           </div>
         {{ end }}
       </li>

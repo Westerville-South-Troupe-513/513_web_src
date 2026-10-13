@@ -10,7 +10,7 @@
     {{ range $.Params.performances }}
       {{ if ne (.ticket_url | default "") "" }}{{ $hasTickets = true }}{{ end }}
     {{ end }}
-    {{ if $hasTickets }}
+    {{ if and (eq $.Params.program "main-stage") $hasTickets }}
       {{ $label = "Tickets On Sale" }}
       {{ $key = "tickets-on-sale" }}
     {{ end }}

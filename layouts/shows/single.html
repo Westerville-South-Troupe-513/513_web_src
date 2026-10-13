@@ -38,7 +38,7 @@
           <div class="hero-actions">
             <a class="button-primary" href="/shows/archive/">Browse Past Productions</a>
           </div>
-        {{ else if not .Params.performances }}
+        {{ else if and (eq .Params.program "main-stage") (not .Params.performances) }}
           {{ partial "ticket-actions.html" (dict "show" . "showDetails" false) }}
         {{ end }}
         {{ if .Params.performances }}{{ partial "performance-picker.html" . }}{{ end }}

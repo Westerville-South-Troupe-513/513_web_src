@@ -26,9 +26,9 @@
   {{ with $featured }}
   {{ $featuredArt := partial "show-art-data.html" . }}
   {{ $status := partial "show-status.html" . }}
-  {{ $hasTickets := ne (.Params.ticket_url | default "") "" }}
+  {{ $hasTickets := and (eq .Params.program "main-stage") (ne (.Params.ticket_url | default "") "") }}
   {{ range .Params.performances }}
-    {{ if .ticket_url }}{{ $hasTickets = true }}{{ end }}
+    {{ if and (eq $featured.Params.program "main-stage") .ticket_url }}{{ $hasTickets = true }}{{ end }}
   {{ end }}
   <section class="hero" aria-labelledby="featured-show-title">
     <div class="container-wide hero-inner">

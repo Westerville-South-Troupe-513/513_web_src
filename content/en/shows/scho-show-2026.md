@@ -22,4 +22,3 @@ featured: false
 draft: false
 art_color: "#5f2b87"
 ---
-Ticket information will be added when it becomes available.
