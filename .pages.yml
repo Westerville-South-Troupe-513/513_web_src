@@ -460,8 +460,8 @@ content:
           delete: false
         view:
           primary: title
-          fields: [title, level, season, active, sort_order]
-          sort: [sort_order, title]
+          fields: [title, level, season, active]
+          sort: [title]
           search: [title, level]
         fields:
           - name: title
@@ -486,10 +486,6 @@ content:
             label: Active
             type: boolean
             default: true
-          - name: sort_order
-            label: Sort order
-            type: number
-
   - name: information
     label: Visitor Information
     type: group

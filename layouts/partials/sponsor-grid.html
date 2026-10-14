@@ -1,6 +1,6 @@
 <div class="sponsor-grid">
   {{ $sponsors := where (where site.RegularPages "Section" "sponsors") ".Params.active" true }}
-  {{ range sort $sponsors ".Params.sort_order" }}
+  {{ range sort $sponsors "Title" }}
     {{ $sponsor := . }}
     {{ if .Params.website_url }}<a class="sponsor-card" href="{{ .Params.website_url }}" aria-label="Visit {{ .Title }}" target="_blank" rel="noopener">{{ else }}<div class="sponsor-card">{{ end }}
       {{ with .Params.logo }}
