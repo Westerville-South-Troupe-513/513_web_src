@@ -2207,10 +2207,19 @@ button:focus-visible {
 .sponsor-card:hover { background: #ebe8e2; }
 
 .sponsor-card-cta {
+  grid-column: span var(--sponsor-cta-span-5);
+  gap: .4em;
   background: #e2e2e2;
   color: #8a898d;
   font-weight: 400;
   letter-spacing: .04em;
+}
+
+.sponsor-card-cta-plus {
+  font-family: Arial, sans-serif;
+  font-size: 1.4em;
+  font-weight: 900;
+  line-height: 1;
 }
 
 .sponsor-card-cta:hover {
@@ -2943,6 +2952,7 @@ button:focus-visible {
   .footer-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .footer-brand { grid-column: 1 / -1; }
   .sponsor-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .sponsor-card-cta { grid-column: span var(--sponsor-cta-span-4); }
   .menu-button { display: flex; }
   .nav-menu {
     display: none;
@@ -2995,6 +3005,7 @@ button:focus-visible {
   .past-productions-feature { height: 13rem; }
   .people-grid { grid-template-columns: 1fr; }
   .sponsor-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sponsor-card-cta { grid-column: span var(--sponsor-cta-span-3); }
   .sponsor-card { min-height: 7rem; padding: 1rem; font-size: 1.1rem; }
   .sponsor-card img { max-height: 4rem; }
   .faq-layout {
@@ -3102,6 +3113,7 @@ button:focus-visible {
   .board-list article,
   .booster-board-section .board-list article { grid-template-columns: 1fr; gap: .35rem; }
   .sponsor-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sponsor-card-cta { grid-column: span var(--sponsor-cta-span-2); }
   .performance-row { align-items: flex-start; flex-direction: column; }
   .archive-show-entry {
     align-items: start;

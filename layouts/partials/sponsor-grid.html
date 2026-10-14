@@ -1,5 +1,6 @@
 <div class="sponsor-grid">
   {{ $sponsors := where (where site.RegularPages "Section" "sponsors") ".Params.active" true }}
+  {{ $sponsorCount := len $sponsors }}
   {{ range sort $sponsors "Title" }}
     {{ $sponsor := . }}
     {{ if .Params.website_url }}<a class="sponsor-card" href="{{ .Params.website_url }}" aria-label="Visit {{ .Title }}" target="_blank" rel="noopener">{{ else }}<div class="sponsor-card">{{ end }}
@@ -12,5 +13,6 @@
       {{ else }}<span>{{ $sponsor.Title }}</span>{{ end }}
     {{ if .Params.website_url }}</a>{{ else }}</div>{{ end }}
   {{ end }}
-  <a class="sponsor-card sponsor-card-cta" href="/sponsors/">Add Your Company</a>
+  <a class="sponsor-card sponsor-card-cta" href="/sponsors/"
+    style="--sponsor-cta-span-5: {{ sub 5 (mod $sponsorCount 5) }}; --sponsor-cta-span-4: {{ sub 4 (mod $sponsorCount 4) }}; --sponsor-cta-span-3: {{ sub 3 (mod $sponsorCount 3) }}; --sponsor-cta-span-2: {{ sub 2 (mod $sponsorCount 2) }};"><span class="sponsor-card-cta-plus" aria-hidden="true">+</span><span>Add Your Company</span></a>
 </div>
