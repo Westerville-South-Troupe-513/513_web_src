@@ -2206,6 +2206,18 @@ button:focus-visible {
 
 .sponsor-card:hover { background: #ebe8e2; }
 
+.sponsor-card-cta {
+  background: #e2e2e2;
+  color: #8a898d;
+  font-weight: 400;
+  letter-spacing: .04em;
+}
+
+.sponsor-card-cta:hover {
+  background: #d4d4d4;
+  color: #5f5e62;
+}
+
 .sponsor-card img {
   max-width: 100%;
   max-height: 5.5rem;
