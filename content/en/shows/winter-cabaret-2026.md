@@ -2,7 +2,7 @@
 title: "Winter Cabaret"
 slug: "winter-cabaret-2026"
 description: "Winter Cabaret brings South Troupe 513 students together for an evening of student performances."
-short_summary: "Winter Cabaret brings South Troupe 513 students together for an evening of student performances."
+short_summary: "Students bring skits, songs, dance, and instrumental music to this year's Winter Cabaret. The evening gives Troupe 513 performers a chance to share what they do."
 season: "2026-27"
 show_type: "Student Variety Show"
 program: "special-event"

@@ -98,7 +98,7 @@ content:
           - name: short_summary
             label: Promotional synopsis
             type: text
-            description: "Two informative, enticing sentences for the homepage hero and show-page introduction."
+            description: "Two specific, natural sentences for the homepage hero and show-page introduction."
           - name: long_summary
             label: Full synopsis
             type: rich-text
@@ -182,26 +182,26 @@ content:
             list: true
             description: "Add individual one-act titles and directors when the program is announced."
           - name: poster
-            label: Poster — medium
+            label: Poster (medium)
             type: image
             description: "Smaller portrait artwork used in season grids."
           - name: poster_large
-            label: Poster — large
+            label: Poster (large)
             type: image
             description: "Larger portrait artwork used on the show detail page."
           - name: profile_image
-            label: Profile graphic — medium
+            label: Profile graphic (medium)
             type: image
             description: "Square promotional artwork for compact uses."
           - name: profile_image_large
-            label: Profile graphic — large
+            label: Profile graphic (large)
             type: image
             description: "Large square promotional artwork for social and promotional uses."
           - name: hero_image
             label: Hero image
             type: image
           - name: hero_image_large
-            label: Hero image — large
+            label: Hero image (large)
             type: image
             description: "Optional larger version used on wide screens."
           - name: art_color
@@ -270,7 +270,7 @@ content:
               collection: people
               multiple: true
               value: "{slug}"
-              label: "{title} — {role}"
+              label: "{title}: {role}"
               search: "title,role"
           - name: cast
             label: Cast
@@ -671,7 +671,7 @@ content:
             type: image
             required: true
           - name: hero_image_large
-            label: Hero image — large
+            label: Hero image (large)
             type: image
             description: "Optional larger version used on wide screens."
           - name: hero_image_alt
@@ -717,7 +717,7 @@ content:
             type: image
             required: true
           - name: hero_image_large
-            label: Hero image — large
+            label: Hero image (large)
             type: image
             description: "Optional larger version used on wide screens."
           - name: hero_image_alt
@@ -776,7 +776,7 @@ content:
             type: image
             required: true
           - name: hero_image_large
-            label: Hero image — large
+            label: Hero image (large)
             type: image
             description: "Optional larger version used on wide screens."
           - name: hero_image_alt
@@ -818,7 +818,7 @@ content:
             type: image
             required: true
           - name: hero_image_large
-            label: Hero image — large
+            label: Hero image (large)
             type: image
             description: "Optional larger version used on wide screens."
           - name: hero_image_alt

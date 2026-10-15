@@ -37,7 +37,10 @@
       <div class="hero-copy">
         <p class="eyebrow">{{ if eq $status.key "coming-soon" }}In the Wings{{ else }}{{ $status.label }}{{ end }} · {{ $activeSeason.Title }}</p>
         <h1 class="display-title" id="featured-show-title">{{ $featured.Title }}</h1>
-        <p class="hero-meta">{{ $featured.Params.show_type }} · {{ $featured.Params.date_display }}</p>
+        <p class="hero-meta">
+          <span class="hero-meta-type">{{ $featured.Params.show_type }}</span>
+          <span class="hero-meta-date">{{ $featured.Params.date_display }}</span>
+        </p>
         {{ with $featured.Params.short_summary }}<p class="hero-summary">{{ . }}</p>{{ end }}
         <div class="hero-actions">
           <a class="button-primary hero-more-info" href="{{ $featured.RelPermalink }}">{{ if $hasTickets }}Showtimes &amp; Tickets{{ else if $featured.Params.performances }}View Showtimes{{ else }}Show Details{{ end }} <span class="hero-more-info-arrow" aria-hidden="true">&rarr;</span></a>

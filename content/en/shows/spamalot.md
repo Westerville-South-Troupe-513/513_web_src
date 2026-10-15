@@ -2,7 +2,7 @@
 title: "Monty Python's Spamalot"
 slug: "spamalot"
 description: "The winter musical in Westerville South Theatre's 2026–27 Main Stage season."
-short_summary: "King Arthur and his very questionable Knights of the Round Table gallop off in search of the Holy Grail—without the benefit of actual horses. Packed with outrageous characters, killer rabbits, flying cows, and exuberant musical numbers, Spamalot turns Arthurian legend into an evening of glorious silliness."
+short_summary: "King Arthur and his knights set out to find the Holy Grail, despite having little idea what they're doing. Along the way they meet taunting Frenchmen, a killer rabbit, and plenty of Monty Python nonsense."
 long_summary: |
   Lovingly ripped from Monty Python and the Holy Grail, Spamalot follows King Arthur as he gathers a ragtag band of knights and sets out on a quest filled with taunting Frenchmen, shrubbery-obsessed foes, a fearsome rabbit, and obstacles no respectable legend would dare include. Along the way, the Lady of the Lake makes sure this medieval adventure remembers that it is also a Broadway musical.
 

@@ -2,7 +2,7 @@
 title: "Admissions"
 slug: "admissions"
 description: "A student-directed full-length play in Troupe 513's 2026–27 season."
-short_summary: "A prep-school admissions leader has devoted her career to building a more diverse institution—until her son's college ambitions force her principles into painfully personal territory. Admissions is a smart, provocative, and darkly funny examination of privilege, family, and what happens when our ideals carry a cost."
+short_summary: "Sherri has spent her career pushing an elite prep school to become more diverse. When her son faces disappointment in the college admissions process, she has to reckon with what she believes and what she wants for him."
 long_summary: |
   Sherri Rosen-Mason leads admissions at an elite New England prep school, where she has worked to move a tradition-bound institution toward a more diverse future. But when her talented son sets his sights on an Ivy League university and receives an outcome the family did not expect, the values Sherri champions at work collide with ambition at home.
 

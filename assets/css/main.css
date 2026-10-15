@@ -399,11 +399,24 @@ button:focus-visible {
   margin: 1.25rem 0 0;
   color: #d2d1d4;
   font-family: var(--font-display);
-  font-size: clamp(1.35rem, 3vw, 2rem);
+  font-size: clamp(1.2rem, 2.4vw, 1.65rem);
   font-weight: 600;
   letter-spacing: .02em;
   line-height: 1.1;
   text-transform: uppercase;
+}
+
+.hero-meta-type,
+.hero-meta-date {
+  display: block;
+}
+
+.hero-meta-type {
+  font-size: clamp(.95rem, 1.7vw, 1.25rem);
+}
+
+.hero-meta-date {
+  margin-top: .4rem;
 }
 
 .hero-summary,

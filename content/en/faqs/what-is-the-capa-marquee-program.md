@@ -5,7 +5,7 @@ order: 20
 featured: true
 active: true
 ---
-The CAPA Marquee program is part of the Columbus Association for the Performing Arts (CAPA). Because CAPA is a member of the Broadway League, Columbus is an official Regional Awards Program of The Jimmy Awards®/National High School Musical Theatre Awards®. CAPA sponsors the prestigious national program for high school musical theatre students through its local awards program—the CAPA Marquee Awards.
+The CAPA Marquee program is part of the Columbus Association for the Performing Arts (CAPA). Because CAPA is a member of the Broadway League, Columbus is an official Regional Awards Program of The Jimmy Awards®/National High School Musical Theatre Awards®. CAPA sponsors the prestigious national program for high school musical theatre students through its local awards program, the CAPA Marquee Awards.
 
 To be considered for participation in the CAPA Marquee Awards, schools must submit an online application and present a full-length musical from a list of Jimmy® Awards-approved productions between mid October – mid April (exact dates vary each year)..
 

@@ -2,7 +2,7 @@
 title: "Black History Month Celebration"
 slug: "black-history-month-celebration-2027"
 description: "Celebrate Black History Month with a student-created performance at Westerville South."
-short_summary: "Celebrate Black History Month with a student-created performance at Westerville South."
+short_summary: "Westerville South students write, choreograph, direct, and perform this Black History Month Celebration. The school club presenting it is separate from Troupe 513 and the Theatre Boosters."
 season: "2026-27"
 show_type: "Special Event"
 program: "special-event"

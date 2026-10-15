@@ -2,7 +2,7 @@
 title: "27th Annual Scho Show"
 slug: "scho-show-2026"
 description: "Troupe 513's annual student-led scholarship show."
-short_summary: "The 27th Annual Scho Show hands the stage to Troupe 513 students for a one-night showcase created and performed by the troupe's own artists. Expect an energetic mix of talent, personality, and surprises while supporting a beloved tradition that celebrates student leadership."
+short_summary: "Scho Show belongs to the students: they create it, perform it, and decide what surprises make it in. This 27th annual performance also supports the troupe's scholarship tradition."
 long_summary: |
   For twenty-seven years, Scho Show has given Troupe 513 students a special opportunity to build an evening around their own voices, talents, and creative ideas. The result is a lively, one-night-only showcase where the unexpected is part of the fun and the students take ownership of the stage.
 

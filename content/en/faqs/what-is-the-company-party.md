@@ -5,7 +5,7 @@ order: 130
 featured: false
 active: true
 ---
-At some point during the run of every Main Stage show, we have a company party for everyone involved in the production—performers, technicians, crew members, and student leaders alike.
+At some point during the run of every Main Stage show, we have a company party for everyone involved in the production, including performers, technicians, crew members, and student leaders.
 
 Who is invited? Everyone involved in the show, so the cast, the run crew, the build crew, the paint crew ... anyone! If you filled out a one-stop shop for the show, your kid should feel welcome at and included in the company party. (If your kid hesitates and says, "Oh, well, I didn't do much," or "I don't know many people," please encourage them to come! These parties are a lot of fun, and it's really where the kids get to hang out and chill in a way different than during rehearsals.) We do ask that kids don't bring guests, even if it's a really fun Troupe 513 member. Company from that show only.
 

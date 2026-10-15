@@ -2,7 +2,7 @@
 title: "One Bad Day"
 slug: "one-bad-day"
 description: "A student-directed full-length play in Troupe 513's 2026–27 season."
-short_summary: "One day, one stage, and one student-led production come together for a full-length theatrical experience shaped by bold choices and close collaboration. Join director Emanuel Marriscal and the cast for a project that puts emerging artists—and the surprises of live storytelling—in the spotlight."
+short_summary: "Emanuel Marriscal leads a student cast through a full-length play they are building together. The story is still under wraps, so the students' choices will be part of the surprise."
 long_summary: |
   One Bad Day is part of Troupe 513's student-directed full-length series, giving a student director and company the opportunity to shape an entire production from first read-through to final curtain. Story details will be revealed as the project develops, preserving the discoveries and surprises the company is preparing for the stage.
 

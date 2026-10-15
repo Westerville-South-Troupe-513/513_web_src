@@ -2,7 +2,7 @@
 title: "Kiss Me, Kate!"
 slug: "kiss-me-kate"
 description: "The spring musical in Westerville South Theatre's 2026–27 Main Stage season."
-short_summary: "Former spouses Lilli Vanessi and Fred Graham reunite to star in a musical version of The Taming of the Shrew, only to discover that their offstage feud is every bit as fiery as Shakespeare's. Romance, gangsters, backstage chaos, and Cole Porter's irresistible score collide in a sophisticated musical comedy where the show must go on."
+short_summary: "Fred casts his ex-wife Lilli opposite him in a musical version of The Taming of the Shrew. Their onstage sparring spills backstage just as a gambling debt brings two gangsters into the company."
 long_summary: |
   Passions run high when actor-director Fred Graham casts his movie-star ex-wife, Lilli Vanessi, opposite him in a musical production of The Taming of the Shrew. Their onstage sparring spills backstage, a misdirected bouquet rekindles old feelings, and a gambling debt brings two unexpected gangsters into a company already struggling to make it through opening night.
 

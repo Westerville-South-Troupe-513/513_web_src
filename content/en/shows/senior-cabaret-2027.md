@@ -2,7 +2,7 @@
 title: "Senior Cabaret"
 slug: "senior-cabaret-2027"
 description: "Join us for Senior Cabaret at Westerville South."
-short_summary: "Join us for Senior Cabaret at Westerville South."
+short_summary: "Senior Cabaret gives Westerville South's seniors their own night on stage. Program and admission details will be shared when they are available."
 season: "2026-27"
 show_type: "Senior Cabaret"
 program: "special-event"

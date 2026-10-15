@@ -13,7 +13,7 @@ This policy applies only to wshstheatre.org. It does not govern the Westerville 
 
 This website does not currently offer user accounts, accept payments directly, or use first-party forms. We do not currently use advertising trackers or a first-party analytics service.
 
-You may voluntarily provide information—such as your name, email address, and the contents of your message—when you contact the Boosters by email. We use that information to respond to your request and coordinate the activity you asked about.
+When you contact the Boosters by email, you may voluntarily provide your name, email address, and the contents of your message. We use that information to respond to your request and coordinate the activity you asked about.
 
 Our website is hosted through GitHub Pages. Like most hosting providers, GitHub may automatically process technical information such as your IP address, browser or device type, referring page, pages requested, and the date and time of a request. This information is used by the provider to deliver, maintain, and secure the service. We do not use those logs to create individual visitor profiles.
 
