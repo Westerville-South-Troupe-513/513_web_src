@@ -11,8 +11,6 @@ season: "2026-27"
 show_type: "Student-Directed Full-Length Play"
 program: "student-directed"
 production_format: "play"
-poster: "/images/admissions_poster_medium.webp"
-poster_large: "/images/admissions_poster_large.webp"
 student_directors:
   - "Elliott Jingo"
 opening_date: 2026-12-02
