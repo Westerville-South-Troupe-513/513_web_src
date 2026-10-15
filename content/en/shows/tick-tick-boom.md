@@ -11,6 +11,8 @@ season: "2026-27"
 show_type: "Student-Directed Full-Length Musical"
 program: "student-directed"
 production_format: "musical"
+poster: "/images/tick_tick_boom_poster_medium.webp"
+poster_large: "/images/tick_tick_boom_poster_large.webp"
 student_directors:
   - "Easton Kelly"
 opening_date: 2026-10-21
