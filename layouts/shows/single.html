@@ -3,7 +3,9 @@
   {{ $programLabel := partial "program-label.html" .Params.program }}
   {{ $venue := site.GetPage (printf "/venues/%s" .Params.venue) }}
   {{ $art := partial "show-art-data.html" . }}
-  <header class="show-detail-hero" style="--show-color: {{ .Params.art_color | default "#33333a" }}">
+  {{ $showColor := "#242429" }}
+  {{ if $art.src }}{{ $showColor = .Params.art_color | default "#242429" }}{{ end }}
+  <header class="show-detail-hero" style="--show-color: {{ $showColor }}">
     <div class="container-wide show-detail-grid">
       <div class="show-detail-poster{{ if not $art.src }} show-detail-poster-fallback{{ end }}">
         {{ if $art.src }}

@@ -458,7 +458,7 @@ button:focus-visible {
   width: min(100%, 25rem);
   aspect-ratio: var(--show-art-ratio);
   border: 1px solid rgba(255,255,255,.6);
-  background: var(--show-color, #1e3152);
+  background: var(--show-color, #242429);
   box-shadow: 1.25rem 1.25rem 0 rgba(216, 58, 32, .8);
   color: inherit;
   text-decoration: none;
@@ -477,6 +477,7 @@ button:focus-visible {
   flex-direction: column;
   justify-content: space-between;
   padding: clamp(1.25rem, 4vw, 2.25rem);
+  background: #242429;
   color: white;
 }
 
@@ -571,7 +572,7 @@ button:focus-visible {
   overflow: hidden;
   aspect-ratio: var(--show-art-ratio);
   border: 1px solid rgba(255,255,255,.18);
-  background: var(--show-color, #33333a);
+  background: var(--show-color, #242429);
   color: white;
   text-decoration: none;
   transition: transform 180ms ease, box-shadow 180ms ease;

@@ -25,6 +25,8 @@
   {{ end }}
   {{ with $featured }}
   {{ $featuredArt := partial "show-art-data.html" . }}
+  {{ $showColor := "#242429" }}
+  {{ if $featuredArt.src }}{{ $showColor = .Params.art_color | default "#242429" }}{{ end }}
   {{ $status := partial "show-status.html" . }}
   {{ $hasTickets := and (eq .Params.program "main-stage") (ne (.Params.ticket_url | default "") "") }}
   {{ range .Params.performances }}
@@ -42,7 +44,7 @@
         </div>
       </div>
       <div class="hero-poster-column">
-        <a class="hero-poster" href="{{ $featured.RelPermalink }}" aria-label="View details for {{ $featured.Title }}" style="--show-color: {{ $featured.Params.art_color }}">
+        <a class="hero-poster" href="{{ $featured.RelPermalink }}" aria-label="View details for {{ $featured.Title }}" style="--show-color: {{ $showColor }}">
           {{ if $featuredArt.src }}
             <img
               class="show-art show-art-{{ $featuredArt.kind }}"

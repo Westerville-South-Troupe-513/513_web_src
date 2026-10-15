@@ -205,9 +205,9 @@ content:
             type: image
             description: "Optional larger version used on wide screens."
           - name: art_color
-            label: Artwork fallback color
+            label: Artwork background color
             type: string
-            description: "Hex color used until poster artwork is available."
+            description: "Hex color behind uploaded artwork. Shows without artwork use #242429."
             pattern: "^#[0-9a-fA-F]{6}$"
           - name: opening_date
             label: Opening date
