@@ -47,7 +47,7 @@
         </div>
       </div>
       <div class="hero-poster-column">
-        <a class="hero-poster" href="{{ $featured.RelPermalink }}" aria-label="View details for {{ $featured.Title }}" style="--show-color: {{ $showColor }}">
+        <a class="hero-poster" href="{{ $featured.RelPermalink }}" aria-label="View details for {{ $featured.Title }}" style="--show-color: {{ $showColor }};{{ if and $featuredArt.width $featuredArt.height }} --hero-art-ratio: {{ $featuredArt.width }} / {{ $featuredArt.height }};{{ end }}">
           {{ if $featuredArt.src }}
             <img
               class="show-art show-art-{{ $featuredArt.kind }}"

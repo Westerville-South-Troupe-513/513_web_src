@@ -469,7 +469,7 @@ button:focus-visible {
   display: block;
   position: relative;
   width: min(100%, 25rem);
-  aspect-ratio: var(--show-art-ratio);
+  aspect-ratio: var(--hero-art-ratio, var(--show-art-ratio));
   border: 1px solid rgba(255,255,255,.6);
   background: var(--show-color, #242429);
   box-shadow: 1.25rem 1.25rem 0 rgba(216, 58, 32, .8);
@@ -481,7 +481,7 @@ button:focus-visible {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .poster-fallback {
