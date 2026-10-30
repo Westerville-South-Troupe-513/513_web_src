@@ -8,3 +8,8 @@ if (menuButton && menu) {
     menu.toggleAttribute('data-open', !isOpen);
   });
 }
+
+// Keep sponsor email addresses out of the generated HTML as plain text.
+document.querySelectorAll('[data-sponsor-email]').forEach((link) => {
+  link.href = `mailto:${atob(link.dataset.sponsorEmail)}`;
+});

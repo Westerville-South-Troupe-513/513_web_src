@@ -876,6 +876,15 @@ button:focus-visible {
   color: #c9c8cb;
 }
 
+.home-resources {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.resources-header .eyebrow {
+  color: var(--color-stage-red-dark);
+}
+
 .resources-header > div {
   max-width: 50rem;
 }
@@ -883,7 +892,7 @@ button:focus-visible {
 .resources-intro {
   max-width: 44rem;
   margin: 1rem 0 0;
-  color: #c9c8cb;
+  color: #5f5e62;
   font-size: clamp(.95rem, 1.6vw, 1.1rem);
   line-height: 1.65;
 }
@@ -895,13 +904,14 @@ button:focus-visible {
 }
 
 .resource-card {
+  --resource-accent: #ff917c;
   display: flex;
   min-width: 0;
   min-height: 25rem;
   flex-direction: column;
   border-top: .3rem solid var(--color-stage-red);
-  background: var(--color-warm-white);
-  color: var(--color-ink);
+  background: var(--color-ink-soft);
+  color: var(--color-warm-white);
   padding: clamp(1.5rem, 3vw, 2.25rem);
 }
 
@@ -927,7 +937,7 @@ button:focus-visible {
 
 .resource-audience {
   margin: 2rem 0 0;
-  color: var(--color-stage-red-dark);
+  color: var(--resource-accent);
   font-size: .72rem;
   font-weight: 800;
   letter-spacing: .12em;
@@ -944,13 +954,13 @@ button:focus-visible {
 
 .resource-card > p:not(.resource-audience) {
   margin: 0;
-  color: #5f5e62;
+  color: #c9c8cb;
   font-size: .9rem;
   line-height: 1.6;
 }
 
 .resource-social-arrow {
-  color: var(--color-stage-red);
+  color: var(--color-stage-red-dark);
 }
 
 .resource-social-card .resource-audience {
@@ -974,6 +984,7 @@ button:focus-visible {
   grid-template-columns: 2rem minmax(0, 1fr) auto;
   border: 1px solid #d5d1ca;
   border-radius: .25rem;
+  background: var(--color-warm-white);
   color: var(--color-ink);
   padding: .65rem .75rem;
   text-decoration: none;
@@ -982,7 +993,7 @@ button:focus-visible {
 
 .resource-social-links a:hover,
 .resource-primary-link:hover {
-  border-color: var(--color-stage-red);
+  border-color: var(--color-stage-red-dark);
   background: white;
 }
 
@@ -1030,7 +1041,7 @@ button:focus-visible {
 .resource-social-links small,
 .resource-primary-link small {
   margin-top: .15rem;
-  color: #69686d;
+  color: #5f5e62;
   font-size: .7rem;
   line-height: 1.35;
 }

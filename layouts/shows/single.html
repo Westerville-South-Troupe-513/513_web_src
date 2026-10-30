@@ -76,6 +76,7 @@
         <dl>
           <div><dt>Production</dt><dd>{{ .Params.show_type }}</dd></div>
           <div><dt>{{ if .Params.opening_date }}Dates{{ else }}Season{{ end }}</dt><dd>{{ .Params.date_display }}</dd></div>
+          {{ with .Params.ticket_prices }}<div><dt>Admission</dt><dd>{{ . }}</dd></div>{{ end }}
           {{ with .Params.student_directors }}<div><dt>Student {{ if gt (len .) 1 }}directors{{ else }}director{{ end }}</dt><dd>{{ delimit . ", " " &amp; " | safeHTML }}</dd></div>{{ end }}
           {{ if .Params.venue_tbd }}
             <div><dt>Venue</dt><dd>To Be Determined</dd></div>

@@ -474,6 +474,9 @@ content:
           - name: website_url
             label: Website
             type: string
+          - name: email
+            label: Email (used when there is no website)
+            type: string
           - name: level
             label: Sponsor level
             type: select

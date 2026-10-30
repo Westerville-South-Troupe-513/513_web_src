@@ -6,6 +6,7 @@
 {{ end }}
 <section class="performance-picker" id="performances" aria-labelledby="performances-heading">
   <h2 class="footer-heading" id="performances-heading">{{ if eq $status.key "closed" }}Performances{{ else if $hasTickets }}Choose a Performance{{ else }}Performance Times{{ end }}</h2>
+  {{ with .Params.ticket_prices }}<p class="performance-picker-note">{{ . }}</p>{{ end }}
   {{ if ne $status.key "closed" }}<p class="performance-picker-note">{{ if $hasTickets }}Select a time to buy tickets on HomeTown. {{ end }}All times Eastern.</p>{{ end }}
   <ul class="performance-options">
     {{ range .Params.performances }}
@@ -21,7 +22,7 @@
         {{ else }}
           <div class="performance-option-unavailable">
             <span class="performance-time">{{ .time }}</span>
-            {{ if eq $status.key "closed" }}<span class="performance-link-label">Closed</span>{{ else if $isMainStage }}<span class="performance-link-label">Tickets coming soon</span>{{ end }}
+            {{ if eq $status.key "closed" }}<span class="performance-link-label">Closed</span>{{ else if and $isMainStage (not $.Params.ticket_prices) }}<span class="performance-link-label">Tickets coming soon</span>{{ end }}
           </div>
         {{ end }}
       </li>

@@ -1,7 +1,7 @@
 ---
 title: "Every Brilliant Thing"
 slug: "every-brilliant-thing"
-description: "The winter play in Westerville South Theatre's 2026–27 Main Stage season."
+description: "Every Brilliant Thing at Westerville South High School's auxiliary gym, November 7–8, 2026. Pay what you want; all proceeds go to Hope Squad."
 short_summary: "After a mother's suicide attempt, her seven-year-old child starts a list of everything that makes life worth living. The list keeps growing, and the audience becomes part of the story."
 long_summary: |
   After a mother's suicide attempt, her seven-year-old child starts cataloging every brilliant thing in the world, from ice cream and water fights to the countless ordinary pleasures we too easily overlook. The list grows across a lifetime, becoming a tender record of love, loss, resilience, and the complicated ways one family's pain echoes through the years.
@@ -21,9 +21,11 @@ performances:
     time: "7:00 PM"
   - date: 2026-11-08
     time: "7:00 PM"
-venue_tbd: true
+ticket_prices: "Pay what you want. All proceeds go to Hope Squad."
+venue: "south-aux-gym"
+venue_tbd: false
 featured: false
 draft: false
 art_color: "#d58b24"
 ---
-Ticket information will be added when it becomes available.
+Performances take place in the auxiliary gym at Westerville South High School. Admission is pay what you want, and all proceeds go to Hope Squad.

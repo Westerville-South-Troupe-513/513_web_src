@@ -3,7 +3,13 @@
   {{ $sponsorCount := len $sponsors }}
   {{ range sort $sponsors "Title" }}
     {{ $sponsor := . }}
-    {{ if .Params.website_url }}<a class="sponsor-card" href="{{ .Params.website_url }}" aria-label="Visit {{ .Title }}" target="_blank" rel="noopener">{{ else }}<div class="sponsor-card">{{ end }}
+    {{ if .Params.website_url }}
+      <a class="sponsor-card" href="{{ .Params.website_url }}" aria-label="Visit {{ .Title }}" target="_blank" rel="noopener">
+    {{ else if .Params.email }}
+      <a class="sponsor-card" data-sponsor-email="{{ .Params.email | base64Encode }}" aria-label="Email {{ .Title }}" title="Email {{ .Title }}">
+    {{ else }}
+      <div class="sponsor-card">
+    {{ end }}
       {{ with .Params.logo }}
         {{ $logo := . }}
         {{ $optimizedLogo := replaceRE `(?i)\.(png|jpe?g)$` ".webp" $logo }}
@@ -11,7 +17,7 @@
         {{ $dimensions := partial "image-dimensions.html" $optimizedLogo }}
         <img src="{{ $optimizedLogo }}" alt="{{ $sponsor.Title }}"{{ if and $dimensions.width $dimensions.height }} width="{{ $dimensions.width }}" height="{{ $dimensions.height }}"{{ end }} loading="lazy" decoding="async">
       {{ else }}<span>{{ $sponsor.Title }}</span>{{ end }}
-    {{ if .Params.website_url }}</a>{{ else }}</div>{{ end }}
+    {{ if or .Params.website_url .Params.email }}</a>{{ else }}</div>{{ end }}
   {{ end }}
   <a class="sponsor-card sponsor-card-cta" href="/sponsors/"
     style="--sponsor-cta-span-5: {{ sub 5 (mod $sponsorCount 5) }}; --sponsor-cta-span-4: {{ sub 4 (mod $sponsorCount 4) }}; --sponsor-cta-span-3: {{ sub 3 (mod $sponsorCount 3) }}; --sponsor-cta-span-2: {{ sub 2 (mod $sponsorCount 2) }};"><span class="sponsor-card-cta-plus" aria-hidden="true">+</span><span>Add Your Company</span></a>

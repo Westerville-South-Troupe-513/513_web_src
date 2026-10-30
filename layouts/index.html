@@ -42,6 +42,7 @@
           <span class="hero-meta-date">{{ $featured.Params.date_display }}</span>
         </p>
         {{ with $featured.Params.short_summary }}<p class="hero-summary">{{ . }}</p>{{ end }}
+        {{ with $featured.Params.ticket_prices }}<p class="hero-summary">{{ . }}</p>{{ end }}
         <div class="hero-actions">
           <a class="button-primary hero-more-info" href="{{ $featured.RelPermalink }}">{{ if $hasTickets }}Showtimes &amp; Tickets{{ else if $featured.Params.performances }}View Showtimes{{ else }}Show Details{{ end }} <span class="hero-more-info-arrow" aria-hidden="true">&rarr;</span></a>
         </div>
@@ -88,8 +89,9 @@
   </section>
 
   {{ with $upcomingStudentShows }}{{ partial "student-work-section.html" (dict "shows" . "eyebrow" "Their Ideas, Their Stage" "title" "Upcoming Student-Directed & Original Work" "show_archive_link" true) }}{{ end }}
+  {{ partial "past-productions-section.html" . }}
 
-  <section class="section section-dark home-resources" aria-labelledby="resources-heading">
+  <section class="section home-resources" aria-labelledby="resources-heading">
     <div class="container-wide">
       <header class="section-header resources-header">
         <div>
