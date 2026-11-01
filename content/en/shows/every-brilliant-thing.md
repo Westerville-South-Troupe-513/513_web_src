@@ -20,7 +20,7 @@ performances:
   - date: 2026-11-07
     time: "7:00 PM"
   - date: 2026-11-08
-    time: "7:00 PM"
+    time: "2:00 PM"
 ticket_prices: "Pay what you want. All proceeds go to Hope Squad."
 venue: "south-aux-gym"
 venue_tbd: false
