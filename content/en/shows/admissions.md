@@ -15,14 +15,8 @@ poster: "/images/admissions_poster_medium.webp"
 poster_large: "/images/admissions_poster_large.webp"
 student_directors:
   - "Elliott Jingo"
-opening_date: 2026-12-02
-closing_date: 2026-12-03
-date_display: "December 2–3, 2026"
-performances:
-  - date: 2026-12-02
-    time: "7:00 PM"
-  - date: 2026-12-03
-    time: "7:00 PM"
+date_display: "TBD"
+performances: []
 venue: "south-auditorium"
 featured: false
 draft: false

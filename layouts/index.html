@@ -18,7 +18,7 @@
     {{ end }}
   {{ end }}
   {{ $featured := false }}
-  {{ range $seasonShows }}
+  {{ range $mainStageShows }}
     {{ if and (not $featured) (ne (partial "show-status.html" .).key "closed") }}
       {{ $featured = . }}
     {{ end }}

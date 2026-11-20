@@ -75,7 +75,7 @@
         <h2 class="footer-heading">Show Details</h2>
         <dl>
           <div><dt>Production</dt><dd>{{ .Params.show_type }}</dd></div>
-          <div><dt>{{ if .Params.opening_date }}Dates{{ else }}Season{{ end }}</dt><dd>{{ .Params.date_display }}</dd></div>
+          <div><dt>{{ if or .Params.opening_date (eq .Params.date_display "TBD") }}Dates{{ else }}Season{{ end }}</dt><dd>{{ .Params.date_display }}</dd></div>
           {{ with .Params.ticket_prices }}<div><dt>Admission</dt><dd>{{ . }}</dd></div>{{ end }}
           {{ with .Params.student_directors }}<div><dt>Student {{ if gt (len .) 1 }}directors{{ else }}director{{ end }}</dt><dd>{{ delimit . ", " " &amp; " | safeHTML }}</dd></div>{{ end }}
           {{ if .Params.venue_tbd }}
